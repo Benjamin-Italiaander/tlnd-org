@@ -1,0 +1,147 @@
+<!doctype html><html lang=en><head><title>Bearos Start Point · Benjamin Italiaander</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Benjamin Italiaander"><meta name=description content="
+  The first basics of Bareos
+  
+    
+    Link to heading
+  
+
+
+  Main components of Bareos
+  
+    
+    Link to heading
+  
+
+Bareos is made up of the following major components or services:
+
+Bareos Director Service
+
+Console service
+
+Bareos File deamon
+
+Bareos Storage Deamon
+
+Bareos Monitor service
+
+
+
+  Bareos Director Service
+  
+    
+    Link to heading
+  
+
+The Director is the central control program for all the other daemons. It schedules and supervises all the backup, restore, verify and archive operations. The system administrator uses the Bareos Director to schedule backups and to recover files. The Director runs as a daemon (or service) in the background."><meta name=keywords content="python,keras,Bash,kitty,kitten"><meta name=twitter:card content="summary"><meta name=twitter:title content="Bearos Start Point"><meta name=twitter:description content="The first basics of Bareos Link to heading Main components of Bareos Link to heading Bareos is made up of the following major components or services:
+Bareos Director Service Console service Bareos File deamon Bareos Storage Deamon Bareos Monitor service Bareos Director Service Link to heading The Director is the central control program for all the other daemons. It schedules and supervises all the backup, restore, verify and archive operations. The system administrator uses the Bareos Director to schedule backups and to recover files. The Director runs as a daemon (or service) in the background."><meta property="og:url" content="http://localhost/Linux/backup/tape/bearos-start-point/"><meta property="og:site_name" content="Benjamin Italiaander"><meta property="og:title" content="Bearos Start Point"><meta property="og:description" content="The first basics of Bareos Link to heading Main components of Bareos Link to heading Bareos is made up of the following major components or services:
+Bareos Director Service Console service Bareos File deamon Bareos Storage Deamon Bareos Monitor service Bareos Director Service Link to heading The Director is the central control program for all the other daemons. It schedules and supervises all the backup, restore, verify and archive operations. The system administrator uses the Bareos Director to schedule backups and to recover files. The Director runs as a daemon (or service) in the background."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="linux"><link rel=canonical href=http://localhost/Linux/backup/tape/bearos-start-point/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css integrity="sha256-9rGzWnsCUhslM49s9Yl1+ZgKbBKEd2P+NaSDB3WM0ec=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/img/favicon.svg sizes=any><link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://localhost/>Benjamin Italiaander
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/>Home</a></li><li class=navigation-item><a class=navigation-link href=/>Books</a></li><li class=navigation-item><a class=navigation-link href=/Linux/yubikey/>Yubikey cli</a></li><li class=navigation-item><a class=navigation-link href=/Linux/>Linux</a></li><li class=navigation-item><a class=navigation-link href=/>Art I Enjoy</a></li></ul></section></nav><div class=content><section class="container page"><article><header><h1 class=title><a class=title-link href=http://localhost/Linux/backup/tape/bearos-start-point/>Bearos Start Point</a></h1></header><h1 id=the-first-basics-of-bareos>The first basics of Bareos
+<a class=heading-link href=#the-first-basics-of-bareos><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h1><h2 id=main-components-of-bareos>Main components of Bareos
+<a class=heading-link href=#main-components-of-bareos><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Bareos is made up of the following major components or services:</p><ul><li><a href=#Bareos-Director-Service>Bareos Director Service</a></li><li><a href=#Console-service>Console service</a></li><li><a href=#Bareos-File-Daemon>Bareos File deamon</a></li><li><a href=#Bareos-Storage-Daemon>Bareos Storage Deamon</a></li><li><a href=#Bareos-Monitor-Service>Bareos Monitor service</a></li></ul><h3 id=bareos-director-service>Bareos Director Service
+<a class=heading-link href=#bareos-director-service><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>The Director is the central control program for all the other daemons. It schedules and supervises all the backup, restore, verify and archive operations. The system administrator uses the Bareos Director to schedule backups and to recover files. The Director runs as a daemon (or service) in the background.</p><h3 id=console-service>Console service
+<a class=heading-link href=#console-service><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>The &ldquo;bconsole&rdquo; program that interfaces to the Director allowing the user or system administrator to control Bareos.</p><h3 id=bareos-file-daemon>Bareos File Daemon
+<a class=heading-link href=#bareos-file-daemon><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>The Bareos File Daemon is a program that must be installed on each (Client) machine that should be backed up. At the request of the Bareos Director, it finds the files to be backed up and sends them (their data) to the Bareos Storage Daemon.
+It is specific to the operating system on which it runs and is responsible for providing the file attributes and data when requested by the Bareos Director.
+The Bareos File Daemon is also responsible for the file system dependent part of restoring the file attributes and data during a recovery operation. This program runs as a daemon on the machine to be backed up.</p><h3 id=bareos-storage-daemon>Bareos Storage Daemon
+<a class=heading-link href=#bareos-storage-daemon><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>The Storage daemon, sometimes referred to as the SD, is the code that writes the attributes and data to a storage Volume (usually a tape or disk). The Bareos Storage Daemon is responsible, at the Bareos Director request, for accepting data from a Bareos File Daemon and storing the file attributes and data to the physical backup media or volumes. In the case of a restore request, it is responsible to find the data and send it to the Bareos File Daemon.
+There can be multiple Bareos Storage Daemon in your environment, all controlled by the same Bareos Director.
+The Storage services runs as a daemon on the machine that has the backup device (such as a tape drive).</p><h3 id=bareos-monitor-service>Bareos Monitor Service
+<a class=heading-link href=#bareos-monitor-service><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>The program that interfaces to all the daemons allowing the user or system administrator to monitor Bareos status.</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># estimate will give you the results of a job what will be backed up</span>
+</span></span><span style=display:flex><span>estimate <span style=color:#79c0ff>job</span><span style=color:#ff7b72;font-weight:700>=</span>MyFirstJob listing
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># run job</span>
+</span></span><span style=display:flex><span>run <span style=color:#79c0ff>job</span><span style=color:#ff7b72;font-weight:700>=</span>MyFirstJob yes
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># list running jop on client</span>
+</span></span><span style=display:flex><span>status client
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>list jobs
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>list joblog <span style=color:#79c0ff>jobid</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>61</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># list on with tape the job is stored</span>
+</span></span><span style=display:flex><span>*list volumes <span style=color:#79c0ff>jobid</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>61</span>
+</span></span><span style=display:flex><span>+------------+
+</span></span><span style=display:flex><span>| volumename |
+</span></span><span style=display:flex><span>+------------+
+</span></span><span style=display:flex><span>| 000011L9   |
+</span></span><span style=display:flex><span>+------------+
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># display the files inside a job</span>
+</span></span><span style=display:flex><span>list files <span style=color:#79c0ff>jobid</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>61</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># RESTORE</span>
+</span></span><span style=display:flex><span>*restore 
+</span></span><span style=display:flex><span>Automatically selected Catalog: MyCatalog
+</span></span><span style=display:flex><span>Using Catalog <span style=color:#a5d6ff>&#34;MyCatalog&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>First you <span style=color:#ff7b72>select</span> one or more JobIds that contain files
+</span></span><span style=display:flex><span>to be restored. You will be presented several methods
+</span></span><span style=display:flex><span>of specifying the JobIds. Then you will be allowed to
+</span></span><span style=display:flex><span><span style=color:#ff7b72>select</span> which files from those JobIds are to be restored.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>To <span style=color:#ff7b72>select</span> the JobIds, you have the following choices:
+</span></span><span style=display:flex><span> 1: List last <span style=color:#a5d6ff>20</span> Jobs run
+</span></span><span style=display:flex><span> 2: List Jobs where a given File is saved
+</span></span><span style=display:flex><span> 3: Enter list of comma separated JobIds to <span style=color:#ff7b72>select</span>
+</span></span><span style=display:flex><span> 4: Enter SQL list command
+</span></span><span style=display:flex><span> 5: Select the most recent backup <span style=color:#ff7b72>for</span> a client
+</span></span><span style=display:flex><span> 6: Select backup <span style=color:#ff7b72>for</span> a client before a specified time
+</span></span><span style=display:flex><span> 7: Enter a list of files to restore
+</span></span><span style=display:flex><span> 8: Enter a list of files to restore before a specified time
+</span></span><span style=display:flex><span> 9: Find the JobIds of the most recent backup <span style=color:#ff7b72>for</span> a client
+</span></span><span style=display:flex><span>10: Find the JobIds <span style=color:#ff7b72>for</span> a backup <span style=color:#ff7b72>for</span> a client before a specified time
+</span></span><span style=display:flex><span>11: Enter a list of directories to restore <span style=color:#ff7b72>for</span> found JobIds
+</span></span><span style=display:flex><span>12: Select full restore to a specified Job date
+</span></span><span style=display:flex><span>13: Cancel
+</span></span><span style=display:flex><span>Select item:  <span style=color:#ff7b72;font-weight:700>(</span>1-13<span style=color:#ff7b72;font-weight:700>)</span>: <span style=color:#a5d6ff>5</span>
+</span></span><span style=display:flex><span>Automatically selected Client: bareos-fd
+</span></span><span style=display:flex><span>The defined FileSet resources are:
+</span></span><span style=display:flex><span>1: Catalog
+</span></span><span style=display:flex><span>2: SelfTest
+</span></span><span style=display:flex><span>3: cwi1001
+</span></span><span style=display:flex><span>4: cwi1004
+</span></span><span style=display:flex><span>5: cwi2004
+</span></span><span style=display:flex><span>Select FileSet resource <span style=color:#ff7b72;font-weight:700>(</span>1-5<span style=color:#ff7b72;font-weight:700>)</span>: <span style=color:#a5d6ff>3</span>
+</span></span><span style=display:flex><span>+-------+-------+----------+----------+---------------------+------------+
+</span></span><span style=display:flex><span>| jobid | level | jobfiles | jobbytes | starttime           | volumename |
+</span></span><span style=display:flex><span>+-------+-------+----------+----------+---------------------+------------+
+</span></span><span style=display:flex><span>|    <span style=color:#a5d6ff>61</span> | F     |       <span style=color:#a5d6ff>73</span> |        <span style=color:#a5d6ff>0</span> | 2025-04-15 11:32:33 | 000011L9   |
+</span></span><span style=display:flex><span>+-------+-------+----------+----------+---------------------+------------+
+</span></span><span style=display:flex><span>You have selected the following JobId: <span style=color:#a5d6ff>61</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Building directory tree <span style=color:#ff7b72>for</span> JobId<span style=color:#ff7b72;font-weight:700>(</span>s<span style=color:#ff7b72;font-weight:700>)</span> <span style=color:#a5d6ff>61</span> ...  ++++++++++++++++++++++++++++++++++++
+</span></span><span style=display:flex><span><span style=color:#a5d6ff>73</span> files inserted into the tree.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>You are now entering file selection mode where you add <span style=color:#ff7b72;font-weight:700>(</span>mark<span style=color:#ff7b72;font-weight:700>)</span> and
+</span></span><span style=display:flex><span>remove <span style=color:#ff7b72;font-weight:700>(</span>unmark<span style=color:#ff7b72;font-weight:700>)</span> files to be restored. No files are initially added, unless
+</span></span><span style=display:flex><span>you used the <span style=color:#a5d6ff>&#34;all&#34;</span> keyword on the command line.
+</span></span><span style=display:flex><span>Enter <span style=color:#a5d6ff>&#34;done&#34;</span> to leave this mode.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>cwd is: /
+</span></span><span style=display:flex><span>$ dir
+</span></span><span style=display:flex><span>----------   <span style=color:#a5d6ff>0</span> <span style=color:#a5d6ff>0</span> <span style=color:#ff7b72;font-weight:700>(</span>root<span style=color:#ff7b72;font-weight:700>)</span> <span style=color:#a5d6ff>0</span> <span style=color:#ff7b72;font-weight:700>(</span>root<span style=color:#ff7b72;font-weight:700>)</span>             <span style=color:#a5d6ff>0</span>  1970-01-01 01:00:00   /storage/
+</span></span><span style=display:flex><span>$ cd storage/ 
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># LIST all backups made from a job</span>
+</span></span><span style=display:flex><span>*list jobs <span style=color:#79c0ff>job</span><span style=color:#ff7b72;font-weight:700>=</span>cwi1001 
+</span></span><span style=display:flex><span>+-------+---------+-----------+---------------------+----------+------+-------+----------+------------+-----------+
+</span></span><span style=display:flex><span>| jobid | name    | client    | starttime           | duration | type | level | jobfiles | jobbytes   | jobstatus |
+</span></span><span style=display:flex><span>+-------+---------+-----------+---------------------+----------+------+-------+----------+------------+-----------+
+</span></span><span style=display:flex><span>|    <span style=color:#a5d6ff>50</span> | cwi1001 | bareos-fd | 2025-04-07 12:00:46 | 00:00:00 | B    | F     |      <span style=color:#a5d6ff>338</span> | 36,351,640 | T         |
+</span></span><span style=display:flex><span>|    <span style=color:#a5d6ff>51</span> | cwi1001 | bareos-fd | 2025-04-07 12:10:08 | 00:00:01 | B    | F     |      <span style=color:#a5d6ff>338</span> | 36,351,640 | T         |
+</span></span><span style=display:flex><span>|    <span style=color:#a5d6ff>55</span> | cwi1001 | bareos-fd | 2025-04-08 15:53:15 | 00:00:10 | B    | F     |       <span style=color:#a5d6ff>73</span> |          <span style=color:#a5d6ff>0</span> | T         |
+</span></span><span style=display:flex><span>|    <span style=color:#a5d6ff>61</span> | cwi1001 | bareos-fd | 2025-04-15 11:32:33 | 00:00:38 | B    | F     |       <span style=color:#a5d6ff>73</span> |          <span style=color:#a5d6ff>0</span> | T         |
+</span></span><span style=display:flex><span>+-------+---------+-----------+---------------------+----------+------+-------+----------+------------+-----------+
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># GREP from linux CLI to bconsole</span>
+</span></span><span style=display:flex><span>root@bak4:~# bconsole <span style=color:#ff7b72;font-weight:700>&lt;&lt;&lt;</span> <span style=color:#a5d6ff>&#34;list jobs&#34;</span> | grep <span style=color:#a5d6ff>1001</span>
+</span></span><span style=display:flex><span>|    <span style=color:#a5d6ff>50</span> | cwi1001          | bareos-fd | 2025-04-07 12:00:46 | 00:00:00 | B    | F     |      <span style=color:#a5d6ff>338</span> | 36,351,640 | T         |
+</span></span><span style=display:flex><span>|    <span style=color:#a5d6ff>51</span> | cwi1001          | bareos-fd | 2025-04-07 12:10:08 | 00:00:01 | B    | F     |      <span style=color:#a5d6ff>338</span> | 36,351,640 | T         |
+</span></span><span style=display:flex><span>|    <span style=color:#a5d6ff>55</span> | cwi1001          | bareos-fd | 2025-04-08 15:53:15 | 00:00:10 | B    | F     |       <span style=color:#a5d6ff>73</span> |          <span style=color:#a5d6ff>0</span> | T         |
+</span></span><span style=display:flex><span>|    <span style=color:#a5d6ff>61</span> | cwi1001          | bareos-fd | 2025-04-15 11:32:33 | 00:00:38 | B    | F     |       <span style=color:#a5d6ff>73</span> |          <span style=color:#a5d6ff>0</span> | T         |
+</span></span><span style=display:flex><span>root@bak4:~# 
+</span></span></code></pre></div></article></section></div><footer class=footer><section class=container>©
+2016 -
+2026
+Benjamin Italiaander
+·</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script></body></html>

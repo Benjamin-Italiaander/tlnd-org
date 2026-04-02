@@ -1,0 +1,62 @@
+<!doctype html><html lang=en><head><title>Ssl Checks · Benjamin Italiaander</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Benjamin Italiaander"><meta name=description content="
+  Regular ssl checks
+  
+    
+    Link to heading
+  
+
+Check a Certificate Signing Request (CSR)
+openssl req -text -noout -verify -in CSR.csr
+Check a private key
+openssl rsa -in privateKey.key -check
+Check a certificate
+openssl x509 -in certificate.crt -text -noout
+Check a PKCS#12 file (.pfx or .p12)
+openssl pkcs12 -info -in keyStore.p12
+
+  Check if certificates are a pair
+  
+    
+    Link to heading
+  
+
+You can check if a crt and a key file are a match with a md5 check, if the output of de md5 is the same you have a matching ssl-pair"><meta name=keywords content="python,keras,Bash,kitty,kitten"><meta name=twitter:card content="summary"><meta name=twitter:title content="Ssl Checks"><meta name=twitter:description content="Regular ssl checks Link to heading Check a Certificate Signing Request (CSR)
+openssl req -text -noout -verify -in CSR.csr Check a private key
+openssl rsa -in privateKey.key -check Check a certificate
+openssl x509 -in certificate.crt -text -noout Check a PKCS#12 file (.pfx or .p12)
+openssl pkcs12 -info -in keyStore.p12 Check if certificates are a pair Link to heading You can check if a crt and a key file are a match with a md5 check, if the output of de md5 is the same you have a matching ssl-pair"><meta property="og:url" content="http://localhost/Linux/ssl/ssl-checks/"><meta property="og:site_name" content="Benjamin Italiaander"><meta property="og:title" content="Ssl Checks"><meta property="og:description" content="Regular ssl checks Link to heading Check a Certificate Signing Request (CSR)
+openssl req -text -noout -verify -in CSR.csr Check a private key
+openssl rsa -in privateKey.key -check Check a certificate
+openssl x509 -in certificate.crt -text -noout Check a PKCS#12 file (.pfx or .p12)
+openssl pkcs12 -info -in keyStore.p12 Check if certificates are a pair Link to heading You can check if a crt and a key file are a match with a md5 check, if the output of de md5 is the same you have a matching ssl-pair"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="linux"><link rel=canonical href=http://localhost/Linux/ssl/ssl-checks/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css integrity="sha256-9rGzWnsCUhslM49s9Yl1+ZgKbBKEd2P+NaSDB3WM0ec=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/img/favicon.svg sizes=any><link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://localhost/>Benjamin Italiaander
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/>Home</a></li><li class=navigation-item><a class=navigation-link href=/>Books</a></li><li class=navigation-item><a class=navigation-link href=/Linux/yubikey/>Yubikey cli</a></li><li class=navigation-item><a class=navigation-link href=/Linux/>Linux</a></li><li class=navigation-item><a class=navigation-link href=/>Art I Enjoy</a></li></ul></section></nav><div class=content><section class="container page"><article><header><h1 class=title><a class=title-link href=http://localhost/Linux/ssl/ssl-checks/>Ssl Checks</a></h1></header><h2 id=regular-ssl-checks>Regular ssl checks
+<a class=heading-link href=#regular-ssl-checks><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Check a Certificate Signing Request (CSR)</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>openssl req -text -noout -verify -in CSR.csr
+</span></span></code></pre></div><p>Check a private key</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>openssl rsa -in privateKey.key -check
+</span></span></code></pre></div><p>Check a certificate</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>openssl x509 -in certificate.crt -text -noout
+</span></span></code></pre></div><p>Check a PKCS#12 file (.pfx or .p12)</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>openssl pkcs12 -info -in keyStore.p12
+</span></span></code></pre></div><h2 id=check-if-certificates-are-a-pair>Check if certificates are a pair
+<a class=heading-link href=#check-if-certificates-are-a-pair><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>You can check if a crt and a key file are a match with a md5 check, if the output of de md5 is the same you have a matching ssl-pair</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>openssl rsa -modulus -noout -in ./certificate.key | openssl md5
+</span></span><span style=display:flex><span>openssl x509 -modulus -noout -in ./certificate.crt | openssl md5
+</span></span></code></pre></div><p>Here is a small script that you may use to check if the pairs are matching</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-weight:700;font-style:italic>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#ff7b72>if</span> <span style=color:#ff7b72;font-weight:700>[</span> <span style=color:#79c0ff>$#</span> -eq <span style=color:#a5d6ff>0</span> <span style=color:#ff7b72;font-weight:700>]</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>then</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#a5d6ff>&#34;usage: </span><span style=color:#ff7b72>$(</span>basename <span style=color:#79c0ff>$0</span><span style=color:#ff7b72>)</span><span style=color:#a5d6ff> certfile keyfile csrfile&#34;</span>
+</span></span><span style=display:flex><span>    exit
+</span></span><span style=display:flex><span><span style=color:#ff7b72>fi</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>cert</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#79c0ff>$1</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>key</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#79c0ff>$2</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>csr</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#79c0ff>$3</span>
+</span></span><span style=display:flex><span>echo <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$cert</span><span style=color:#a5d6ff>:&#34;</span>
+</span></span><span style=display:flex><span>openssl x509 -noout -modulus -in <span style=color:#79c0ff>$cert</span> | openssl md5
+</span></span><span style=display:flex><span>echo <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$key</span><span style=color:#a5d6ff>:&#34;</span>
+</span></span><span style=display:flex><span>openssl rsa -noout -modulus -in <span style=color:#79c0ff>$key</span> | openssl md5
+</span></span><span style=display:flex><span>echo <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$csr</span><span style=color:#a5d6ff>:&#34;</span>
+</span></span><span style=display:flex><span>test ! x<span style=color:#79c0ff>$csr</span> <span style=color:#ff7b72;font-weight:700>=</span> x <span style=color:#ff7b72;font-weight:700>&amp;&amp;</span> openssl req -noout -modulus -in <span style=color:#79c0ff>$csr</span> | openssl md5
+</span></span></code></pre></div></article></section></div><footer class=footer><section class=container>©
+2016 -
+2026
+Benjamin Italiaander
+·</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script></body></html>

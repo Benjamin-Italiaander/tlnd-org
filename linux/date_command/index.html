@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Date command in bash · Benjamin Italiaander
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Benjamin Italiaander">
+<meta name="description" content="
+  Just a small example of the date command
+  
+    
+    Link to heading
+  
+
+Show the weekday in number, always handy to know, small examples of the date command
+# Display weekday
+date &#43;%u
+# Display quater of the year
+date &#43;%q
+#!/bin/bash
+todayWeekday=$(date &#43;%u)
+todayQuater=$(date &#43;%q)
+echo -e &#39;The command &#34;date &#43;%u&#34; gives the weekday in numbers output is:&#39; $todayWeekday
+">
+<meta name="keywords" content="python, keras, Bash, kitty, kitten">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Date command in bash">
+  <meta name="twitter:description" content="Just a small example of the date command Link to heading Show the weekday in number, always handy to know, small examples of the date command
+# Display weekday date &#43;%u # Display quater of the year date &#43;%q #!/bin/bash todayWeekday=$(date &#43;%u) todayQuater=$(date &#43;%q) echo -e &#39;The command &#34;date &#43;%u&#34; gives the weekday in numbers output is:&#39; $todayWeekday">
+
+<meta property="og:url" content="http://localhost:1313/linux/date_command/">
+  <meta property="og:site_name" content="Benjamin Italiaander">
+  <meta property="og:title" content="Date command in bash">
+  <meta property="og:description" content="Just a small example of the date command Link to heading Show the weekday in number, always handy to know, small examples of the date command
+# Display weekday date &#43;%u # Display quater of the year date &#43;%q #!/bin/bash todayWeekday=$(date &#43;%u) todayQuater=$(date &#43;%q) echo -e &#39;The command &#34;date &#43;%u&#34; gives the weekday in numbers output is:&#39; $todayWeekday">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="linux">
+    <meta property="article:published_time" content="2023-02-27T14:12:45+01:00">
+    <meta property="article:modified_time" content="2023-02-27T14:12:45+01:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/linux/date_command/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+  
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Benjamin Italiaander
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/">Home</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/books/">Books</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/yubikey/">Yubikey cli</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/linux/">Linux</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/art_i_enjoy/">Art I Enjoy</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/linux/date_command/">
+          Date command in bash
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="just-a-small-example-of-the-date-command">
+  Just a small example of the date command
+  <a class="heading-link" href="#just-a-small-example-of-the-date-command">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Show the weekday in number, always handy to know, small examples of the date command</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Display weekday</span>
+</span></span><span style="display:flex;"><span>date +%u
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Display quater of the year</span>
+</span></span><span style="display:flex;"><span>date +%q
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-weight:bold;font-style:italic">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff">todayWeekday</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#ff7b72">$(</span>date +%u<span style="color:#ff7b72">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff">todayQuater</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#ff7b72">$(</span>date +%q<span style="color:#ff7b72">)</span>
+</span></span><span style="display:flex;"><span>echo -e <span style="color:#a5d6ff">&#39;The command &#34;date +%u&#34; gives the weekday in numbers output is:&#39;</span> <span style="color:#79c0ff">$todayWeekday</span>
+</span></span></code></pre></div>
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2016 -
+    
+    2026
+     Benjamin Italiaander 
+    ·
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

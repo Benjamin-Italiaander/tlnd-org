@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Project</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/main/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/main/</guid>
+      <description>&lt;h1 id=&#34;-benjamins-life&#34;&gt;🌈 Benjamin&amp;rsquo;s Life&lt;/h1&gt;&#xA;&lt;h2 id=&#34;hey-there-&#34;&gt;Hey there! 🌞&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;m &lt;strong&gt;Benjamin Italiaander&lt;/strong&gt; — and welcome to my &lt;em&gt;cheerful little corner of the world&lt;/em&gt;! 💛✨&lt;br&gt;&#xA;This is where I collect and share all the things that make my days brighter and my heart lighter! 🌸&lt;/p&gt;&#xA;&lt;p&gt;Here you’ll find:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;🍲 Delicious &lt;strong&gt;food recipes&lt;/strong&gt; I love to make (and of course, eat!)&lt;/li&gt;&#xA;&lt;li&gt;📚 My &lt;strong&gt;favorite books&lt;/strong&gt; that inspire me, surprise me, or simply make me smile&lt;/li&gt;&#xA;&lt;li&gt;💬 Uplifting &lt;strong&gt;quotes &amp;amp; thoughts&lt;/strong&gt; that fill me with calm and positivity&lt;/li&gt;&#xA;&lt;li&gt;🎸 Fun &lt;strong&gt;music tabs&lt;/strong&gt; I enjoy playing and learning&lt;/li&gt;&#xA;&lt;li&gt;💻 My handy &lt;strong&gt;Linux notes&lt;/strong&gt; — because even tech can bring a little joy!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This is my &lt;strong&gt;happy place&lt;/strong&gt; — a colorful mix of creativity, curiosity, and sunshine vibes! ☀️💫&lt;br&gt;&#xA;Grab a cup of tea, take a peek around, and maybe you’ll find a spark of happiness too! 🌻💖&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

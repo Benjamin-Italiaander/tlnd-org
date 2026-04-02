@@ -1,0 +1,106 @@
+<!doctype html><html lang=en><head><title>YubiKey OATH / TOTP Guide · Benjamin Italiaander</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Benjamin Italiaander"><meta name=description content="This guide explains **how to copy your existing TOTP secrets into your YubiKey**."><meta name=keywords content="python,keras,Bash,kitty,kitten"><meta name=twitter:card content="summary"><meta name=twitter:title content="YubiKey OATH / TOTP Guide"><meta name=twitter:description content="This guide explains **how to copy your existing TOTP secrets into your YubiKey**."><meta property="og:url" content="http://localhost/Linux/yubikey/EN_yubikey_otp/"><meta property="og:site_name" content="Benjamin Italiaander"><meta property="og:title" content="YubiKey OATH / TOTP Guide"><meta property="og:description" content="This guide explains **how to copy your existing TOTP secrets into your YubiKey**."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="linux"><meta property="article:published_time" content="1970-01-01T01:33:40+01:00"><meta property="article:modified_time" content="1970-01-01T01:33:40+01:00"><link rel=canonical href=http://localhost/Linux/yubikey/EN_yubikey_otp/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css integrity="sha256-9rGzWnsCUhslM49s9Yl1+ZgKbBKEd2P+NaSDB3WM0ec=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/img/favicon.svg sizes=any><link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://localhost/>Benjamin Italiaander
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/>Home</a></li><li class=navigation-item><a class=navigation-link href=/>Books</a></li><li class=navigation-item><a class=navigation-link href=/Linux/yubikey/>Yubikey cli</a></li><li class=navigation-item><a class=navigation-link href=/Linux/>Linux</a></li><li class=navigation-item><a class=navigation-link href=/>Art I Enjoy</a></li></ul></section></nav><div class=content><section class="container page"><article><header><h1 class=title><a class=title-link href=http://localhost/Linux/yubikey/EN_yubikey_otp/>YubiKey OATH / TOTP Guide</a></h1></header><h1 id=-yubikey-oath--totp-guide>🔐 YubiKey OATH / TOTP Guide
+<a class=heading-link href=#-yubikey-oath--totp-guide><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h1><h3 id=copying-existing-totp-secrets-into-your-yubikey>Copying Existing TOTP Secrets into Your YubiKey
+<a class=heading-link href=#copying-existing-totp-secrets-into-your-yubikey><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><hr><h2 id=-about-this-guide>⚠️ About This Guide
+<a class=heading-link href=#-about-this-guide><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>This guide explains <strong>how to copy your existing TOTP secrets into your YubiKey</strong>.</p><h3 id=-warning-1>⚠️ Warning 1
+<a class=heading-link href=#-warning-1><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Use this method <strong>only if you fully understand what you are doing</strong>.
+TOTP secrets are <strong>extremely sensitive</strong> — if someone obtains your secret, they can generate your codes.</p><h3 id=why-do-this>Why do this?
+<a class=heading-link href=#why-do-this><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>This method allows you to:</p><ul><li>create <strong>multiple YubiKeys</strong> containing the <strong>same TOTP tokens</strong>, or</li><li>store a token on several YubiKeys <em>and/or</em> an authenticator app</li></ul><p>Instead of generating new tokens per device, you can <strong>duplicate</strong> a single TOTP secret across several YubiKeys.</p><p>Use with caution.</p><h3 id=-warning-2>⚠️ Warning 2
+<a class=heading-link href=#-warning-2><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Before using OATH/TOTP on your YubiKey, complete the <strong>minimum setup</strong> guide:
+👉 <strong><a href=https://github.com/Benjamin-Italiaander/My_Notes/blob/main/Linux/yubikey/README/>https://github.com/Benjamin-Italiaander/My_Notes/blob/main/Linux/yubikey/README.md</a></strong></p><h3 id=-warning-3>⚠️ Warning 3
+<a class=heading-link href=#-warning-3><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>After you finish all steps:
+👉 <strong>Clear your terminal and shell history!</strong></p><hr><h1 id=1-check-your-oath-configuration>1. Check Your OATH Configuration
+<a class=heading-link href=#1-check-your-oath-configuration><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h1><p>Run:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>ykman oath info
+</span></span></code></pre></div><p>Example output:</p><pre tabindex=0><code>OATH version:        5.7.4
+Password protection: disabled
+</code></pre><p>If password protection is <strong>disabled</strong>, continue to the next step.</p><hr><h1 id=2-enable-oath-password-protection>2. Enable OATH Password Protection
+<a class=heading-link href=#2-enable-oath-password-protection><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h1><p>This encrypts all TOTP secrets stored on the YubiKey.</p><p>Run:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>ykman oath access change
+</span></span></code></pre></div><p>You will be asked:</p><pre tabindex=0><code>Enter the new password:
+Repeat for confirmation:
+</code></pre><p>Verify:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>ykman oath info
+</span></span></code></pre></div><p>Expected result:</p><pre tabindex=0><code>OATH version:        5.7.4
+Password protection: enabled
+</code></pre><hr><h1 id=3-add-a-totp-credential>3. Add a TOTP Credential
+<a class=heading-link href=#3-add-a-totp-credential><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h1><p>These examples use the <strong>correct ykman 5.x syntax</strong>.</p><h3 id=example-1--generic-totp-entry>Example 1 — Generic TOTP Entry
+<a class=heading-link href=#example-1--generic-totp-entry><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>ykman oath accounts add --touch --digits <span style=color:#a5d6ff>6</span> --period <span style=color:#a5d6ff>30</span> <span style=color:#a5d6ff>&#34;appName:username&#34;</span> ABCDAOFKRNGKALWD
+</span></span></code></pre></div><h3 id=example-2--github-totp-entry>Example 2 — GitHub TOTP Entry
+<a class=heading-link href=#example-2--github-totp-entry><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>ykman oath accounts add --touch --digits <span style=color:#a5d6ff>6</span> --period <span style=color:#a5d6ff>30</span> <span style=color:#a5d6ff>&#34;gitHub:myusername&#34;</span> ABCDAOFKRNGKALWD
+</span></span></code></pre></div><blockquote><p>The final argument (<code>ABCDAOFKRNGKALWD</code>) is the <strong>Base32 TOTP secret</strong>.</p></blockquote><hr><h1 id=4-generate-totp-codes>4. Generate TOTP Codes
+<a class=heading-link href=#4-generate-totp-codes><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h1><p>List all codes:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>ykman oath accounts code
+</span></span></code></pre></div><p>Get one specific code:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>ykman oath accounts code <span style=color:#a5d6ff>&#34;gitHub:myusername&#34;</span>
+</span></span></code></pre></div><p>Or a short version:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>ykman oath accounts code github
+</span></span></code></pre></div><hr><h1 id=5-advanced-cli-tricks>5. Advanced CLI Tricks
+<a class=heading-link href=#5-advanced-cli-tricks><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h1><h2 id=copy-totp-code-directly-to-clipboard>Copy TOTP code directly to clipboard
+<a class=heading-link href=#copy-totp-code-directly-to-clipboard><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>ykman oath accounts code zimbra:italiaan | awk <span style=color:#a5d6ff>&#39;{print $2}&#39;</span> | xclip -selection c
+</span></span></code></pre></div><hr><h2 id=create-a-custom-totp-shell-function>Create a custom <code>totp()</code> shell function
+<a class=heading-link href=#create-a-custom-totp-shell-function><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Add to your <code>.bashrc</code> or <code>.zshrc</code>:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># example one</span>
+</span></span><span style=display:flex><span>totp<span style=color:#ff7b72;font-weight:700>()</span> <span style=color:#ff7b72;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    ykman oath accounts code <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$1</span><span style=color:#a5d6ff>&#34;</span> | awk <span style=color:#a5d6ff>&#39;{print $2}&#39;</span> | xclip -selection c
+</span></span><span style=display:flex><span>    echo <span style=color:#a5d6ff>&#34;Copied TOTP for </span><span style=color:#79c0ff>$1</span><span style=color:#a5d6ff> to clipboard.&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72;font-weight:700>}</span>
+</span></span></code></pre></div><h3 id=example-2--specific-account-function>Example 2 — Specific account function
+<a class=heading-link href=#example-2--specific-account-function><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>token-github<span style=color:#ff7b72;font-weight:700>()</span> <span style=color:#ff7b72;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    ykman oath accounts code <span style=color:#a5d6ff>&#34;gitHub:myusername&#34;</span> | awk <span style=color:#a5d6ff>&#39;{print $2}&#39;</span> | xclip -selection c
+</span></span><span style=display:flex><span>    echo <span style=color:#a5d6ff>&#34;Copied TOTP for gitHub to clipboard.&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72;font-weight:700>}</span>
+</span></span></code></pre></div><hr><h1 id=6-create-a-rofi-menu-for-totp>6. Create a Rofi Menu for TOTP
+<a class=heading-link href=#6-create-a-rofi-menu-for-totp><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h1><p>This script lists your YubiKey OATH accounts in <strong>rofi</strong>, lets you pick one, and copies the code automatically.</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-weight:700;font-style:italic>#!/usr/bin/env bash
+</span></span></span><span style=display:flex><span>set -euo pipefail
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Dependencies:</span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>#  - ykman (YubiKey Manager CLI)</span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>#  - rofi</span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>#  - xclip</span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>#  - notify-send (optional, from libnotify-bin)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Get list of OATH accounts from the YubiKey</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>accounts</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>ykman oath accounts list <span style=color:#ff7b72;font-weight:700>||</span> true<span style=color:#ff7b72>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>if</span> <span style=color:#ff7b72;font-weight:700>[</span> -z <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$accounts</span><span style=color:#a5d6ff>&#34;</span> <span style=color:#ff7b72;font-weight:700>]</span>; <span style=color:#ff7b72>then</span>
+</span></span><span style=display:flex><span>    notify-send <span style=color:#a5d6ff>&#34;YubiKey TOTP&#34;</span> <span style=color:#a5d6ff>&#34;No OATH accounts found (or YubiKey not inserted).&#34;</span> <span style=color:#ff7b72;font-weight:700>||</span> true
+</span></span><span style=display:flex><span>    exit <span style=color:#a5d6ff>1</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Choose account via rofi</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>selection</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>printf <span style=color:#a5d6ff>&#39;%s\n&#39;</span> <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$accounts</span><span style=color:#a5d6ff>&#34;</span> | rofi -dmenu -p <span style=color:#a5d6ff>&#34;YubiKey TOTP&#34;</span><span style=color:#ff7b72>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># If user cancelled rofi</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>if</span> <span style=color:#ff7b72;font-weight:700>[</span> -z <span style=color:#a5d6ff>&#34;</span><span style=color:#a5d6ff>${</span><span style=color:#79c0ff>selection</span><span style=color:#ff7b72>:-</span><span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>&#34;</span> <span style=color:#ff7b72;font-weight:700>]</span>; <span style=color:#ff7b72>then</span>
+</span></span><span style=display:flex><span>    exit <span style=color:#a5d6ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Generate code for selected account</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>code_line</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>ykman oath accounts code <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$selection</span><span style=color:#a5d6ff>&#34;</span><span style=color:#ff7b72>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Extract the TOTP code (second field)</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>code</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>printf <span style=color:#a5d6ff>&#39;%s\n&#39;</span> <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$code_line</span><span style=color:#a5d6ff>&#34;</span> | awk <span style=color:#a5d6ff>&#39;{print $NF}&#39;</span><span style=color:#ff7b72>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Copy to clipboard</span>
+</span></span><span style=display:flex><span>printf <span style=color:#a5d6ff>&#39;%s&#39;</span> <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$code</span><span style=color:#a5d6ff>&#34;</span> | xclip -selection c
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Optional notification</span>
+</span></span><span style=display:flex><span>notify-send <span style=color:#a5d6ff>&#34;YubiKey TOTP&#34;</span> <span style=color:#a5d6ff>&#34;Code for &#39;</span><span style=color:#79c0ff>$selection</span><span style=color:#a5d6ff>&#39; copied to clipboard.&#34;</span> <span style=color:#ff7b72;font-weight:700>||</span> true
+</span></span></code></pre></div></article></section></div><footer class=footer><section class=container>©
+2016 -
+2026
+Benjamin Italiaander
+·</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script></body></html>

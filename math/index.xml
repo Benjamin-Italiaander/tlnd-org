@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Maths on Benjamin Italiaander</title><link>http://localhost/math/</link><description>Recent content in Maths on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><atom:link href="http://localhost/math/index.xml" rel="self" type="application/rss+xml"/><item><title>KaTeX</title><link>http://localhost/math/KaTeX/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/math/KaTeX/</guid><description>&lt;p&gt;Just a reminder how to do stuff&lt;/p&gt;
+&lt;p&gt;A simple way to make a expression devide&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-katex" data-lang="katex"&gt;\frac {(4+b)} {(b-2)}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;$$\frac {(4+b)} {(b-2)}$$&lt;/p&gt;
+&lt;p&gt;\begin{align*}
+&amp;amp; a_{ijk} = 2 \
+&amp;amp;(because ||V_1-V_2|| = \max_{i \in [d]}|V^i_1 - V^i_2|)
+\end{align*}&lt;/p&gt;
+&lt;p&gt;$$\begin{equation}
+\frac {
+(4+b)
+(b-2)
+}
+\end{equation}$$&lt;/p&gt;
+&lt;p&gt;Now align this to the left
+$$\left{( \frac {(4+b)} {(b-2)})}\left$$&lt;/p&gt;
+&lt;p&gt;Also have a look &lt;a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics"&gt;here wikipedia&lt;/a&gt;
+
+Also have a look &lt;a href="https://katex.org/docs/supported.html"&gt;here katex&lt;/a&gt;
+&lt;/p&gt;</description></item><item><title>Supported Functions</title><link>http://localhost/math/KaTex_funtion_list/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/math/KaTex_funtion_list/</guid><description>&lt;p&gt;This is a list of TeX functions supported by KaTeX. It is sorted into logical groups.&lt;/p&gt;
+&lt;p&gt;There is a similar &lt;a href="support_table/"&gt;Support Table&lt;/a&gt;
+, sorted alphabetically, that lists both supported and un-supported functions.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id="accents"&gt;
+ Accents
+ &lt;a class="heading-link" href="#accents"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;&lt;/th&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;$a&amp;rsquo;$ &lt;code&gt;a'&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\tilde{a}$ &lt;code&gt;\tilde{a}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\mathring{g}$ &lt;code&gt;\mathring{g}&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;$a&amp;rsquo;&amp;rsquo;$ &lt;code&gt;a''&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\widetilde{ac}$ &lt;code&gt;\widetilde{ac}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\overgroup{AB}$ &lt;code&gt;\overgroup{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;$a^{\prime}$ &lt;code&gt;a^{\prime}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\utilde{AB}$ &lt;code&gt;\utilde{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\undergroup{AB}$ &lt;code&gt;\undergroup{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;$\acute{a}$ &lt;code&gt;\acute{a}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\vec{F}$ &lt;code&gt;\vec{F}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\Overrightarrow{AB}$ &lt;code&gt;\Overrightarrow{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;$\bar{y}$ &lt;code&gt;\bar{y}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\overleftarrow{AB}$ &lt;code&gt;\overleftarrow{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\overrightarrow{AB}$ &lt;code&gt;\overrightarrow{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;$\breve{a}$ &lt;code&gt;\breve{a}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\underleftarrow{AB}$ &lt;code&gt;\underleftarrow{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\underrightarrow{AB}$ &lt;code&gt;\underrightarrow{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;$\check{a}$ &lt;code&gt;\check{a}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\overleftharpoon{ac}$ &lt;code&gt;\overleftharpoon{ac}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\overrightharpoon{ac}$ &lt;code&gt;\overrightharpoon{ac}&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;$\dot{a}$ &lt;code&gt;\dot{a}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\overleftrightarrow{AB}$ &lt;code&gt;\overleftrightarrow{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\overbrace{AB}$ &lt;code&gt;\overbrace{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;$\ddot{a}$ &lt;code&gt;\ddot{a}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\underleftrightarrow{AB}$ &lt;code&gt;\underleftrightarrow{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\underbrace{AB}$ &lt;code&gt;\underbrace{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;$\grave{a}$ &lt;code&gt;\grave{a}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\overline{AB}$ &lt;code&gt;\overline{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\overlinesegment{AB}$ &lt;code&gt;\overlinesegment{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;$\hat{\theta}$ &lt;code&gt;\hat{\theta}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\underline{AB}$ &lt;code&gt;\underline{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\underlinesegment{AB}$ &lt;code&gt;\underlinesegment{AB}&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;$\widehat{ac}$ &lt;code&gt;\widehat{ac}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\widecheck{ac}$ &lt;code&gt;\widecheck{ac}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;$\underbar{X}$ &lt;code&gt;\underbar{X}&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Accent functions inside \text{…}&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

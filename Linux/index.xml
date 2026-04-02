@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Index on Benjamin Italiaander</title><link>http://localhost/Linux/</link><description>Recent content in Index on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 27 Feb 2023 14:12:45 +0100</lastBuildDate><atom:link href="http://localhost/Linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Benchmark write speed</title><link>http://localhost/Linux/benchmark/benchmark_writespeed/</link><pubDate>Mon, 27 Feb 2023 14:12:45 +0100</pubDate><guid>http://localhost/Linux/benchmark/benchmark_writespeed/</guid><description>&lt;h1 id="-benchmark-write-speed-to-a-disk"&gt;
+ 💾 Benchmark Write Speed to a Disk
+ &lt;a class="heading-link" href="#-benchmark-write-speed-to-a-disk"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Sometimes you need to test how fast a (network) disk can handle writes.&lt;/p&gt;
+&lt;p&gt;A common method is:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Write &lt;strong&gt;one large file&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Split it into &lt;strong&gt;many small files&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Benchmark copying them using &lt;code&gt;rsync&lt;/code&gt; or &lt;code&gt;cp&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Why?
+Some storage systems handle large sequential writes very well, but struggle with many small files (metadata overhead, IOPS limits, etc.).&lt;/p&gt;</description></item><item><title>Date command in bash</title><link>http://localhost/Linux/bash_tricks/date_command/</link><pubDate>Mon, 27 Feb 2023 14:12:45 +0100</pubDate><guid>http://localhost/Linux/bash_tricks/date_command/</guid><description>&lt;h1 id="just-a-small-example-of-the-date-command"&gt;
+ Just a small example of the date command
+ &lt;a class="heading-link" href="#just-a-small-example-of-the-date-command"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Show the weekday in number, always handy to know, small examples of the date command&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-style:italic"&gt;# Display weekday&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;date +%u
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-style:italic"&gt;# Display quater of the year&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;date +%q
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-weight:bold;font-style:italic"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#79c0ff"&gt;todayWeekday&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#ff7b72"&gt;$(&lt;/span&gt;date +%u&lt;span style="color:#ff7b72"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#79c0ff"&gt;todayQuater&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#ff7b72"&gt;$(&lt;/span&gt;date +%q&lt;span style="color:#ff7b72"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo -e &lt;span style="color:#a5d6ff"&gt;&amp;#39;The command &amp;#34;date +%u&amp;#34; gives the weekday in numbers output is:&amp;#39;&lt;/span&gt; &lt;span style="color:#79c0ff"&gt;$todayWeekday&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Create colored alertboxes in Markdown (MD)</title><link>http://localhost/Linux/markdown/create_colored_alertboxes_in_markdown/</link><pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/markdown/create_colored_alertboxes_in_markdown/</guid><description>&lt;p&gt;Alert boxes in pandoc goodies or easy-pandoc-template&lt;/p&gt;
+&lt;p&gt;::: { .Alert #custom-id .other-class } ::::::
+&lt;strong&gt;UPDATE&lt;/strong&gt; &amp;mdash; My &lt;a href="addup.html"&gt;addup&lt;/a&gt;
+ has been &lt;a href="https://github.com/ryangrose/easy-pandoc-templates/commit/337d251bdc5c3577ebf8f128e418f6428398fb46"&gt;commited by Ryan Rose&lt;/a&gt;
+ so the easy pandoc template now works with alert boxes.&lt;/p&gt;
+&lt;p&gt;My current favourite is the &lt;a href="https://github.com/ryangrose/easy-pandoc-templates"&gt;easy-pandoc-templates&lt;/a&gt;
+.&lt;/p&gt;
+&lt;p&gt;::::::::::::::::::&lt;/p&gt;
+&lt;p&gt;I was struggeling with making alertboxes with markdown (MD)
+So here is how to create a Alertbox&lt;/p&gt;
+&lt;p&gt;It does not feel like the ease of MD but just copy and paste if you like this style. It&amp;rsquo;s used with &lt;a href="https://github.com/tajmone/pandoc-goodies"&gt;pandoc-goodies&lt;/a&gt;
+&lt;/p&gt;</description></item><item><title>CSS addup for alert boxes</title><link>http://localhost/Linux/markdown/addup/</link><pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/markdown/addup/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;padding&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;11&lt;/span&gt;&lt;span style="color:#ff7b72"&gt;px&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;margin-bottom&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;24&lt;/span&gt;&lt;span style="color:#ff7b72"&gt;px&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;border-style&lt;/span&gt;: &lt;span style="color:#79c0ff"&gt;solid&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;border-width&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;1&lt;/span&gt;&lt;span style="color:#ff7b72"&gt;px&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;border-radius&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;4&lt;/span&gt;&lt;span style="color:#ff7b72"&gt;px&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;p&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;p&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;p&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;p&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;p&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;margin-top&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;p&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;last-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;p&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;last-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;p&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;last-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;p&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;last-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;p&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;last-child&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;margin-bottom&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#224466&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;background-color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#E2EEF9&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;border-color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#BAC6D3&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#4C4A42&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;background-color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#FFF9EA&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;border-color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#DFD8C2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#991111&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;background-color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#FCDEDE&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;border-color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#D2B2B2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#22662C&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;background-color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#E2F9E5&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;border-color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#BAD3BE&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#2F363D&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;background-color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#F6F8FA&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;border-color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#D5D8DA&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h1&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h2&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h3&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h4&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h5&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h6&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#224466&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;margin-bottom&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h1&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h2&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h3&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h4&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h5&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h6&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#4C4A42&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;margin-bottom&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h1&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h2&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h3&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h4&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h5&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h6&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#991111&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;margin-bottom&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h1&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h2&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h3&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h4&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h5&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h6&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#22662C&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;margin-bottom&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h1&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h2&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h3&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h4&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h5&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h6&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;color&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;#2F363D&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;margin-bottom&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h1&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h2&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h3&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h4&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h5&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h6&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;margin-top&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h1&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h2&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h3&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h4&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h5&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h6&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;margin-top&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h1&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h2&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h3&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h4&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h5&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Error&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h6&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;margin-top&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h1&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h2&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h3&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h4&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h5&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Success&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h6&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;margin-top&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h1&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h2&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h3&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h4&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h5&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Note&lt;/span&gt; &lt;span style="color:#7ee787"&gt;h6&lt;/span&gt;:&lt;span style="color:#d2a8ff;font-weight:bold"&gt;first-child&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72"&gt;margin-top&lt;/span&gt;: &lt;span style="color:#a5d6ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Connect S4048 with console in Linux</title><link>http://localhost/Linux/RS232/connect_serial_with_fedora/</link><pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/RS232/connect_serial_with_fedora/</guid><description>&lt;h1 id="connect-serial-console-in-linux"&gt;
+ Connect serial console in Linux
+ &lt;a class="heading-link" href="#connect-serial-console-in-linux"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;I needed to connect my Dell S4048 and my Dell Z9100-ON over a serial port in linux.&lt;/p&gt;
+&lt;p&gt;So i was trying to connect over my rs232 cable to my Dell switch. But somehow i got weird characters after connecting.&lt;/p&gt;
+&lt;p&gt;specifiations on the DELL site said&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;115200 baud rate—set the MicroUSB console port to 9600 baud rate.&lt;/li&gt;
+&lt;li&gt;No parity.&lt;/li&gt;
+&lt;li&gt;8 data bits.&lt;/li&gt;
+&lt;li&gt;1 stop bit.&lt;/li&gt;
+&lt;li&gt;No flow control.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I did try minicom, and cu but with no working results
+Finally &lt;a href="http://www.columbia.edu/kermit/ck90.html"&gt;kermit&lt;/a&gt;
+ did the trick by using a config file ~/.kermrc containing&lt;/p&gt;</description></item><item><title>Fetchmail OPENSSL error</title><link>http://localhost/Linux/fetchmail/openSSL_and_Fetchmail_part1/</link><pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/fetchmail/openSSL_and_Fetchmail_part1/</guid><description>&lt;h1 id="fetchmail-openssl-reported-error"&gt;
+ Fetchmail OpenSSL reported error
+ &lt;a class="heading-link" href="#fetchmail-openssl-reported-error"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;In case you get the OpenSSL error with fetchmail you need to generate a MD5 fingerprint to validate de OpenSSL connection and add this to your ~/.fetchmailrc file. Also make sure you have a accurate version of OpenSSL installed.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-style:italic"&gt;#Generate MD5 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;openssl s_client -connect zimap.cwi.nl:993 &amp;lt;/dev/null 2&amp;gt;/dev/null | openssl x509 -fingerprint -noout -md5 -in /dev/stdin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-style:italic"&gt;#Add this line with your generated fingerprint to your ~/.fetchmailrc file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ssl
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sslfingerprint &lt;span style="color:#a5d6ff"&gt;&amp;#34;01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:FF&amp;#34;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;finally your config should be something like&lt;/p&gt;</description></item><item><title>Fetchmail OPENSSL error PART 2</title><link>http://localhost/Linux/fetchmail/openSSL_and_Fetchmail_part2/</link><pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/fetchmail/openSSL_and_Fetchmail_part2/</guid><description>&lt;h1 id="fetchmail-openssl-error-part-2"&gt;
+ Fetchmail OpenSSL error PART 2
+ &lt;a class="heading-link" href="#fetchmail-openssl-error-part-2"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;In the past fetchmail only required a md5 fingerprint of a ssl-certificate as a validation. Since ferora36 fetchmail requires a complete certificate and c_rehash files of the certificates.&lt;/p&gt;
+&lt;p&gt;This can be accomplished by the following steps&lt;/p&gt;
+&lt;h2 id="get-the-domain-certificate"&gt;
+ Get the domain certificate
+ &lt;a class="heading-link" href="#get-the-domain-certificate"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Save the domain certificate to some place, in my example we create a folder inside the home folder and save it there.&lt;/p&gt;</description></item><item><title>Best practice generate a ssh-keypair</title><link>http://localhost/Linux/ssh/ssh_keygen/</link><pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssh/ssh_keygen/</guid><description>&lt;p&gt;&lt;img src="./ssh-150x150.png" alt="" title="ssh-150x150.png"&gt;&lt;/p&gt;
+&lt;h3 id="introduction"&gt;
+ Introduction
+ &lt;a class="heading-link" href="#introduction"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;This is a short best practice how to generate a ssh-keypair at the linux commandline.&lt;/p&gt;
+&lt;p&gt;A public/private key pair is pair of mathematically related keys used in asymmetric cryptography for authentication, digital signature, or key establishment. As the name indicates, the private key is used by the owner of the key pair, is kept secret, and should be protected at all times, while the public key can be published and used be the relying party to complete the protocol or invert the operations performed with the private key.&lt;/p&gt;</description></item><item><title>Connect to cisco switch with SSH</title><link>http://localhost/Linux/ssh/cisco/</link><pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssh/cisco/</guid><description>&lt;h3 id="introduction"&gt;
+ Introduction
+ &lt;a class="heading-link" href="#introduction"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;I got this error message when i try to login with SSH to my cisco switch.&lt;/p&gt;
+&lt;p&gt;::: { .Alert #custom-id .other-class } ::::::
+&lt;strong&gt;CISCO&lt;/strong&gt; &amp;mdash; SSH fails to connect&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Unable to negotiate with [hostname or ip] port 22: no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1,diffie-hellman-group14-sha1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;::::::::::::::::::&lt;/p&gt;
+&lt;p&gt;You can solve this by using&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ssh -o &lt;span style="color:#79c0ff"&gt;KexAlgorithms&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;diffie-hellman-group1-sha1 &lt;span style="color:#ff7b72;font-weight:bold"&gt;[&lt;/span&gt;hostname or ip&lt;span style="color:#ff7b72;font-weight:bold"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>generate qrcode from pipe in linux cli</title><link>http://localhost/Linux/cli/qrcode/</link><pubDate>Thu, 01 Jan 1970 01:33:44 +0100</pubDate><guid>http://localhost/Linux/cli/qrcode/</guid><description>&lt;h1 id="create-a-qrcode-from-command-output"&gt;
+ Create a qrcode from command output
+ &lt;a class="heading-link" href="#create-a-qrcode-from-command-output"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;I needed to pipe my cli output to a qrcode and generate a qrcode from it.
+So here a short one how to generate qrcode from pipe in linux cli.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat ./somefile.txt | qrencode -t ansiutf8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or i manage my passowords with pass and needed to copy a password to my phone by qr&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pass work/someaccount | head -n1 | tr -d &lt;span style="color:#79c0ff"&gt;\\&lt;/span&gt;n | qrencode -t ansiutf8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;rsquo;tr&amp;rsquo; removes the newline at the end witch is added.&lt;/p&gt;</description></item><item><title>Install linux fujitsu lifebook</title><link>http://localhost/Linux/fedora/Install_Linux_from_USB_on_fujitsu_lifebook/</link><pubDate>Thu, 01 Jan 1970 01:33:41 +0100</pubDate><guid>http://localhost/Linux/fedora/Install_Linux_from_USB_on_fujitsu_lifebook/</guid><description>&lt;p&gt;I was trying to run a USB-install with Fedora 36 on my fujitsu lifebook u7410 but it did not boot from usb.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;set_second_stage&lt;span style="color:#ff7b72;font-weight:bold"&gt;()&lt;/span&gt; failed: invalid Parameter
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Something has &lt;span style="color:#ff7b72"&gt;done&lt;/span&gt; seriously wrong: shim_init&lt;span style="color:#ff7b72;font-weight:bold"&gt;()&lt;/span&gt; failed Invalid Parameter
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Avoid this problem by making a bootable USB with &lt;a href="https://www.ventoy.net/en/index.html"&gt;ventoy USB tool&lt;/a&gt;
+&lt;/p&gt;</description></item><item><title>Some tricks in bash</title><link>http://localhost/Linux/bash_tricks/display_number_of_loggedin_users/</link><pubDate>Thu, 01 Jan 1970 01:33:41 +0100</pubDate><guid>http://localhost/Linux/bash_tricks/display_number_of_loggedin_users/</guid><description>&lt;h1 id="display-the-number-of-logged-in-users-using-the-who-command"&gt;
+ Display the number of logged in users using the who command
+ &lt;a class="heading-link" href="#display-the-number-of-logged-in-users-using-the-who-command"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Keeping track of the number of users logged into a system can be incredibly useful. Here&amp;rsquo;s a concise Bash command that displays the exact
+count of active users&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;who -q | grep &lt;span style="color:#a5d6ff"&gt;&amp;#34;users=&amp;#34;&lt;/span&gt; | sed &lt;span style="color:#a5d6ff"&gt;&amp;#39;s/# users=//g&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For a continuous, real-time update of the user count, try piping the command to &lt;code&gt;watch&lt;/code&gt; - it&amp;rsquo;s as easy as&lt;/p&gt;</description></item><item><title>Bash Otp Generator</title><link>http://localhost/Linux/bash_otp_generator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/bash_otp_generator/</guid><description>&lt;h1 id="create-an-otp-mfa-tool-in-the-bash-terminal"&gt;
+ Create an OTP MFA Tool in the Bash Terminal
+ &lt;a class="heading-link" href="#create-an-otp-mfa-tool-in-the-bash-terminal"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;I was tired of using &lt;strong&gt;Google Authenticator&lt;/strong&gt;, so I found a simple way to generate my own &lt;strong&gt;OTP (One-Time Password)&lt;/strong&gt; codes directly in &lt;strong&gt;Bash&lt;/strong&gt;.&lt;br&gt;
+Just replace the example string below (&lt;code&gt;JHJH...&lt;/code&gt;) with your own secret key.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;/usr/bin/oathtool -b --totp &lt;span style="color:#a5d6ff"&gt;&amp;#39;JHJHJHJHJHJHJHJHJHJHJHJHJ&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you want to copy the token directly to your clipboard, just use &lt;strong&gt;xclip&lt;/strong&gt;:&lt;/p&gt;</description></item><item><title>Bearos Start Point</title><link>http://localhost/Linux/backup/tape/bearos-start-point/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/backup/tape/bearos-start-point/</guid><description>&lt;h1 id="the-first-basics-of-bareos"&gt;
+ The first basics of Bareos
+ &lt;a class="heading-link" href="#the-first-basics-of-bareos"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="main-components-of-bareos"&gt;
+ Main components of Bareos
+ &lt;a class="heading-link" href="#main-components-of-bareos"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Bareos is made up of the following major components or services:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#Bareos-Director-Service"&gt;Bareos Director Service&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Console-service"&gt;Console service&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Bareos-File-Daemon"&gt;Bareos File deamon&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Bareos-Storage-Daemon"&gt;Bareos Storage Deamon&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Bareos-Monitor-Service"&gt;Bareos Monitor service&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="bareos-director-service"&gt;
+ Bareos Director Service
+ &lt;a class="heading-link" href="#bareos-director-service"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;The Director is the central control program for all the other daemons. It schedules and supervises all the backup, restore, verify and archive operations. The system administrator uses the Bareos Director to schedule backups and to recover files. The Director runs as a daemon (or service) in the background.&lt;/p&gt;</description></item><item><title>Bye Bye Screen Hello Zellij</title><link>http://localhost/Linux/cli/bye-bye-screen-hello-zellij/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/bye-bye-screen-hello-zellij/</guid><description>&lt;h1 id="zellij-is-a-great-alternative-for-screen"&gt;
+ &lt;a href="https://zellij.dev/"&gt;zellij&lt;/a&gt;
+ is a great alternative for screen!
+ &lt;a class="heading-link" href="#zellij-is-a-great-alternative-for-screen"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;h3 id="i-just-came-across-a-really-nice-tool-zellij-as-a-replacement-of-the-tmux-or-screen-terminal-multiplexing-applications-i-instantly-became-a-fan"&gt;
+ I just came across a really nice tool zellij as a replacement of the tmux or screen terminal multiplexing applications. I instantly became a fan!
+ &lt;a class="heading-link" href="#i-just-came-across-a-really-nice-tool-zellij-as-a-replacement-of-the-tmux-or-screen-terminal-multiplexing-applications-i-instantly-became-a-fan"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://zellij.dev/"&gt;zellij can be found here&lt;/a&gt;
+ it&amp;rsquo;s not in all repository&amp;rsquo;s yet, but easy to build from source or download the binary and copy it into your /sbin folder&lt;/p&gt;</description></item><item><title>Chmod Ssh Files</title><link>http://localhost/Linux/ssh/chmod_ssh_files/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssh/chmod_ssh_files/</guid><description>&lt;h1 id="chmod-ssh-files"&gt;
+ chmod ssh files
+ &lt;a class="heading-link" href="#chmod-ssh-files"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;SSH folder -	~/.ssh	700	drwx&amp;mdash;&amp;mdash;&lt;/li&gt;
+&lt;li&gt;Public key	- ~/.ssh/id_rsa.pub	644	-rw-r&amp;ndash;r&amp;ndash;&lt;/li&gt;
+&lt;li&gt;Private key	- ~/.ssh/id_rsa	600	-rw&amp;mdash;&amp;mdash;-&lt;/li&gt;
+&lt;li&gt;Authorized Keys -	~/.ssh/authorized_keys	600	-rw&amp;mdash;&amp;mdash;-&lt;/li&gt;
+&lt;li&gt;Config -	~/.ssh/config	600	-rw&amp;mdash;&amp;mdash;-&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="home-folder"&gt;
+ home folder
+ &lt;a class="heading-link" href="#home-folder"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;chmod g-w,o-w ~
+Home folder	~	755 at most	drwxr-xr-x at most&lt;/p&gt;</description></item><item><title>Config</title><link>http://localhost/Linux/ssh/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssh/config/</guid><description>&lt;h3 id="ssh-config-client-config-file"&gt;
+ ssh config client config file
+ &lt;a class="heading-link" href="#ssh-config-client-config-file"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h4 id="file-is-located-at"&gt;
+ File is located at
+ &lt;a class="heading-link" href="#file-is-located-at"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;~/.ssh/config
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="example-1"&gt;
+ Example 1
+ &lt;a class="heading-link" href="#example-1"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;This is a regular config&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Host server.tld
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; User username
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; IdentityFile /home/username/.ssh/id_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ForwardAgent yes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The ForwardAgent option allows you to use your private, local SSH key remotely without worrying about leaving confidential data on the server you&amp;rsquo;re working with. It&amp;rsquo;s built into ssh, and is easy to set up and use.&lt;/p&gt;</description></item><item><title>Copy And Paste In Cli</title><link>http://localhost/Linux/cli/copy-and-paste-in-cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/copy-and-paste-in-cli/</guid><description>&lt;h1 id="copying-and-pasting-in-the-linux-terminal-is-quite-easy-with-xclip"&gt;
+ Copying and pasting in the Linux terminal is quite easy with xclip.
+ &lt;a class="heading-link" href="#copying-and-pasting-in-the-linux-terminal-is-quite-easy-with-xclip"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;h3 id="simple-bash-command"&gt;
+ simple bash command
+ &lt;a class="heading-link" href="#simple-bash-command"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-style:italic"&gt;# This command copys&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;xclip -selection c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="making-it-in-a-function"&gt;
+ making it in a function
+ &lt;a class="heading-link" href="#making-it-in-a-function"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;I added in my .bashrc file a function because i keep forgetting it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-style:italic"&gt;# call this function by just open copy-to-clipboard&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;copy-to-clipboard&lt;span style="color:#ff7b72;font-weight:bold"&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; xclip -selection c
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff7b72;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-style:italic"&gt;#for example:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat some-file.txt | copy-to-clipboard
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Diff</title><link>http://localhost/Linux/cli/diff/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/diff/</guid><description>&lt;h1 id="show-the-difference-between-two-files"&gt;
+ show the difference between two files
+ &lt;a class="heading-link" href="#show-the-difference-between-two-files"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Colomed output&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;diff -y --side-by-side file_one.txt file_two.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Colomed output filtered&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;diff -y --side-by-side --suppress-common-lines file_one.txt file_two.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;diff --side-by-side file_one.txt file_two.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;diff --side-by-side --suppress-common-lines file_one.txt file_two.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Extract Publickey From Privatekey Openssl</title><link>http://localhost/Linux/ssl/extract-publickey-from-privatekey-openssl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssl/extract-publickey-from-privatekey-openssl/</guid><description>&lt;h1 id="optionally-the-rsa-public-key-can-be-extracted-from-the-private-key"&gt;
+ Optionally, the rsa public key can be extracted from the private key
+ &lt;a class="heading-link" href="#optionally-the-rsa-public-key-can-be-extracted-from-the-private-key"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;openssl rsa -in domain.tld.key -pubout -out doamin.tld.pubkey
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;openssl rsa -in domain.tld.pubkey -pubin -noout -text
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Filter From Tab</title><link>http://localhost/Linux/cli/Filter_from_tab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/Filter_from_tab/</guid><description>&lt;h1 id="extracting-a-specific-column-in-linux-cli"&gt;
+ Extracting a Specific Column in Linux CLI
+ &lt;a class="heading-link" href="#extracting-a-specific-column-in-linux-cli"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Sometimes, you may need to extract a specific column (or tab-separated field) from a file in the Linux command line.&lt;/p&gt;
+&lt;h3 id="example-file"&gt;
+ Example File
+ &lt;a class="heading-link" href="#example-file"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s say we have a file (&lt;code&gt;file.txt&lt;/code&gt;) with the following content:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;A B C 
+D E F 
+G H I 
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="extracting-the-first-column"&gt;
+ Extracting the First Column
+ &lt;a class="heading-link" href="#extracting-the-first-column"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;To extract the first column from each line, you can use &lt;code&gt;awk&lt;/code&gt;:&lt;/p&gt;</description></item><item><title>Find Exclude Hidden Files</title><link>http://localhost/Linux/find_exclude_hidden_files/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/find_exclude_hidden_files/</guid><description>&lt;h2 id="find-files-and-igonre-hidden--files"&gt;
+ Find files and igonre hidden (.*) files
+ &lt;a class="heading-link" href="#find-files-and-igonre-hidden--files"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;find /home/user ! -path &lt;span style="color:#a5d6ff"&gt;&amp;#39;*/.*&amp;#39;&lt;/span&gt; -type f
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;you can replace /home/user to your desired folder.
+you can change the type f (file) or d (directory)&lt;/p&gt;</description></item><item><title>Firefox Already Running</title><link>http://localhost/Linux/firefox/firefox_already_running/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/firefox/firefox_already_running/</guid><description>&lt;h1 id="firefox-already-running"&gt;
+ firefox already running
+ &lt;a class="heading-link" href="#firefox-already-running"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;If you try to open firefox and get the message firefox already running,
+you may try this script&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-weight:bold;font-style:italic"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#79c0ff"&gt;files&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#a5d6ff"&gt;`&lt;/span&gt;find ~/.mozilla -name &lt;span style="color:#a5d6ff"&gt;&amp;#34;*lock&amp;#34;&lt;/span&gt;&lt;span style="color:#a5d6ff"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff7b72"&gt;for&lt;/span&gt; file in &lt;span style="color:#a5d6ff"&gt;`&lt;/span&gt;echo &lt;span style="color:#79c0ff"&gt;$files&lt;/span&gt;&lt;span style="color:#a5d6ff"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff7b72"&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; echo &lt;span style="color:#a5d6ff"&gt;&amp;#34;removing &lt;/span&gt;&lt;span style="color:#79c0ff"&gt;$file&lt;/span&gt;&lt;span style="color:#a5d6ff"&gt;...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; rm &lt;span style="color:#a5d6ff"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#79c0ff"&gt;$file&lt;/span&gt;&lt;span style="color:#a5d6ff"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff7b72"&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>First Tape Commands In Linux</title><link>http://localhost/Linux/backup/tape/first-tape-commands-in-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/backup/tape/first-tape-commands-in-linux/</guid><description>&lt;h1 id="manage-tape-autoloader-drives-and-libraries-for-unixlinux-cli"&gt;
+ Manage tape autoloader drives and libraries for Unix/Linux CLI
+ &lt;a class="heading-link" href="#manage-tape-autoloader-drives-and-libraries-for-unixlinux-cli"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;First steps of managing tapes in linux is using the MT and MTX command.&lt;/p&gt;
+&lt;p&gt;Tools used in this article are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lsscsi (list SCSI devices (or hosts), list NVMe devices)&lt;/li&gt;
+&lt;li&gt;mt (control magnetic tape drive operation from mt-st package) used to control the tape drive like tape movements, ejection, and drive settings.&lt;/li&gt;
+&lt;li&gt;mtx (control SCSI media changer devices) used to control tape libraries (moving cartridges from slots to drives, etc)&lt;/li&gt;
+&lt;li&gt;tar (an archiving utility)&lt;/li&gt;
+&lt;li&gt;ltfs (Linear Tape File System)&lt;/li&gt;
+&lt;li&gt;sg3-utils (The sg3_utils package contains utilities that send SCSI commands to devices)&lt;/li&gt;
+&lt;li&gt;dd (convert and copy a file)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id="warning-first-time-loading-a-lto9-tape-it-automatically-initiates-tape-calibration-sometimes-taking-up-to-2-hours"&gt;
+ Warning! First time loading a LTO9 tape it automatically initiates tape calibration sometimes taking up to 2 hours
+ &lt;a class="heading-link" href="#warning-first-time-loading-a-lto9-tape-it-automatically-initiates-tape-calibration-sometimes-taking-up-to-2-hours"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;When LTO9 media is first loaded into the LTO9 drive, the drive automatically initiates tape calibration, which includes initialization and characterization of the cartridge.&lt;/p&gt;</description></item><item><title>ImageMagick</title><link>http://localhost/Linux/cli/ImageMagick/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/ImageMagick/</guid><description>&lt;h1 id="using-imagemagick"&gt;
+ Using ImageMagick
+ &lt;a class="heading-link" href="#using-imagemagick"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;If you ever need to do some quick image or document conversions, ImageMagick is a command-line tool that can save you a ton of time. Here&amp;rsquo;s a quick guide on how to install it and use it to convert images, PDFs, and more. Perfect for automating repetitive tasks.&lt;/p&gt;
+&lt;h2 id="installing-imagemagick--with-homebrew--macos"&gt;
+ Installing ImageMagick 🪄 with Homebrew 🍺 (macOS)
+ &lt;a class="heading-link" href="#installing-imagemagick--with-homebrew--macos"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;To install ImageMagick on macOS, you can use Homebrew:&lt;/p&gt;</description></item><item><title>Keyboard Not Working On Fujitsu Lifebook On Fedora</title><link>http://localhost/Linux/fedora/Keyboard_not_working_on_Fujitsu_Lifebook_on_Fedora/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/fedora/Keyboard_not_working_on_Fujitsu_Lifebook_on_Fedora/</guid><description>&lt;p&gt;title: &amp;ldquo;Keyboard not working on Fujitsu Lifebook on Fedora 36&amp;rdquo;
+author:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Benjamin Italiaander
+date: 2022-08-19
+keywords:
+&lt;ul&gt;
+&lt;li&gt;Fujitsu U7410&lt;/li&gt;
+&lt;li&gt;Fedora&lt;/li&gt;
+&lt;li&gt;keyboard&lt;/li&gt;
+&lt;li&gt;fujitsu lifebook u7410&lt;/li&gt;
+&lt;li&gt;lifebook&lt;/li&gt;
+&lt;li&gt;U7410&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;So the after installing Fedora Linux 36 on my fujitsu lifebook u7410 my keyboard was not working anymore. I fixed this by editing grub.&lt;/p&gt;
+&lt;p&gt;Just add at the bottom of /etc/default/grub the following line&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#79c0ff"&gt;GRUB_CMDLINE_LINUX_DEFAULT&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#a5d6ff"&gt;&amp;#34;quiet splash i8042.reset i8042.nomux i8042.nopnp i8042.noloop&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After editing the grub file update the grubfile&lt;/p&gt;</description></item><item><title>OpenPGP GnuPG Cheat Sheet</title><link>http://localhost/Linux/OpenPGP_GnuPG_cheat_sheet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/OpenPGP_GnuPG_cheat_sheet/</guid><description>&lt;h1 id="a-small-list-with-som-important-commands-i-use-with-gnupg"&gt;
+ A small list with som important commands i use with GnuPG
+ &lt;a class="heading-link" href="#a-small-list-with-som-important-commands-i-use-with-gnupg"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="yubikey-and-gnupg-openpgp-or-gpg"&gt;
+ YubiKey and gnuPG OpenPGP or gpg
+ &lt;a class="heading-link" href="#yubikey-and-gnupg-openpgp-or-gpg"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Just start with&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;# open the gpg with your yubikey
+gpg --card-edit
+
+# Now enter the admin command
+gpg/card&amp;gt; admin
+
+# Now enter Help and you see all possible commands
+gpg/card&amp;gt; help
+quit quit this menu
+admin show admin commands
+help show this help
+list list all available data
+name change card holder&amp;#39;s name
+url change URL to retrieve key
+fetch fetch the key specified in the card URL
+login change the login name
+lang change the language preferences
+salutation change card holder&amp;#39;s salutation
+cafpr change a CA fingerprint
+forcesig toggle the signature force PIN flag
+generate generate new keys
+passwd menu to change or unblock the PIN
+verify verify the PIN and list all data
+unblock unblock the PIN using a Reset Code
+factory-reset destroy all keys and data
+kdf-setup setup KDF for PIN authentication
+key-attr change the key attribute
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;List all keys including keygrip or keyidentity on a yubiKey&lt;/p&gt;</description></item><item><title>Outgoing Connections</title><link>http://localhost/Linux/cli/outgoing_connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/outgoing_connections/</guid><description>&lt;p&gt;#How to filter out outgoing connections on the linux cli
+This is a small example how&lt;/p&gt;
+&lt;p&gt;Filter outoutgoing TCP connections&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-style:italic"&gt;# Show ougoing TCP connections&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;netstat -atn | tr -s &lt;span style="color:#a5d6ff"&gt;&amp;#39; &amp;#39;&lt;/span&gt;| cut -f5 -d &lt;span style="color:#a5d6ff"&gt;&amp;#39; &amp;#39;&lt;/span&gt; | grep -v &lt;span style="color:#a5d6ff"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Filter out going UDP connections&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-style:italic"&gt;# Show outgoing UDP connections&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;netstat -aun | tr -s &lt;span style="color:#a5d6ff"&gt;&amp;#39; &amp;#39;&lt;/span&gt;| cut -f5 -d &lt;span style="color:#a5d6ff"&gt;&amp;#39; &amp;#39;&lt;/span&gt; | grep -v &lt;span style="color:#a5d6ff"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Read Markdown In Cli</title><link>http://localhost/Linux/cli/read_markdown_in_cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/read_markdown_in_cli/</guid><description>&lt;h1 id="reading-markdown-files-in-the-linux-commandline"&gt;
+ Reading markDown files in the Linux commandline
+ &lt;a class="heading-link" href="#reading-markdown-files-in-the-linux-commandline"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;One handy tool i came across is
+&lt;a href="https://github.com/charmbracelet/glow"&gt;Glow&lt;/a&gt;
+ well maintained and easy to use&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/Textualize/frogmouth"&gt;frogmouth&lt;/a&gt;
+ is a simple MD vieuwer in the CLI build with textual(&lt;a href="https://github.com/Textualize/textual"&gt;https://github.com/Textualize/textual&lt;/a&gt;
+)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/ttscoff/mdless"&gt;mdless&lt;/a&gt;
+ mdless does not like it is maintained on a regular base, but it does give a good output of markdonwfiles in the cli.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/markdownlint/markdownlint"&gt;Markdown lint tool&lt;/a&gt;
+ fr the MD purists a check tool for you md files. Not wel maintained.&lt;/p&gt;</description></item><item><title>Remove Blank Spaces</title><link>http://localhost/Linux/cli/remove-blank-spaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/remove-blank-spaces/</guid><description>&lt;h1 id="remove-blankspace-from-output"&gt;
+ Remove blankspace from output
+ &lt;a class="heading-link" href="#remove-blankspace-from-output"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;If you have a pattern like this in a file:
+abcd efdg ijklm sfgsdf
+sdgf gfgf gdfg dgdffdg&lt;/p&gt;
+&lt;p&gt;and you like to convert it in seperat the words per line
+The most easiest way of removing whitespace from a pattern like&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat ./somefile.txt | xargs -n &lt;span style="color:#a5d6ff"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Some Instruction Aboutssl I Found Online</title><link>http://localhost/Linux/ssl/some-instruction-aboutssl-i-found-online/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssl/some-instruction-aboutssl-i-found-online/</guid><description>&lt;p&gt;i found this useful instruction &lt;a href="https://gist.github.com/soarez/9688998"&gt;here&lt;/a&gt;
+ Thank you for sharing &lt;a href="https://uk.linkedin.com/in/soarez"&gt;Igor Soarez&lt;/a&gt;
+&lt;/p&gt;
+&lt;h1 id="how-to-setup-your-own-ca-with-openssl"&gt;
+ How to setup your own CA with OpenSSL
+ &lt;a class="heading-link" href="#how-to-setup-your-own-ca-with-openssl"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;For educational reasons I&amp;rsquo;ve decided to create my own CA.
+Here is what I learned.&lt;/p&gt;
+&lt;h1 id="first-things-first"&gt;
+ First things first
+ &lt;a class="heading-link" href="#first-things-first"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Lets get some context first.&lt;/p&gt;
+&lt;h2 id="public-key-cryptography"&gt;
+ Public Key Cryptography
+ &lt;a class="heading-link" href="#public-key-cryptography"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;AKA asymmetric cryptography solves the problem of two entities communicating
+securely without ever exchanging a common key, by using two related keys,
+one private, one public.&lt;/p&gt;</description></item><item><title>SSL Certificate Signing Request Best Practices</title><link>http://localhost/Linux/ssl/SSL-Certificate-Signing-Request-best-practices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssl/SSL-Certificate-Signing-Request-best-practices/</guid><description>&lt;h1 id="certificate-signing-request-best-practices-using-openssl"&gt;
+ Certificate Signing Request Best Practices Using OpenSSL
+ &lt;a class="heading-link" href="#certificate-signing-request-best-practices-using-openssl"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;A Certificate Signing Request (CSR) can be generated with OpenSSL, during the creation of a CSR you generate two files, A private key (.key file) and a certificate signing request (.csr file)&lt;/p&gt;
+&lt;p&gt;Best way of generating a CSR is by creating a request configuration file where you add all the SSL info. In this case i call the config file request.cnf.&lt;/p&gt;</description></item><item><title>Ssl Checks</title><link>http://localhost/Linux/ssl/ssl-checks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssl/ssl-checks/</guid><description>&lt;h2 id="regular-ssl-checks"&gt;
+ Regular ssl checks
+ &lt;a class="heading-link" href="#regular-ssl-checks"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Check a Certificate Signing Request (CSR)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;openssl req -text -noout -verify -in CSR.csr
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check a private key&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;openssl rsa -in privateKey.key -check
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check a certificate&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;openssl x509 -in certificate.crt -text -noout
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check a PKCS#12 file (.pfx or .p12)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;openssl pkcs12 -info -in keyStore.p12
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="check-if-certificates-are-a-pair"&gt;
+ Check if certificates are a pair
+ &lt;a class="heading-link" href="#check-if-certificates-are-a-pair"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;You can check if a crt and a key file are a match with a md5 check, if the output of de md5 is the same you have a matching ssl-pair&lt;/p&gt;</description></item><item><title>Ssl Rehash And Filepermissions</title><link>http://localhost/Linux/ssl/ssl-rehash-and-filepermissions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssl/ssl-rehash-and-filepermissions/</guid><description>&lt;h1 id=""&gt;
+ 
+ &lt;a class="heading-link" href="#"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-weight:bold;font-style:italic"&gt;#!/bin/bash -
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#79c0ff"&gt;uid&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#79c0ff"&gt;$1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#79c0ff"&gt;gid&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#79c0ff"&gt;$2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#79c0ff"&gt;uid&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#a5d6ff"&gt;${&lt;/span&gt;&lt;span style="color:#79c0ff"&gt;uid&lt;/span&gt;:=&lt;span style="color:#a5d6ff"&gt;&amp;#34;nginx&amp;#34;&lt;/span&gt;&lt;span style="color:#a5d6ff"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#79c0ff"&gt;gid&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#a5d6ff"&gt;${&lt;/span&gt;&lt;span style="color:#79c0ff"&gt;gid&lt;/span&gt;:=&lt;span style="color:#79c0ff"&gt;$uid&lt;/span&gt;&lt;span style="color:#a5d6ff"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;/bin/rm *.0
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ln -s ca-bundle.crt &lt;span style="color:#a5d6ff"&gt;`&lt;/span&gt;openssl x509 -hash -noout -in ca-bundle.crt&lt;span style="color:#a5d6ff"&gt;`&lt;/span&gt;.0
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat asterisk_cwi_nl.crt &amp;gt; ssl-bundle.crt
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &amp;gt;&amp;gt; ssl-bundle.crt
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat ca-bundle.crt &amp;gt;&amp;gt; ssl-bundle.crt
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ln -s ssl-bundle.crt &lt;span style="color:#a5d6ff"&gt;`&lt;/span&gt;openssl x509 -hash -noout -in ssl-bundle.crt&lt;span style="color:#a5d6ff"&gt;`&lt;/span&gt;.0
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff7b72"&gt;if&lt;/span&gt; &lt;span style="color:#ff7b72;font-weight:bold"&gt;[&lt;/span&gt; -f asterisk_project_cwi_nl.crt &lt;span style="color:#ff7b72;font-weight:bold"&gt;]&lt;/span&gt;; &lt;span style="color:#ff7b72"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; cat asterisk_project_cwi_nl.crt &amp;gt; project-bundle.crt
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; echo &amp;gt;&amp;gt; project-bundle.crt
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; cat ca-bundle.crt &amp;gt;&amp;gt; project-bundle.crt
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ln -s project-bundle.crt &lt;span style="color:#a5d6ff"&gt;`&lt;/span&gt;openssl x509 -hash -noout -in project-bundle.crt&lt;span style="color:#a5d6ff"&gt;`&lt;/span&gt;.0
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff7b72"&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;chmod &lt;span style="color:#a5d6ff"&gt;0444&lt;/span&gt; *.crt
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;chmod &lt;span style="color:#a5d6ff"&gt;0400&lt;/span&gt; *.key
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;chown &lt;span style="color:#79c0ff"&gt;$uid&lt;/span&gt;:&lt;span style="color:#79c0ff"&gt;$gid&lt;/span&gt; *.&lt;span style="color:#ff7b72;font-weight:bold"&gt;{&lt;/span&gt;crt,key&lt;span style="color:#ff7b72;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Virsh</title><link>http://localhost/Linux/kvm/virsh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/kvm/virsh/</guid><description>&lt;h1 id="get-local-port-for-display"&gt;
+ Get local port for display
+ &lt;a class="heading-link" href="#get-local-port-for-display"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;List all running VMS&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-style:italic"&gt;# virsh list&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Id Name State
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;--------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a5d6ff"&gt;1&lt;/span&gt; debian12 running
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a5d6ff"&gt;4&lt;/span&gt; AGENDA running
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Find local port&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-style:italic"&gt;# virsh domdisplay --domain debian12 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;spice://127.0.0.1:5900
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item></channel></rss>

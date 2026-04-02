@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>YubiKey Get started the safe way on Benjamin Italiaander</title><link>http://localhost/Linux/yubikey/</link><description>Recent content in YubiKey Get started the safe way on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 01 Jan 1970 01:33:40 +0100</lastBuildDate><atom:link href="http://localhost/Linux/yubikey/index.xml" rel="self" type="application/rss+xml"/><item><title>YubiKey GPG Guide</title><link>http://localhost/Linux/yubikey/NL_yubikey_gpg/</link><pubDate>Thu, 01 Jan 1970 01:33:40 +0100</pubDate><guid>http://localhost/Linux/yubikey/NL_yubikey_gpg/</guid><description>&lt;p&gt;Hier is een &lt;strong&gt;duidelijke, complete en professionele uitleg&lt;/strong&gt; voor het &lt;strong&gt;instellen van PGP op een YubiKey&lt;/strong&gt;.
+Ik houd het overzichtelijk maar technisch correct.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="-instellen-van-pgp-op-een-yubikey-gpg--yubikey"&gt;
+ 🔐 Instellen van PGP op een YubiKey (GPG + YubiKey)
+ &lt;a class="heading-link" href="#-instellen-van-pgp-op-een-yubikey-gpg--yubikey"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Dit is de &lt;strong&gt;standaard, best-practice workflow&lt;/strong&gt; om PGP veilig op een YubiKey te gebruiken.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-installeer-benodigde-software"&gt;
+ &lt;strong&gt;1. Installeer benodigde software&lt;/strong&gt;
+ &lt;a class="heading-link" href="#1-installeer-benodigde-software"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id="linux"&gt;
+ Linux
+ &lt;a class="heading-link" href="#linux"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt install gnupg2 scdaemon pcscd yubikey-manager yubikey-personalization
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl enable --now pcscd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="macos-via-homebrew"&gt;
+ macOS (via Homebrew)
+ &lt;a class="heading-link" href="#macos-via-homebrew"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew install gnupg yubikey-personalization yubikey-manager
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew services start pcscd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="2-maak-een"&gt;
+ &lt;strong&gt;2. Maak een &lt;em&gt;offline master key&lt;/em&gt;&lt;/strong&gt;
+ &lt;a class="heading-link" href="#2-maak-een"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Dit is de belangrijkste stap.&lt;/p&gt;</description></item><item><title>YubiKey install ykman from git</title><link>http://localhost/Linux/yubikey/EN_yubikey_install_ykman/</link><pubDate>Thu, 01 Jan 1970 01:33:40 +0100</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_install_ykman/</guid><description>&lt;h2 id="-installing-the-latest-ykman-advanced-methods"&gt;
+ 🔧 Installing the Latest &lt;code&gt;ykman&lt;/code&gt; (Advanced Methods)
+ &lt;a class="heading-link" href="#-installing-the-latest-ykman-advanced-methods"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;For advanced users, there are several ways to install the &lt;strong&gt;latest development version&lt;/strong&gt; of YubiKey Manager (&lt;code&gt;ykman&lt;/code&gt;) directly from source.
+Choose the method that best fits your workflow.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="1--install-ykman-in-a-python-virtual-environment-recommended"&gt;
+ 1. 📦 Install &lt;code&gt;ykman&lt;/code&gt; in a Python Virtual Environment (Recommended)
+ &lt;a class="heading-link" href="#1--install-ykman-in-a-python-virtual-environment-recommended"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;This keeps the installation &lt;strong&gt;isolated&lt;/strong&gt; from your system Python and avoids conflicts.&lt;/p&gt;</description></item><item><title>YubiKey OATH / TOTP Guide</title><link>http://localhost/Linux/yubikey/EN_yubikey_otp/</link><pubDate>Thu, 01 Jan 1970 01:33:40 +0100</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_otp/</guid><description>&lt;h1 id="-yubikey-oath--totp-guide"&gt;
+ 🔐 YubiKey OATH / TOTP Guide
+ &lt;a class="heading-link" href="#-yubikey-oath--totp-guide"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;h3 id="copying-existing-totp-secrets-into-your-yubikey"&gt;
+ Copying Existing TOTP Secrets into Your YubiKey
+ &lt;a class="heading-link" href="#copying-existing-totp-secrets-into-your-yubikey"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h2 id="-about-this-guide"&gt;
+ ⚠️ About This Guide
+ &lt;a class="heading-link" href="#-about-this-guide"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;This guide explains &lt;strong&gt;how to copy your existing TOTP secrets into your YubiKey&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id="-warning-1"&gt;
+ ⚠️ Warning 1
+ &lt;a class="heading-link" href="#-warning-1"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Use this method &lt;strong&gt;only if you fully understand what you are doing&lt;/strong&gt;.
+TOTP secrets are &lt;strong&gt;extremely sensitive&lt;/strong&gt; — if someone obtains your secret, they can generate your codes.&lt;/p&gt;</description></item><item><title>YubiKey SSH Guide</title><link>http://localhost/Linux/yubikey/EN_yubikey_ssh/</link><pubDate>Thu, 01 Jan 1970 01:33:40 +0100</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_ssh/</guid><description>&lt;h1 id="ssh-with-yubikey-fido2"&gt;
+ SSH with YubiKey (FIDO2)
+ &lt;a class="heading-link" href="#ssh-with-yubikey-fido2"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Make sure you do the &lt;a href="https://github.com/Benjamin-Italiaander/My_Notes/blob/main/Linux/yubikey/README/"&gt;first steps&lt;/a&gt;
+ of initiating your YubiKey before you will start using the SSH functionality on your yubikey.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There are still two keys generated: your private key and your public key.
+The private key remains important when using your YubiKey. In fact, the private key functions as a challenge key and works together with your YubiKey.&lt;/p&gt;</description></item><item><title>EN Install All Dependencies</title><link>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</guid><description>&lt;hr&gt;
+&lt;p&gt;date: 2025-10-01T12:30:21+01:00
+title: &amp;ldquo;Before installing YubiKey&amp;rsquo;s ykman software&amp;rdquo;
+draft: false
+description: &amp;ldquo;1. Install the first dependicies on your system&amp;rdquo;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="before-you-install-ykman"&gt;
+ Before you install ykman
+ &lt;a class="heading-link" href="#before-you-install-ykman"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;You will need to have the following onboard&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;apt install gnupg2 scdaemon pcscd pip pipx 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;GnuPG — The Universal Crypto Engine&lt;/li&gt;
+&lt;li&gt;scdaemon - Smartcard daemon for the GnuPG system&lt;/li&gt;
+&lt;li&gt;pcscd - PC/SC Smart Card Daemon&lt;/li&gt;
+&lt;li&gt;pipx - execute binaries from Python packages in isolated environments&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>EN Yubikey Firts Time Use</title><link>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</guid><description>&lt;h1 id="yubikey-bare-minimum"&gt;
+ YubiKey bare minimum
+ &lt;a class="heading-link" href="#yubikey-bare-minimum"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;h4 id="a-short-getting-started-using-the-linux-cli"&gt;
+ A short Getting Started Using the Linux CLI
+ &lt;a class="heading-link" href="#a-short-getting-started-using-the-linux-cli"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;Step 1 till step 8 are the absolute bare minimum you should complete before you start using your YubiKey.
+If you skip these steps, there is nothing truly secure about using your YubiKey.&lt;/p&gt;
+&lt;p&gt;Hardware tokens are a powerful tool and can raise your security to a very high level—but only when used correctly.
+Be aware that using hardware tokens incorrectly will not result in a more secure user environment.&lt;/p&gt;</description></item><item><title>NL Yubikey Ingebruikname</title><link>http://localhost/Linux/yubikey/NL_yubikey_ingebruikname/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/NL_yubikey_ingebruikname/</guid><description>&lt;h1 id="yubikey-basisconfiguratie"&gt;
+ &lt;strong&gt;YubiKey basisconfiguratie&lt;/strong&gt;
+ &lt;a class="heading-link" href="#yubikey-basisconfiguratie"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;h4 id="een-korte-introductie-voor-gebruik-via-de-linux-cli"&gt;
+ Een korte introductie voor gebruik via de Linux CLI
+ &lt;a class="heading-link" href="#een-korte-introductie-voor-gebruik-via-de-linux-cli"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;Stap 1 t/m stap 8 zijn het &lt;strong&gt;absolute minimum&lt;/strong&gt; dat je moet uitvoeren voordat je je YubiKey in gebruik neemt.
+Als je deze stappen overslaat, is er &lt;strong&gt;niets echt veilig&lt;/strong&gt; aan het gebruik van je YubiKey.&lt;/p&gt;
+&lt;p&gt;Hardware-tokens zijn een krachtig hulpmiddel en kunnen je beveiliging naar een zeer hoog niveau tillen — &lt;strong&gt;maar alleen wanneer je ze correct gebruikt&lt;/strong&gt;.
+Wees je ervan bewust dat hardware-tokens &lt;strong&gt;verkeerd gebruiken níét&lt;/strong&gt; resulteert in een veiliger gebruikersomgeving.&lt;/p&gt;</description></item><item><title>NL Yubikey Linux Gui Login</title><link>http://localhost/Linux/yubikey/NL_yubikey_linux_gui_login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/NL_yubikey_linux_gui_login/</guid><description>&lt;p&gt;Hier is een &lt;strong&gt;duidelijke en complete handleiding&lt;/strong&gt; om &lt;strong&gt;op Ubuntu in te loggen met je YubiKey&lt;/strong&gt; (PAM + FIDO2 / WebAuthn).
+Dit werkt voor:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ubuntu desktop login (GDM)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;sudo&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;su&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TTY login&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ik geef zowel de &lt;strong&gt;snelle versie&lt;/strong&gt; als de &lt;strong&gt;uitgebreide versie&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="-korte-versie-tldr"&gt;
+ ✅ &lt;strong&gt;Korte versie (TL;DR)&lt;/strong&gt;
+ &lt;a class="heading-link" href="#-korte-versie-tldr"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Installeer FIDO2-tools:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt install libpam-u2f pamu2fcfg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;Maak de config-map aan:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mkdir -p ~/.config/Yubico
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="3"&gt;
+&lt;li&gt;Registreer je YubiKey:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pamu2fcfg &amp;gt; ~/.config/Yubico/u2f_keys
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(raak de YubiKey aan)&lt;/p&gt;</description></item></channel></rss>

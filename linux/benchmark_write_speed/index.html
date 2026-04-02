@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Benchmark write speed · Benjamin Italiaander
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Benjamin Italiaander">
+<meta name="description" content="test">
+<meta name="keywords" content="python, keras, Bash, kitty, kitten">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Benchmark write speed">
+  <meta name="twitter:description" content="test">
+
+<meta property="og:url" content="http://localhost:1313/linux/benchmark_write_speed/">
+  <meta property="og:site_name" content="Benjamin Italiaander">
+  <meta property="og:title" content="Benchmark write speed">
+  <meta property="og:description" content="test">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="linux">
+    <meta property="article:published_time" content="2023-02-27T14:12:45+01:00">
+    <meta property="article:modified_time" content="2023-02-27T14:12:45+01:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/linux/benchmark_write_speed/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+  
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Benjamin Italiaander
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/">Home</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/books/">Books</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/yubikey/">Yubikey cli</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/linux/">Linux</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/art_i_enjoy/">Art I Enjoy</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/linux/benchmark_write_speed/">
+          Benchmark write speed
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="-benchmark-write-speed-to-a-disk">
+  💾 Benchmark Write Speed to a Disk
+  <a class="heading-link" href="#-benchmark-write-speed-to-a-disk">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Sometimes you need to test how fast a (network) disk can handle writes.</p>
+<p>A common method is:</p>
+<ol>
+<li>Write <strong>one large file</strong></li>
+<li>Split it into <strong>many small files</strong></li>
+<li>Benchmark copying them using <code>rsync</code> or <code>cp</code></li>
+</ol>
+<p>Why?
+Some storage systems handle large sequential writes very well, but struggle with many small files (metadata overhead, IOPS limits, etc.).</p>
+<hr>
+<h2 id="1-create-a-large-random-file">
+  1️⃣ Create a Large Random File
+  <a class="heading-link" href="#1-create-a-large-random-file">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Generate a large file locally:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Create a ~1GB file</span>
+</span></span><span style="display:flex;"><span>dd <span style="color:#ff7b72">if</span><span style="color:#ff7b72;font-weight:bold">=</span>/dev/urandom <span style="color:#79c0ff">of</span><span style="color:#ff7b72;font-weight:bold">=</span>random_file <span style="color:#79c0ff">bs</span><span style="color:#ff7b72;font-weight:bold">=</span>1G <span style="color:#79c0ff">count</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">1</span>
+</span></span></code></pre></div><p>Measure how long it takes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>time dd <span style="color:#ff7b72">if</span><span style="color:#ff7b72;font-weight:bold">=</span>/dev/urandom <span style="color:#79c0ff">of</span><span style="color:#ff7b72;font-weight:bold">=</span>random_file <span style="color:#79c0ff">bs</span><span style="color:#ff7b72;font-weight:bold">=</span>1G <span style="color:#79c0ff">count</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">1</span>
+</span></span></code></pre></div><blockquote>
+<p>💡 Increase <code>count=10</code> for ~10GB, etc.</p>
+</blockquote>
+<p>Alternative example (slightly smaller blocks):</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dd <span style="color:#ff7b72">if</span><span style="color:#ff7b72;font-weight:bold">=</span>/dev/urandom <span style="color:#79c0ff">of</span><span style="color:#ff7b72;font-weight:bold">=</span>random_file <span style="color:#79c0ff">bs</span><span style="color:#ff7b72;font-weight:bold">=</span>128K <span style="color:#79c0ff">count</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">10000</span>
+</span></span></code></pre></div><hr>
+<h2 id="2-split-into-many-small-files">
+  2️⃣ Split Into Many Small Files
+  <a class="heading-link" href="#2-split-into-many-small-files">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Create a directory and split the large file into 1MB chunks:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir random_dir
+</span></span><span style="display:flex;"><span>split -b 1M -a <span style="color:#a5d6ff">3</span> random_file random_dir/file_
+</span></span></code></pre></div><p>This creates many small files like:</p>
+<pre tabindex="0"><code>file_aaa
+file_aab
+file_aac
+...
+</code></pre><hr>
+<h2 id="3-benchmark-with-rsync">
+  3️⃣ Benchmark with rsync
+  <a class="heading-link" href="#3-benchmark-with-rsync">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="copy-single-large-file">
+  Copy Single Large File
+  <a class="heading-link" href="#copy-single-large-file">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync --info<span style="color:#ff7b72;font-weight:bold">=</span>progress2 random_file /target/path/
+</span></span></code></pre></div><h3 id="copy-many-small-files">
+  Copy Many Small Files
+  <a class="heading-link" href="#copy-many-small-files">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync --info<span style="color:#ff7b72;font-weight:bold">=</span>progress2 -r random_dir/ /target/path/
+</span></span></code></pre></div><p>Example targets:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync --info<span style="color:#ff7b72;font-weight:bold">=</span>progress2 -r random_dir/ /zs3/1/test/
+</span></span><span style="display:flex;"><span>rsync --info<span style="color:#ff7b72;font-weight:bold">=</span>progress2 -r random_dir/ /zs3/2/test/
+</span></span><span style="display:flex;"><span>rsync --info<span style="color:#ff7b72;font-weight:bold">=</span>progress2 -r random_dir/ /bigstore/test/
+</span></span></code></pre></div><hr>
+<h2 id="4-local-copy-benchmark">
+  4️⃣ Local Copy Benchmark
+  <a class="heading-link" href="#4-local-copy-benchmark">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>You can also benchmark locally:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync --info<span style="color:#ff7b72;font-weight:bold">=</span>progress2 -r random_dir/ random_dir2/
+</span></span></code></pre></div><p>Or using <code>cp</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>time cp -r random_dir random_dir2
+</span></span></code></pre></div><hr>
+<h2 id="5-metadata--iops-test-many-small-files">
+  5️⃣ Metadata / IOPS Test (Many Small Files)
+  <a class="heading-link" href="#5-metadata--iops-test-many-small-files">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>To stress metadata performance:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>time bash -c <span style="color:#a5d6ff">&#39;for i in $(seq 1 1000); do touch random_dir/$i; done&#39;</span>
+</span></span></code></pre></div><p>This tests how fast the filesystem can create many small files.</p>
+<hr>
+<h1 id="-what-this-tests">
+  🧪 What This Tests
+  <a class="heading-link" href="#-what-this-tests">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Test Type</th>
+          <th>What It Measures</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>dd</code> large file</td>
+          <td>Sequential write throughput</td>
+      </tr>
+      <tr>
+          <td><code>rsync</code> large file</td>
+          <td>Network + sequential performance</td>
+      </tr>
+      <tr>
+          <td><code>rsync</code> small files</td>
+          <td>Metadata + IOPS + network</td>
+      </tr>
+      <tr>
+          <td><code>touch</code> loop</td>
+          <td>Pure metadata performance</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h1 id="how-to-benchmark-write-speed-to-a-disk">
+  How to benchmark write speed to a disk
+  <a class="heading-link" href="#how-to-benchmark-write-speed-to-a-disk">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Sometimes you need to test how fast you can write to a (network)disk.
+this can be done by creating one large file and split this in more small files.</p>
+<p>Sometimes it&rsquo;s easier for a storage to write one large file and more dificult to write small files.
+So first we create a random file local and then we split this one large file into small files.</p>
+<p>After all i always test with rsync, but you can also test with cp.</p>
+<p>Create a large random file and see how long it takes</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># This makes a about 1GB file change the count=1 to count=10 and you get a 1GB file</span>
+</span></span><span style="display:flex;"><span>dd <span style="color:#ff7b72">if</span><span style="color:#ff7b72;font-weight:bold">=</span>/dev/urandom <span style="color:#79c0ff">of</span><span style="color:#ff7b72;font-weight:bold">=</span>random_file <span style="color:#79c0ff">bs</span><span style="color:#ff7b72;font-weight:bold">=</span>1G <span style="color:#79c0ff">count</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># you can add time in front and see how long it takes for each system or disk</span>
+</span></span><span style="display:flex;"><span>time dd <span style="color:#ff7b72">if</span><span style="color:#ff7b72;font-weight:bold">=</span>/dev/urandom <span style="color:#79c0ff">of</span><span style="color:#ff7b72;font-weight:bold">=</span>random_file <span style="color:#79c0ff">bs</span><span style="color:#ff7b72;font-weight:bold">=</span>1G <span style="color:#79c0ff">count</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">1</span>
+</span></span></code></pre></div><p>Now you have one large file and split it in small files</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir random_dir
+</span></span><span style="display:flex;"><span>split -b 1m -a <span style="color:#a5d6ff">3</span> random_file random_dir/
+</span></span></code></pre></div><p>Test more with rsync</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync --info<span style="color:#ff7b72;font-weight:bold">=</span>progress2 -r random_dir /machine_to_benchmark
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync -v ./random_file /zs3/1/test/
+</span></span><span style="display:flex;"><span>split random_file -n <span style="color:#a5d6ff">1000</span> random_dir
+</span></span><span style="display:flex;"><span>rsync --info<span style="color:#ff7b72;font-weight:bold">=</span>progress2 random_dir /zs3/1/test/
+</span></span><span style="display:flex;"><span>rsync --info<span style="color:#ff7b72;font-weight:bold">=</span>progress2 - rrandom_dir /zs3/1/test/
+</span></span><span style="display:flex;"><span>rsync --info<span style="color:#ff7b72;font-weight:bold">=</span>progress2 -r random_dir /zs3/1/test/
+</span></span><span style="display:flex;"><span>mkdir /bigstore/test
+</span></span><span style="display:flex;"><span>rsync --info<span style="color:#ff7b72;font-weight:bold">=</span>progress2 -r random_dir /bigstore/test/
+</span></span><span style="display:flex;"><span>rsync --info<span style="color:#ff7b72;font-weight:bold">=</span>progress2 -r random_dir /zs3/2/test/
+</span></span><span style="display:flex;"><span>time bash -c <span style="color:#a5d6ff">&#34;for i in </span><span style="color:#ff7b72">$(</span>seq <span style="color:#a5d6ff">1</span> 1000<span style="color:#ff7b72">)</span><span style="color:#a5d6ff">; do touch /zs3/1/ci/skorikov/random_dir/</span><span style="color:#79c0ff">$i</span><span style="color:#a5d6ff"> done&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dd <span style="color:#ff7b72">if</span><span style="color:#ff7b72;font-weight:bold">=</span>/dev/urandom <span style="color:#79c0ff">of</span><span style="color:#ff7b72;font-weight:bold">=</span>random_file <span style="color:#79c0ff">bs</span><span style="color:#ff7b72;font-weight:bold">=</span>128k <span style="color:#79c0ff">count</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">10000</span>
+</span></span><span style="display:flex;"><span>split -b 1m -a <span style="color:#a5d6ff">3</span> random_file random_dir/
+</span></span><span style="display:flex;"><span>rsync --info<span style="color:#ff7b72;font-weight:bold">=</span>progress2 -r random_dir random_dir2
+</span></span></code></pre></div>
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2016 -
+    
+    2026
+     Benjamin Italiaander 
+    ·
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

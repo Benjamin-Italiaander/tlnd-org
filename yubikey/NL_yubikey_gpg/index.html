@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  YubiKey GPG Guide · Benjamin Italiaander
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Benjamin Italiaander">
+<meta name="description" content="Hoe gebruik je PGP met je YubiKey**.">
+<meta name="keywords" content="python, keras, Bash, kitty, kitten">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YubiKey GPG Guide">
+  <meta name="twitter:description" content="Hoe gebruik je PGP met je YubiKey**.">
+
+<meta property="og:url" content="http://localhost:1313/yubikey/NL_yubikey_gpg/">
+  <meta property="og:site_name" content="Benjamin Italiaander">
+  <meta property="og:title" content="YubiKey GPG Guide">
+  <meta property="og:description" content="Hoe gebruik je PGP met je YubiKey**.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="yubikey">
+    <meta property="article:published_time" content="1970-01-01T01:33:40+01:00">
+    <meta property="article:modified_time" content="1970-01-01T01:33:40+01:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/yubikey/NL_yubikey_gpg/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+  
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Benjamin Italiaander
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/">Home</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/books/">Books</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/yubikey/">Yubikey cli</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/linux/">Linux</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/art_i_enjoy/">Art I Enjoy</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/yubikey/NL_yubikey_gpg/">
+          YubiKey GPG Guide
+        </a>
+      </h1>
+    </header>
+
+    <p>Hier is een <strong>duidelijke, complete en professionele uitleg</strong> voor het <strong>instellen van PGP op een YubiKey</strong>.
+Ik houd het overzichtelijk maar technisch correct.</p>
+<hr>
+<h1 id="-instellen-van-pgp-op-een-yubikey-gpg--yubikey">
+  🔐 Instellen van PGP op een YubiKey (GPG + YubiKey)
+  <a class="heading-link" href="#-instellen-van-pgp-op-een-yubikey-gpg--yubikey">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Dit is de <strong>standaard, best-practice workflow</strong> om PGP veilig op een YubiKey te gebruiken.</p>
+<hr>
+<h2 id="1-installeer-benodigde-software">
+  <strong>1. Installeer benodigde software</strong>
+  <a class="heading-link" href="#1-installeer-benodigde-software">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="linux">
+  Linux
+  <a class="heading-link" href="#linux">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install gnupg2 scdaemon pcscd yubikey-manager yubikey-personalization
+</span></span><span style="display:flex;"><span>sudo systemctl enable --now pcscd
+</span></span></code></pre></div><h3 id="macos-via-homebrew">
+  macOS (via Homebrew)
+  <a class="heading-link" href="#macos-via-homebrew">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install gnupg yubikey-personalization yubikey-manager
+</span></span><span style="display:flex;"><span>brew services start pcscd
+</span></span></code></pre></div><hr>
+<h2 id="2-maak-een">
+  <strong>2. Maak een <em>offline master key</em></strong>
+  <a class="heading-link" href="#2-maak-een">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Dit is de belangrijkste stap.</p>
+<p>De master key gebruik je alleen voor:</p>
+<ul>
+<li>Subkeys aanmaken</li>
+<li>Revocation certificate genereren</li>
+<li>Key management</li>
+</ul>
+<p><strong>Aanbevolen:</strong> maak deze op een air-gapped machine of in een tijdelijke VM.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --full-generate-key
+</span></span></code></pre></div><p>Kies:</p>
+<ul>
+<li>Type: <strong>RSA (4096)</strong> of <strong>Ed25519 (modern, sneller)</strong></li>
+<li>Expiration: 1 year (te verlengen)</li>
+<li>User ID: jouw naam / e-mail</li>
+</ul>
+<hr>
+<h2 id="3-genereer-drie-subkeys">
+  <strong>3. Genereer drie subkeys</strong>
+  <a class="heading-link" href="#3-genereer-drie-subkeys">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>De YubiKey gebruikt <strong>subkeys</strong>, niet de master key zelf.</p>
+<h3 id="aanbevolen-subkeys">
+  Aanbevolen subkeys:
+  <a class="heading-link" href="#aanbevolen-subkeys">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Signing</strong> (S)</li>
+<li><strong>Encryption</strong> (E)</li>
+<li><strong>Authentication</strong> (A)</li>
+</ul>
+<p>Start GPG edit mode:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --edit-key &lt;MASTERKEYID&gt;
+</span></span></code></pre></div><p>Voeg subkeys toe:</p>
+<pre tabindex="0"><code>addkey
+</code></pre><p>Kies per key:</p>
+<ul>
+<li><strong>S</strong>: RSA-Sign / Ed25519</li>
+<li><strong>E</strong>: RSA-Encrypt / Curve25519</li>
+<li><strong>A</strong>: RSA-Auth / Ed25519</li>
+</ul>
+<hr>
+<h2 id="4-exporteer-back-ups-zeer-belangrijk">
+  <strong>4. Exporteer back-ups (zeer belangrijk)</strong>
+  <a class="heading-link" href="#4-exporteer-back-ups-zeer-belangrijk">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --export-secret-keys &lt;MASTERKEYID&gt; &gt; master-private.gpg
+</span></span><span style="display:flex;"><span>gpg --export-secret-subkeys &lt;MASTERKEYID&gt; &gt; subkeys-private.gpg
+</span></span><span style="display:flex;"><span>gpg --export &lt;MASTERKEYID&gt; &gt; public.gpg
+</span></span></code></pre></div><p>Bewaar deze offline (USB in kluis).
+Genereer ook een revocation certificate:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --gen-revoke &lt;MASTERKEYID&gt; &gt; revoke-cert.asc
+</span></span></code></pre></div><hr>
+<h2 id="5-verplaats-subkeys-naar-de-yubikey">
+  <strong>5. Verplaats subkeys naar de YubiKey</strong>
+  <a class="heading-link" href="#5-verplaats-subkeys-naar-de-yubikey">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Open de key:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --edit-key &lt;MASTERKEYID&gt;
+</span></span></code></pre></div><p>Selecteer de subkey:</p>
+<pre tabindex="0"><code>key 1
+keytocard
+</code></pre><p>Kies de juiste slot:</p>
+<ul>
+<li><strong>Signature → Slot 1</strong></li>
+<li><strong>Encryption → Slot 2</strong></li>
+<li><strong>Authentication → Slot 3</strong></li>
+</ul>
+<p>Herhaal voor alle drie.</p>
+<p>De subkeys staan nu <em>uitsluitend</em> op je YubiKey.</p>
+<hr>
+<h2 id="6-verwijder-lokale-private-subkeys">
+  <strong>6. Verwijder lokale private subkeys</strong>
+  <a class="heading-link" href="#6-verwijder-lokale-private-subkeys">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Om te forceren dat <em>alle</em> cryptografische operaties via je YubiKey gaan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --edit-key &lt;MASTERKEYID&gt;
+</span></span></code></pre></div><p>Type:</p>
+<pre tabindex="0"><code>key 1
+key 2
+key 3
+delkey
+save
+</code></pre><p><strong>Alleen de master key blijft lokaal — en die bewaar je offline.</strong></p>
+<hr>
+<h2 id="7-stel-pin-admin-pin-en-touch-policies-in">
+  <strong>7. Stel PIN, Admin PIN en Touch Policies in</strong>
+  <a class="heading-link" href="#7-stel-pin-admin-pin-en-touch-policies-in">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>PIN wijzigen:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ykman openpgp access change-pin
+</span></span></code></pre></div><p>Admin PIN wijzigen:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ykman openpgp access change-admin-pin
+</span></span></code></pre></div><p>Touch policy instellen:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ykman openpgp keys set-touch SIG on
+</span></span><span style="display:flex;"><span>ykman openpgp keys set-touch ENC on
+</span></span><span style="display:flex;"><span>ykman openpgp keys set-touch AUT on
+</span></span></code></pre></div><hr>
+<h2 id="8-test-of-pgp-via-yubikey-werkt">
+  <strong>8. Test of PGP via YubiKey werkt</strong>
+  <a class="heading-link" href="#8-test-of-pgp-via-yubikey-werkt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Test encryptie:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#a5d6ff">&#34;test123&#34;</span> | gpg --encrypt --armor -r &lt;MASTERKEYID&gt;
+</span></span></code></pre></div><p>Test signing:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#a5d6ff">&#34;test&#34;</span> | gpg --sign --armor
+</span></span></code></pre></div><p>Je YubiKey moet nu:</p>
+<ul>
+<li>oplichten</li>
+<li>om touch vragen</li>
+<li>de cryptografie uitvoeren</li>
+</ul>
+<hr>
+<h2 id="9-voeg-je-public-key-toe-aan-systemene-mail">
+  <strong>9. Voeg je public key toe aan systemen/e-mail</strong>
+  <a class="heading-link" href="#9-voeg-je-public-key-toe-aan-systemene-mail">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Public key export:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --armor --export &lt;MASTERKEYID&gt;
+</span></span></code></pre></div><p>Gebruik deze voor:</p>
+<ul>
+<li>E-mail versleuteling (Thunderbird, Mutt, Outlook plugin)</li>
+<li>Git signing (<code>git config --global user.signingkey</code>)</li>
+<li>SSH authenticatie via GPG-agent (<code>enable-ssh-support</code>)</li>
+</ul>
+<hr>
+<h2 id="wil-je-dat-ik-hier-een-stap-voor-stap-markdown-handleiding-van-maak-voor-je-documentatie">
+  Wil je dat ik hier een <strong>stap-voor-stap Markdown handleiding</strong> van maak voor je documentatie?
+  <a class="heading-link" href="#wil-je-dat-ik-hier-een-stap-voor-stap-markdown-handleiding-van-maak-voor-je-documentatie">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Of een <strong>kortere TL;DR versie</strong> voor in je YubiKey setup guide?</p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2016 -
+    
+    2026
+     Benjamin Italiaander 
+    ·
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Index on Benjamin Italiaander</title><link>http://localhost/Linux/</link><description>Recent content in Index on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 27 Feb 2023 14:12:45 +0100</lastBuildDate><atom:link href="http://localhost/Linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Benchmark write speed</title><link>http://localhost/Linux/benchmark/benchmark_writespeed/</link><pubDate>Mon, 27 Feb 2023 14:12:45 +0100</pubDate><guid>http://localhost/Linux/benchmark/benchmark_writespeed/</guid><description>&lt;h1 id="-benchmark-write-speed-to-a-disk"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Benjamin Italiaander</title><link>http://localhost/Linux/</link><description>Recent content in Linux on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 27 Feb 2023 14:12:45 +0100</lastBuildDate><atom:link href="http://localhost/Linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Benchmark write speed</title><link>http://localhost/Linux/benchmark/benchmark_writespeed/</link><pubDate>Mon, 27 Feb 2023 14:12:45 +0100</pubDate><guid>http://localhost/Linux/benchmark/benchmark_writespeed/</guid><description>&lt;h1 id="-benchmark-write-speed-to-a-disk"&gt;
  💾 Benchmark Write Speed to a Disk
  &lt;a class="heading-link" href="#-benchmark-write-speed-to-a-disk"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -30,17 +30,23 @@ Some storage systems handle large sequential writes very well, but struggle with
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#79c0ff"&gt;todayQuater&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#ff7b72"&gt;$(&lt;/span&gt;date +%q&lt;span style="color:#ff7b72"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo -e &lt;span style="color:#a5d6ff"&gt;&amp;#39;The command &amp;#34;date +%u&amp;#34; gives the weekday in numbers output is:&amp;#39;&lt;/span&gt; &lt;span style="color:#79c0ff"&gt;$todayWeekday&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Create colored alertboxes in Markdown (MD)</title><link>http://localhost/Linux/markdown/create_colored_alertboxes_in_markdown/</link><pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/markdown/create_colored_alertboxes_in_markdown/</guid><description>&lt;p&gt;Alert boxes in pandoc goodies or easy-pandoc-template&lt;/p&gt;
-&lt;p&gt;::: { .Alert #custom-id .other-class } ::::::
-&lt;strong&gt;UPDATE&lt;/strong&gt; &amp;mdash; My &lt;a href="addup.html"&gt;addup&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt; &amp;mdash; My &lt;a href="addup.html"&gt;addup&lt;/a&gt;
  has been &lt;a href="https://github.com/ryangrose/easy-pandoc-templates/commit/337d251bdc5c3577ebf8f128e418f6428398fb46"&gt;commited by Ryan Rose&lt;/a&gt;
  so the easy pandoc template now works with alert boxes.&lt;/p&gt;
 &lt;p&gt;My current favourite is the &lt;a href="https://github.com/ryangrose/easy-pandoc-templates"&gt;easy-pandoc-templates&lt;/a&gt;
 .&lt;/p&gt;
-&lt;p&gt;::::::::::::::::::&lt;/p&gt;
 &lt;p&gt;I was struggeling with making alertboxes with markdown (MD)
 So here is how to create a Alertbox&lt;/p&gt;
 &lt;p&gt;It does not feel like the ease of MD but just copy and paste if you like this style. It&amp;rsquo;s used with &lt;a href="https://github.com/tajmone/pandoc-goodies"&gt;pandoc-goodies&lt;/a&gt;
-&lt;/p&gt;</description></item><item><title>CSS addup for alert boxes</title><link>http://localhost/Linux/markdown/addup/</link><pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/markdown/addup/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/p&gt;
+&lt;h3 id="alert-box"&gt;
+ Alert box
+ &lt;a class="heading-link" href="#alert-box"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Alert!&lt;/strong&gt; &amp;mdash; Alertbox with&lt;/p&gt;</description></item><item><title>CSS addup for alert boxes</title><link>http://localhost/Linux/markdown/addup/</link><pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/markdown/addup/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
@@ -257,11 +263,9 @@ Finally &lt;a href="http://www.columbia.edu/kermit/ck90.html"&gt;kermit&lt;/a&gt
  &lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;I got this error message when i try to login with SSH to my cisco switch.&lt;/p&gt;
-&lt;p&gt;::: { .Alert #custom-id .other-class } ::::::
-&lt;strong&gt;CISCO&lt;/strong&gt; &amp;mdash; SSH fails to connect&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CISCO&lt;/strong&gt; &amp;mdash; SSH fails to connect&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Unable to negotiate with [hostname or ip] port 22: no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1,diffie-hellman-group14-sha1
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;::::::::::::::::::&lt;/p&gt;
-&lt;p&gt;You can solve this by using&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can solve this by using&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ssh -o &lt;span style="color:#79c0ff"&gt;KexAlgorithms&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;diffie-hellman-group1-sha1 &lt;span style="color:#ff7b72;font-weight:bold"&gt;[&lt;/span&gt;hostname or ip&lt;span style="color:#ff7b72;font-weight:bold"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>generate qrcode from pipe in linux cli</title><link>http://localhost/Linux/cli/qrcode/</link><pubDate>Thu, 01 Jan 1970 01:33:44 +0100</pubDate><guid>http://localhost/Linux/cli/qrcode/</guid><description>&lt;h1 id="create-a-qrcode-from-command-output"&gt;
  Create a qrcode from command output
@@ -371,34 +375,7 @@ Just replace the example string below (&lt;code&gt;JHJH...&lt;/code&gt;) with yo
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;chmod g-w,o-w ~
-Home folder	~	755 at most	drwxr-xr-x at most&lt;/p&gt;</description></item><item><title>Config</title><link>http://localhost/Linux/ssh/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssh/config/</guid><description>&lt;h3 id="ssh-config-client-config-file"&gt;
- ssh config client config file
- &lt;a class="heading-link" href="#ssh-config-client-config-file"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h3&gt;
-&lt;h4 id="file-is-located-at"&gt;
- File is located at
- &lt;a class="heading-link" href="#file-is-located-at"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;~/.ssh/config
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="example-1"&gt;
- Example 1
- &lt;a class="heading-link" href="#example-1"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h4&gt;
-&lt;p&gt;This is a regular config&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Host server.tld
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; User username
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; IdentityFile /home/username/.ssh/id_rsa
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ForwardAgent yes
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The ForwardAgent option allows you to use your private, local SSH key remotely without worrying about leaving confidential data on the server you&amp;rsquo;re working with. It&amp;rsquo;s built into ssh, and is easy to set up and use.&lt;/p&gt;</description></item><item><title>Copy And Paste In Cli</title><link>http://localhost/Linux/cli/copy-and-paste-in-cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/copy-and-paste-in-cli/</guid><description>&lt;h1 id="copying-and-pasting-in-the-linux-terminal-is-quite-easy-with-xclip"&gt;
+Home folder	~	755 at most	drwxr-xr-x at most&lt;/p&gt;</description></item><item><title>Copy And Paste In Cli</title><link>http://localhost/Linux/cli/copy-and-paste-in-cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/copy-and-paste-in-cli/</guid><description>&lt;h1 id="copying-and-pasting-in-the-linux-terminal-is-quite-easy-with-xclip"&gt;
  Copying and pasting in the Linux terminal is quite easy with xclip.
  &lt;a class="heading-link" href="#copying-and-pasting-in-the-linux-terminal-is-quite-easy-with-xclip"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -529,7 +506,7 @@ you may try this script&lt;/p&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;When LTO9 media is first loaded into the LTO9 drive, the drive automatically initiates tape calibration, which includes initialization and characterization of the cartridge.&lt;/p&gt;</description></item><item><title>ImageMagick</title><link>http://localhost/Linux/cli/ImageMagick/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/ImageMagick/</guid><description>&lt;h1 id="using-imagemagick"&gt;
+&lt;p&gt;When LTO9 media is first loaded into the LTO9 drive, the drive automatically initiates tape calibration, which includes initialization and characterization of the cartridge.&lt;/p&gt;</description></item><item><title>Imagemagick</title><link>http://localhost/Linux/cli/ImageMagick/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/ImageMagick/</guid><description>&lt;h1 id="using-imagemagick"&gt;
  Using ImageMagick
  &lt;a class="heading-link" href="#using-imagemagick"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -564,7 +541,7 @@ keywords:
 &lt;p&gt;So the after installing Fedora Linux 36 on my fujitsu lifebook u7410 my keyboard was not working anymore. I fixed this by editing grub.&lt;/p&gt;
 &lt;p&gt;Just add at the bottom of /etc/default/grub the following line&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#79c0ff"&gt;GRUB_CMDLINE_LINUX_DEFAULT&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#a5d6ff"&gt;&amp;#34;quiet splash i8042.reset i8042.nomux i8042.nopnp i8042.noloop&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After editing the grub file update the grubfile&lt;/p&gt;</description></item><item><title>OpenPGP GnuPG Cheat Sheet</title><link>http://localhost/Linux/OpenPGP_GnuPG_cheat_sheet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/OpenPGP_GnuPG_cheat_sheet/</guid><description>&lt;h1 id="a-small-list-with-som-important-commands-i-use-with-gnupg"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After editing the grub file update the grubfile&lt;/p&gt;</description></item><item><title>Openpgp Gnupg Cheat Sheet</title><link>http://localhost/Linux/OpenPGP_GnuPG_cheat_sheet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/OpenPGP_GnuPG_cheat_sheet/</guid><description>&lt;h1 id="a-small-list-with-som-important-commands-i-use-with-gnupg"&gt;
  A small list with som important commands i use with GnuPG
  &lt;a class="heading-link" href="#a-small-list-with-som-important-commands-i-use-with-gnupg"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -672,7 +649,34 @@ Here is what I learned.&lt;/p&gt;
 &lt;/h2&gt;
 &lt;p&gt;AKA asymmetric cryptography solves the problem of two entities communicating
 securely without ever exchanging a common key, by using two related keys,
-one private, one public.&lt;/p&gt;</description></item><item><title>SSL Certificate Signing Request Best Practices</title><link>http://localhost/Linux/ssl/SSL-Certificate-Signing-Request-best-practices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssl/SSL-Certificate-Signing-Request-best-practices/</guid><description>&lt;h1 id="certificate-signing-request-best-practices-using-openssl"&gt;
+one private, one public.&lt;/p&gt;</description></item><item><title>SSH config file</title><link>http://localhost/Linux/ssh/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssh/config/</guid><description>&lt;h3 id="ssh-config-client-config-file"&gt;
+ ssh config client config file
+ &lt;a class="heading-link" href="#ssh-config-client-config-file"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h4 id="file-is-located-at"&gt;
+ File is located at
+ &lt;a class="heading-link" href="#file-is-located-at"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;~/.ssh/config
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="example-1"&gt;
+ Example 1
+ &lt;a class="heading-link" href="#example-1"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;This is a regular config&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Host server.tld
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; User username
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; IdentityFile /home/username/.ssh/id_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ForwardAgent yes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The ForwardAgent option allows you to use your private, local SSH key remotely without worrying about leaving confidential data on the server you&amp;rsquo;re working with. It&amp;rsquo;s built into ssh, and is easy to set up and use.&lt;/p&gt;</description></item><item><title>Ssl Certificate Signing Request Best Practices</title><link>http://localhost/Linux/ssl/SSL-Certificate-Signing-Request-best-practices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssl/SSL-Certificate-Signing-Request-best-practices/</guid><description>&lt;h1 id="certificate-signing-request-best-practices-using-openssl"&gt;
  Certificate Signing Request Best Practices Using OpenSSL
  &lt;a class="heading-link" href="#certificate-signing-request-best-practices-using-openssl"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;

@@ -101,7 +101,7 @@ TOTP secrets are &lt;strong&gt;extremely sensitive&lt;/strong&gt; — if someone
 &lt;p&gt;&lt;strong&gt;Make sure you do the &lt;a href="https://github.com/Benjamin-Italiaander/My_Notes/blob/main/Linux/yubikey/README/"&gt;first steps&lt;/a&gt;
  of initiating your YubiKey before you will start using the SSH functionality on your yubikey.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;There are still two keys generated: your private key and your public key.
-The private key remains important when using your YubiKey. In fact, the private key functions as a challenge key and works together with your YubiKey.&lt;/p&gt;</description></item><item><title>EN Install All Dependencies</title><link>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</guid><description>&lt;hr&gt;
+The private key remains important when using your YubiKey. In fact, the private key functions as a challenge key and works together with your YubiKey.&lt;/p&gt;</description></item><item><title>En Install All Dependencies</title><link>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</guid><description>&lt;hr&gt;
 &lt;p&gt;date: 2025-10-01T12:30:21+01:00
 title: &amp;ldquo;Before installing YubiKey&amp;rsquo;s ykman software&amp;rdquo;
 draft: false
@@ -121,7 +121,7 @@ description: &amp;ldquo;1. Install the first dependicies on your system&amp;rdqu
 &lt;li&gt;scdaemon - Smartcard daemon for the GnuPG system&lt;/li&gt;
 &lt;li&gt;pcscd - PC/SC Smart Card Daemon&lt;/li&gt;
 &lt;li&gt;pipx - execute binaries from Python packages in isolated environments&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>EN Yubikey Firts Time Use</title><link>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</guid><description>&lt;h1 id="yubikey-bare-minimum"&gt;
+&lt;/ul&gt;</description></item><item><title>En Yubikey Firts Time Use</title><link>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</guid><description>&lt;h1 id="yubikey-bare-minimum"&gt;
  YubiKey bare minimum
  &lt;a class="heading-link" href="#yubikey-bare-minimum"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -138,7 +138,7 @@ description: &amp;ldquo;1. Install the first dependicies on your system&amp;rdqu
 &lt;p&gt;Step 1 till step 8 are the absolute bare minimum you should complete before you start using your YubiKey.
 If you skip these steps, there is nothing truly secure about using your YubiKey.&lt;/p&gt;
 &lt;p&gt;Hardware tokens are a powerful tool and can raise your security to a very high level—but only when used correctly.
-Be aware that using hardware tokens incorrectly will not result in a more secure user environment.&lt;/p&gt;</description></item><item><title>NL Yubikey Ingebruikname</title><link>http://localhost/Linux/yubikey/NL_yubikey_ingebruikname/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/NL_yubikey_ingebruikname/</guid><description>&lt;h1 id="yubikey-basisconfiguratie"&gt;
+Be aware that using hardware tokens incorrectly will not result in a more secure user environment.&lt;/p&gt;</description></item><item><title>Nl Yubikey Ingebruikname</title><link>http://localhost/Linux/yubikey/NL_yubikey_ingebruikname/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/NL_yubikey_ingebruikname/</guid><description>&lt;h1 id="yubikey-basisconfiguratie"&gt;
  &lt;strong&gt;YubiKey basisconfiguratie&lt;/strong&gt;
  &lt;a class="heading-link" href="#yubikey-basisconfiguratie"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -155,7 +155,7 @@ Be aware that using hardware tokens incorrectly will not result in a more secure
 &lt;p&gt;Stap 1 t/m stap 8 zijn het &lt;strong&gt;absolute minimum&lt;/strong&gt; dat je moet uitvoeren voordat je je YubiKey in gebruik neemt.
 Als je deze stappen overslaat, is er &lt;strong&gt;niets echt veilig&lt;/strong&gt; aan het gebruik van je YubiKey.&lt;/p&gt;
 &lt;p&gt;Hardware-tokens zijn een krachtig hulpmiddel en kunnen je beveiliging naar een zeer hoog niveau tillen — &lt;strong&gt;maar alleen wanneer je ze correct gebruikt&lt;/strong&gt;.
-Wees je ervan bewust dat hardware-tokens &lt;strong&gt;verkeerd gebruiken níét&lt;/strong&gt; resulteert in een veiliger gebruikersomgeving.&lt;/p&gt;</description></item><item><title>NL Yubikey Linux Gui Login</title><link>http://localhost/Linux/yubikey/NL_yubikey_linux_gui_login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/NL_yubikey_linux_gui_login/</guid><description>&lt;p&gt;Hier is een &lt;strong&gt;duidelijke en complete handleiding&lt;/strong&gt; om &lt;strong&gt;op Ubuntu in te loggen met je YubiKey&lt;/strong&gt; (PAM + FIDO2 / WebAuthn).
+Wees je ervan bewust dat hardware-tokens &lt;strong&gt;verkeerd gebruiken níét&lt;/strong&gt; resulteert in een veiliger gebruikersomgeving.&lt;/p&gt;</description></item><item><title>Nl Yubikey Linux Gui Login</title><link>http://localhost/Linux/yubikey/NL_yubikey_linux_gui_login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/NL_yubikey_linux_gui_login/</guid><description>&lt;p&gt;Hier is een &lt;strong&gt;duidelijke en complete handleiding&lt;/strong&gt; om &lt;strong&gt;op Ubuntu in te loggen met je YubiKey&lt;/strong&gt; (PAM + FIDO2 / WebAuthn).
 Dit werkt voor:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Ubuntu desktop login (GDM)&lt;/strong&gt;&lt;/li&gt;

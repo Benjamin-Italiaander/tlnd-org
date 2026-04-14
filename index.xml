@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Index on Benjamin Italiaander</title><link>http://localhost/</link><description>Recent content in Index on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 21 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost/index.xml" rel="self" type="application/rss+xml"/><item><title>Books to improve yourself in your relations</title><link>http://localhost/slices_of_life/my_curated_booklist/relations/</link><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/my_curated_booklist/relations/</guid><description>&lt;p&gt;&lt;strong&gt;Improving Relationships - English&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My Notes on Benjamin Italiaander</title><link>http://localhost/</link><description>Recent content in My Notes on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 21 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost/index.xml" rel="self" type="application/rss+xml"/><item><title>Books to improve yourself in your relations</title><link>http://localhost/slices_of_life/my_curated_booklist/relations/</link><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/my_curated_booklist/relations/</guid><description>&lt;p&gt;&lt;strong&gt;Improving Relationships - English&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Love phobia: how to overcome your fear of commitment and abandonment - Hannah Cuppen&lt;/li&gt;
 &lt;li&gt;The Hold Me Tight: Seven Conversations for a Lifetime of Love - &lt;a href="https://en.wikipedia.org/wiki/Sue_Johnson"&gt;Sue Johnson&lt;/a&gt;
@@ -37,45 +37,57 @@ Some storage systems handle large sequential writes very well, but struggle with
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#79c0ff"&gt;todayWeekday&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#ff7b72"&gt;$(&lt;/span&gt;date +%u&lt;span style="color:#ff7b72"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#79c0ff"&gt;todayQuater&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#ff7b72"&gt;$(&lt;/span&gt;date +%q&lt;span style="color:#ff7b72"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo -e &lt;span style="color:#a5d6ff"&gt;&amp;#39;The command &amp;#34;date +%u&amp;#34; gives the weekday in numbers output is:&amp;#39;&lt;/span&gt; &lt;span style="color:#79c0ff"&gt;$todayWeekday&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Week quiz voor Eline en Thije</title><link>http://localhost/Quiz/8y/002_algemeen/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0000</pubDate><guid>http://localhost/Quiz/8y/002_algemeen/</guid><description>&lt;p&gt;::: box&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Wat betekent de uitdrukking &amp;ldquo;Met de kippen op stok gaan&amp;rdquo;?&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Week quiz voor Eline en Thije</title><link>http://localhost/Quiz/8y/002_algemeen/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0000</pubDate><guid>http://localhost/Quiz/8y/002_algemeen/</guid><description>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Wat betekent de uitdrukking &amp;ldquo;Met de kippen op stok gaan&amp;rdquo;?&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Vroeg opstaan&lt;/li&gt;
 &lt;li&gt;Laat naar bed gaan&lt;/li&gt;
-&lt;li&gt;Vroeg gaan slapen
-:::&lt;/li&gt;
+&lt;li&gt;Vroeg gaan slapen&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;::: box
-2. &lt;strong&gt;Welke vrucht zit verborgen in deze zin?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Je moet vandaag opruimen!&lt;/em&gt;
-:::&lt;/p&gt;
-&lt;p&gt;::: box
-3. &lt;strong&gt;Hoeveel weken zitten er in een jaar?&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Welke vrucht zit verborgen in deze zin?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Je moet vandaag opruimen!&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Hoeveel weken zitten er in een jaar?&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;22&lt;/li&gt;
 &lt;li&gt;34&lt;/li&gt;
 &lt;li&gt;52&lt;/li&gt;
-&lt;li&gt;60
-:::&lt;/li&gt;
+&lt;li&gt;60&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;::: box
-4. &lt;strong&gt;Welke groente kan je vormen met de letters PIER?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;:::&lt;/p&gt;
-&lt;p&gt;::: box
-5. &lt;strong&gt;Wat is een TOMHAWK?&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Create colored alertboxes in Markdown (MD)</title><link>http://localhost/Linux/markdown/create_colored_alertboxes_in_markdown/</link><pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/markdown/create_colored_alertboxes_in_markdown/</guid><description>&lt;p&gt;Alert boxes in pandoc goodies or easy-pandoc-template&lt;/p&gt;
-&lt;p&gt;::: { .Alert #custom-id .other-class } ::::::
-&lt;strong&gt;UPDATE&lt;/strong&gt; &amp;mdash; My &lt;a href="addup.html"&gt;addup&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Welke groente kan je vormen met de letters PIER?&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Wat is een TOMHAWK?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Een strijdbijl van de indianen&lt;/li&gt;
+&lt;li&gt;Een sneeuwhut van de Inuit&lt;/li&gt;
+&lt;li&gt;Een wapen van cowboys&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>Create colored alertboxes in Markdown (MD)</title><link>http://localhost/Linux/markdown/create_colored_alertboxes_in_markdown/</link><pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/markdown/create_colored_alertboxes_in_markdown/</guid><description>&lt;p&gt;Alert boxes in pandoc goodies or easy-pandoc-template&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt; &amp;mdash; My &lt;a href="addup.html"&gt;addup&lt;/a&gt;
  has been &lt;a href="https://github.com/ryangrose/easy-pandoc-templates/commit/337d251bdc5c3577ebf8f128e418f6428398fb46"&gt;commited by Ryan Rose&lt;/a&gt;
  so the easy pandoc template now works with alert boxes.&lt;/p&gt;
 &lt;p&gt;My current favourite is the &lt;a href="https://github.com/ryangrose/easy-pandoc-templates"&gt;easy-pandoc-templates&lt;/a&gt;
 .&lt;/p&gt;
-&lt;p&gt;::::::::::::::::::&lt;/p&gt;
 &lt;p&gt;I was struggeling with making alertboxes with markdown (MD)
 So here is how to create a Alertbox&lt;/p&gt;
 &lt;p&gt;It does not feel like the ease of MD but just copy and paste if you like this style. It&amp;rsquo;s used with &lt;a href="https://github.com/tajmone/pandoc-goodies"&gt;pandoc-goodies&lt;/a&gt;
-&lt;/p&gt;</description></item><item><title>CSS addup for alert boxes</title><link>http://localhost/Linux/markdown/addup/</link><pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/markdown/addup/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/p&gt;
+&lt;h3 id="alert-box"&gt;
+ Alert box
+ &lt;a class="heading-link" href="#alert-box"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Alert!&lt;/strong&gt; &amp;mdash; Alertbox with&lt;/p&gt;</description></item><item><title>CSS addup for alert boxes</title><link>http://localhost/Linux/markdown/addup/</link><pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/markdown/addup/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Alert&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#f0883e;font-weight:bold"&gt;Warning&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;,&lt;/span&gt;
@@ -275,34 +287,53 @@ Finally &lt;a href="http://www.columbia.edu/kermit/ck90.html"&gt;kermit&lt;/a&gt
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;Save the domain certificate to some place, in my example we create a folder inside the home folder and save it there.&lt;/p&gt;</description></item><item><title>Week quiz voor Eline en Thije</title><link>http://localhost/Quiz/8y/001_algemeen/</link><pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate><guid>http://localhost/Quiz/8y/001_algemeen/</guid><description>&lt;p&gt;::: box&lt;/p&gt;
-&lt;ol&gt;
+&lt;p&gt;Save the domain certificate to some place, in my example we create a folder inside the home folder and save it there.&lt;/p&gt;</description></item><item><title>Week quiz voor Eline en Thije</title><link>http://localhost/Quiz/8y/001_algemeen/</link><pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate><guid>http://localhost/Quiz/8y/001_algemeen/</guid><description>&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Wat betekent de uitdrukking &amp;ldquo;Met de kippen op stok gaan&amp;rdquo;?&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;Vroeg opstaan&lt;/li&gt;
 &lt;li&gt;Laat naar bed gaan&lt;/li&gt;
-&lt;li&gt;Vroeg gaan slapen
-:::&lt;/li&gt;
+&lt;li&gt;Vroeg gaan slapen&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;::: box
-2. &lt;strong&gt;Welke vrucht zit verborgen in deze zin?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Je moet vandaag opruimen!&lt;/em&gt;
-:::&lt;/p&gt;
-&lt;p&gt;::: box
-3. &lt;strong&gt;Hoeveel weken zitten er in een jaar?&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;&lt;strong&gt;Welke vrucht zit verborgen in deze zin?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;Je moet vandaag opruimen!&lt;/em&gt;&lt;/p&gt;
+&lt;ol start="3"&gt;
+&lt;li&gt;&lt;strong&gt;Hoeveel weken zitten er in een jaar?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;22&lt;/li&gt;
 &lt;li&gt;34&lt;/li&gt;
 &lt;li&gt;52&lt;/li&gt;
-&lt;li&gt;60
-:::&lt;/li&gt;
+&lt;li&gt;60&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;::: box
-4. &lt;strong&gt;Welke groente kan je vormen met de letters PIER?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;:::&lt;/p&gt;
-&lt;p&gt;::: box
-5. &lt;strong&gt;Wat is een TOMHAWK?&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Best practice generate a ssh-keypair</title><link>http://localhost/Linux/ssh/ssh_keygen/</link><pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssh/ssh_keygen/</guid><description>&lt;p&gt;&lt;img src="./ssh-150x150.png" alt="" title="ssh-150x150.png"&gt;&lt;/p&gt;
+&lt;ol start="4"&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Welke groente kan je vormen met de letters PIER?&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Wat is een TOMHAWK?&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Een strijdbijl van de indianen&lt;/li&gt;
+&lt;li&gt;Een sneeuwhut van de Inuit&lt;/li&gt;
+&lt;li&gt;Een wapen van cowboys&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start="6"&gt;
+&lt;li&gt;&lt;strong&gt;Hoe heet het mannetje van een koe?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Een Stier&lt;/li&gt;
+&lt;li&gt;Een Hengst&lt;/li&gt;
+&lt;li&gt;Een Kalf&lt;/li&gt;
+&lt;li&gt;Een Os&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start="7"&gt;
+&lt;li&gt;&lt;strong&gt;Welk woord hoort niet thuis in dit rijtje?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Appel &amp;mdash; Peer &amp;mdash; Pruim &amp;mdash; Wortel&lt;/p&gt;</description></item><item><title>Best practice generate a ssh-keypair</title><link>http://localhost/Linux/ssh/ssh_keygen/</link><pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssh/ssh_keygen/</guid><description>&lt;p&gt;&lt;img src="./ssh-150x150.png" alt="" title="ssh-150x150.png"&gt;&lt;/p&gt;
 &lt;h3 id="introduction"&gt;
  Introduction
  &lt;a class="heading-link" href="#introduction"&gt;
@@ -319,11 +350,9 @@ Finally &lt;a href="http://www.columbia.edu/kermit/ck90.html"&gt;kermit&lt;/a&gt
  &lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;I got this error message when i try to login with SSH to my cisco switch.&lt;/p&gt;
-&lt;p&gt;::: { .Alert #custom-id .other-class } ::::::
-&lt;strong&gt;CISCO&lt;/strong&gt; &amp;mdash; SSH fails to connect&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CISCO&lt;/strong&gt; &amp;mdash; SSH fails to connect&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Unable to negotiate with [hostname or ip] port 22: no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1,diffie-hellman-group14-sha1
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;::::::::::::::::::&lt;/p&gt;
-&lt;p&gt;You can solve this by using&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can solve this by using&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ssh -o &lt;span style="color:#79c0ff"&gt;KexAlgorithms&lt;/span&gt;&lt;span style="color:#ff7b72;font-weight:bold"&gt;=&lt;/span&gt;diffie-hellman-group1-sha1 &lt;span style="color:#ff7b72;font-weight:bold"&gt;[&lt;/span&gt;hostname or ip&lt;span style="color:#ff7b72;font-weight:bold"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Some personal development books i recomend</title><link>http://localhost/slices_of_life/my_curated_booklist/personal_development/</link><pubDate>Sun, 11 Aug 2019 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/my_curated_booklist/personal_development/</guid><description>&lt;p&gt;&lt;strong&gt;Personal Development - English&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1404,7 +1433,7 @@ Perry Expedition to Japan &lt;A HREF="http://www.baxleystamps.com/litho/" target
 &lt;/BODY&gt;
 
 &lt;!-- Mirrored from www.baxleystamps.com/litho/misc/uchida_woodblock_prints_c1970_2_children.shtml by HTTrack Website Copier/3.x [XR&amp;CO'2014], Wed, 29 Oct 2025 14:34:07 GMT --&gt;
-&lt;/HTML&gt;</description></item><item><title> Index</title><link>http://localhost/slices_of_life/__index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/__index/</guid><description>&lt;h1 id="-benjamins-life"&gt;
+&lt;/HTML&gt;</description></item><item><title> Readme</title><link>http://localhost/slices_of_life/__index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/__index/</guid><description>&lt;h1 id="-benjamins-life"&gt;
  🌈 Benjamin&amp;rsquo;s Life
  &lt;a class="heading-link" href="#-benjamins-life"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -1779,34 +1808,7 @@ Just replace the example string below (&lt;code&gt;JHJH...&lt;/code&gt;) with yo
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;chmod g-w,o-w ~
-Home folder	~	755 at most	drwxr-xr-x at most&lt;/p&gt;</description></item><item><title>Config</title><link>http://localhost/Linux/ssh/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssh/config/</guid><description>&lt;h3 id="ssh-config-client-config-file"&gt;
- ssh config client config file
- &lt;a class="heading-link" href="#ssh-config-client-config-file"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h3&gt;
-&lt;h4 id="file-is-located-at"&gt;
- File is located at
- &lt;a class="heading-link" href="#file-is-located-at"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;~/.ssh/config
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="example-1"&gt;
- Example 1
- &lt;a class="heading-link" href="#example-1"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h4&gt;
-&lt;p&gt;This is a regular config&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Host server.tld
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; User username
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; IdentityFile /home/username/.ssh/id_rsa
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ForwardAgent yes
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The ForwardAgent option allows you to use your private, local SSH key remotely without worrying about leaving confidential data on the server you&amp;rsquo;re working with. It&amp;rsquo;s built into ssh, and is easy to set up and use.&lt;/p&gt;</description></item><item><title>Copy And Paste In Cli</title><link>http://localhost/Linux/cli/copy-and-paste-in-cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/copy-and-paste-in-cli/</guid><description>&lt;h1 id="copying-and-pasting-in-the-linux-terminal-is-quite-easy-with-xclip"&gt;
+Home folder	~	755 at most	drwxr-xr-x at most&lt;/p&gt;</description></item><item><title>Copy And Paste In Cli</title><link>http://localhost/Linux/cli/copy-and-paste-in-cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/copy-and-paste-in-cli/</guid><description>&lt;h1 id="copying-and-pasting-in-the-linux-terminal-is-quite-easy-with-xclip"&gt;
  Copying and pasting in the Linux terminal is quite easy with xclip.
  &lt;a class="heading-link" href="#copying-and-pasting-in-the-linux-terminal-is-quite-easy-with-xclip"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -1851,7 +1853,7 @@ Home folder	~	755 at most	drwxr-xr-x at most&lt;/p&gt;</description></item><item
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;diff -y --side-by-side --suppress-common-lines file_one.txt file_two.txt
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;diff --side-by-side file_one.txt file_two.txt
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;diff --side-by-side --suppress-common-lines file_one.txt file_two.txt
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>EN Compassion Determination</title><link>http://localhost/slices_of_life/reminders/EN_compassion_determination/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN_compassion_determination/</guid><description>&lt;h1 id="three-things-that-always-help-me"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>En Compassion Determination</title><link>http://localhost/slices_of_life/reminders/EN/EN_compassion_determination/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN/EN_compassion_determination/</guid><description>&lt;h1 id="three-things-that-always-help-me"&gt;
  Three Things That Always Help Me
  &lt;a class="heading-link" href="#three-things-that-always-help-me"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -1870,7 +1872,7 @@ Home folder	~	755 at most	drwxr-xr-x at most&lt;/p&gt;</description></item><item
 &lt;p&gt;First of all, have compassion for other people.
 Treat people like you would like to be treated.
 Treat people nicely on your way up. You might meet them on the way down.&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s nice to be important, but it&amp;rsquo;s also more important to be nice.&lt;/p&gt;</description></item><item><title>EN Deal With Situations</title><link>http://localhost/slices_of_life/reminders/EN_deal_with_situations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN_deal_with_situations/</guid><description>&lt;h1 id="-the-eckhart-tolle-formula-for-dealing-with-difficult-situations"&gt;
+&lt;p&gt;It&amp;rsquo;s nice to be important, but it&amp;rsquo;s also more important to be nice.&lt;/p&gt;</description></item><item><title>En Deal With Situations</title><link>http://localhost/slices_of_life/reminders/EN/EN_deal_with_situations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN/EN_deal_with_situations/</guid><description>&lt;h1 id="-the-eckhart-tolle-formula-for-dealing-with-difficult-situations"&gt;
  🌿 The Eckhart Tolle Formula for Dealing with Difficult Situations
  &lt;a class="heading-link" href="#-the-eckhart-tolle-formula-for-dealing-with-difficult-situations"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -1886,7 +1888,7 @@ Treat people nicely on your way up. You might meet them on the way down.&lt;/p&g
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt; &lt;em&gt;Can I accept the situation exactly as it is?&lt;/em&gt;
-Sometimes a situation cannot be changed immediately. By fully accepting what is happening, you release inner resistance and create space for peace and clarity.&lt;/p&gt;</description></item><item><title>EN How To Get Old</title><link>http://localhost/slices_of_life/reminders/EN_how_to_get_old/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN_how_to_get_old/</guid><description>&lt;h1 id="-the-formula-for-growing-old-happily-and-healthily"&gt;
+Sometimes a situation cannot be changed immediately. By fully accepting what is happening, you release inner resistance and create space for peace and clarity.&lt;/p&gt;</description></item><item><title>En How To Get Old</title><link>http://localhost/slices_of_life/reminders/EN/EN_how_to_get_old/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN/EN_how_to_get_old/</guid><description>&lt;h1 id="-the-formula-for-growing-old-happily-and-healthily"&gt;
  🌿 The Formula for Growing Old Happily and Healthily
  &lt;a class="heading-link" href="#-the-formula-for-growing-old-happily-and-healthily"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -1903,7 +1905,7 @@ Sometimes a situation cannot be changed immediately. By fully accepting what is 
 &lt;/h2&gt;
 &lt;p&gt;A good night’s sleep is the foundation of recovery.
 While you sleep, your body repairs itself, processes emotions, and recharges your energy.
-&lt;strong&gt;Recommended:&lt;/strong&gt; 8–10 hours of sleep per night, depending on your age and what your body needs.&lt;/p&gt;</description></item><item><title>EN How To Say No</title><link>http://localhost/slices_of_life/reminders/EN_how_to_say_no/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN_how_to_say_no/</guid><description>&lt;h1 id="how-to-say-no-the-right-way"&gt;
+&lt;strong&gt;Recommended:&lt;/strong&gt; 8–10 hours of sleep per night, depending on your age and what your body needs.&lt;/p&gt;</description></item><item><title>En How To Say No</title><link>http://localhost/slices_of_life/reminders/EN/EN_how_to_say_no/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN/EN_how_to_say_no/</guid><description>&lt;h1 id="how-to-say-no-the-right-way"&gt;
  How to say no the right way
  &lt;a class="heading-link" href="#how-to-say-no-the-right-way"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -1915,7 +1917,7 @@ We feel, &lt;em&gt;“I don’t want to disappoint them. I don’t want them to 
 And then we respond with something like: &lt;em&gt;“Oh wow, that sounds great, I’d love to… &lt;strong&gt;but&lt;/strong&gt; I can’t, I have a full day of meetings.”&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The problem is the word &lt;strong&gt;“but.”&lt;/strong&gt;
 “&lt;strong&gt;But&lt;/strong&gt;” has a way of erasing everything that came before it.
-If you say, &lt;em&gt;“I love you, but…”&lt;/em&gt; whatever comes after makes the first part feel less genuine.&lt;/p&gt;</description></item><item><title>EN Install All Dependencies</title><link>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</guid><description>&lt;hr&gt;
+If you say, &lt;em&gt;“I love you, but…”&lt;/em&gt; whatever comes after makes the first part feel less genuine.&lt;/p&gt;</description></item><item><title>En Install All Dependencies</title><link>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</guid><description>&lt;hr&gt;
 &lt;p&gt;date: 2025-10-01T12:30:21+01:00
 title: &amp;ldquo;Before installing YubiKey&amp;rsquo;s ykman software&amp;rdquo;
 draft: false
@@ -1935,7 +1937,7 @@ description: &amp;ldquo;1. Install the first dependicies on your system&amp;rdqu
 &lt;li&gt;scdaemon - Smartcard daemon for the GnuPG system&lt;/li&gt;
 &lt;li&gt;pcscd - PC/SC Smart Card Daemon&lt;/li&gt;
 &lt;li&gt;pipx - execute binaries from Python packages in isolated environments&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>EN Modern Love</title><link>http://localhost/slices_of_life/reminders/EN_modern_love/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN_modern_love/</guid><description>&lt;h1 id="modern-love-and-emotional-defensiveness"&gt;
+&lt;/ul&gt;</description></item><item><title>En Modern Love</title><link>http://localhost/slices_of_life/reminders/EN/EN_modern_love/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN/EN_modern_love/</guid><description>&lt;h1 id="modern-love-and-emotional-defensiveness"&gt;
  Modern Love and Emotional Defensiveness
  &lt;a class="heading-link" href="#modern-love-and-emotional-defensiveness"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -1949,14 +1951,14 @@ They don&amp;rsquo;t want to feel hurt because they don&amp;rsquo;t want to be h
 They don&amp;rsquo;t want to give so much of themselves.
 They don&amp;rsquo;t want to be generous with their spirit.
 They want to protect themselves.&lt;/p&gt;
-&lt;p&gt;So, at the slightest kind of conflict with with their partner, they retreat and they get into their shell. People are more defensive. They&amp;rsquo;re more locked inside themselves. They&amp;rsquo;re more locked inside their phone.&lt;/p&gt;</description></item><item><title>EN Sitting In The Mud</title><link>http://localhost/slices_of_life/reminders/EN_sitting_in_the_mud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN_sitting_in_the_mud/</guid><description>&lt;h1 id="friendship-loyalty-and-showing-up"&gt;
+&lt;p&gt;So, at the slightest kind of conflict with with their partner, they retreat and they get into their shell. People are more defensive. They&amp;rsquo;re more locked inside themselves. They&amp;rsquo;re more locked inside their phone.&lt;/p&gt;</description></item><item><title>En Sitting In The Mud</title><link>http://localhost/slices_of_life/reminders/EN/EN_sitting_in_the_mud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN/EN_sitting_in_the_mud/</guid><description>&lt;h1 id="friendship-loyalty-and-showing-up"&gt;
  Friendship, Loyalty, and Showing Up
  &lt;a class="heading-link" href="#friendship-loyalty-and-showing-up"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;And I remember telling one of my close friends, I said, we we were riding bikes somewhere and I just out of the blue, I don&amp;rsquo;t know why it hit me, I I turned to him and I said, you know, you&amp;rsquo;re one of those friends that if I was really in the I would call you.&lt;/p&gt;</description></item><item><title>EN The Inner Ceiling</title><link>http://localhost/slices_of_life/reminders/EN_the_inner_ceiling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN_the_inner_ceiling/</guid><description>&lt;h1 id="the-glass-ceiling-in-your-mind"&gt;
+&lt;p&gt;And I remember telling one of my close friends, I said, we we were riding bikes somewhere and I just out of the blue, I don&amp;rsquo;t know why it hit me, I I turned to him and I said, you know, you&amp;rsquo;re one of those friends that if I was really in the I would call you.&lt;/p&gt;</description></item><item><title>En The Inner Ceiling</title><link>http://localhost/slices_of_life/reminders/EN/EN_the_inner_ceiling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN/EN_the_inner_ceiling/</guid><description>&lt;h1 id="the-glass-ceiling-in-your-mind"&gt;
  The Glass Ceiling in Your Mind
  &lt;a class="heading-link" href="#the-glass-ceiling-in-your-mind"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -1970,7 +1972,7 @@ They want to protect themselves.&lt;/p&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h4&gt;
-&lt;p&gt;Why is it that intelligent people procrastinate? Why is it that people who are so self-motivated often self-sabotage? And why is it that no matter how many new business opportunities we get or new skills we try to learn, many of us simply find different ways of earning the same amount of money or achieving the same level of success?&lt;/p&gt;</description></item><item><title>EN Yubikey Firts Time Use</title><link>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</guid><description>&lt;h1 id="yubikey-bare-minimum"&gt;
+&lt;p&gt;Why is it that intelligent people procrastinate? Why is it that people who are so self-motivated often self-sabotage? And why is it that no matter how many new business opportunities we get or new skills we try to learn, many of us simply find different ways of earning the same amount of money or achieving the same level of success?&lt;/p&gt;</description></item><item><title>En Yubikey Firts Time Use</title><link>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</guid><description>&lt;h1 id="yubikey-bare-minimum"&gt;
  YubiKey bare minimum
  &lt;a class="heading-link" href="#yubikey-bare-minimum"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2073,7 +2075,7 @@ you may try this script&lt;/p&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;When LTO9 media is first loaded into the LTO9 drive, the drive automatically initiates tape calibration, which includes initialization and characterization of the cartridge.&lt;/p&gt;</description></item><item><title>ImageMagick</title><link>http://localhost/Linux/cli/ImageMagick/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/ImageMagick/</guid><description>&lt;h1 id="using-imagemagick"&gt;
+&lt;p&gt;When LTO9 media is first loaded into the LTO9 drive, the drive automatically initiates tape calibration, which includes initialization and characterization of the cartridge.&lt;/p&gt;</description></item><item><title>Imagemagick</title><link>http://localhost/Linux/cli/ImageMagick/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/cli/ImageMagick/</guid><description>&lt;h1 id="using-imagemagick"&gt;
  Using ImageMagick
  &lt;a class="heading-link" href="#using-imagemagick"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2088,32 +2090,7 @@ you may try this script&lt;/p&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;To install ImageMagick on macOS, you can use Homebrew:&lt;/p&gt;</description></item><item><title>Index</title><link>http://localhost/site-builder/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/site-builder/</guid><description>&lt;h1 id="-benjamins-life"&gt;
- 🌈 Benjamin&amp;rsquo;s Life
- &lt;a class="heading-link" href="#-benjamins-life"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h1&gt;
-&lt;h2 id="hey-there-"&gt;
- Hey there! 🌞
- &lt;a class="heading-link" href="#hey-there-"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;I&amp;rsquo;m &lt;strong&gt;Benjamin Italiaander&lt;/strong&gt; — and welcome to my &lt;em&gt;cheerful little corner of the world&lt;/em&gt;! 💛✨&lt;br&gt;
-This is where I collect and share all the things that make my days brighter and my heart lighter! 🌸&lt;/p&gt;
-&lt;p&gt;Here you’ll find:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;🍲 Delicious &lt;strong&gt;food recipes&lt;/strong&gt; I love to make (and of course, eat!)&lt;/li&gt;
-&lt;li&gt;📚 My &lt;strong&gt;favorite books&lt;/strong&gt; that inspire me, surprise me, or simply make me smile&lt;/li&gt;
-&lt;li&gt;💬 Uplifting &lt;strong&gt;quotes &amp;amp; thoughts&lt;/strong&gt; that fill me with calm and positivity&lt;/li&gt;
-&lt;li&gt;🎸 Fun &lt;strong&gt;music tabs&lt;/strong&gt; I enjoy playing and learning&lt;/li&gt;
-&lt;li&gt;💻 My handy &lt;strong&gt;Linux notes&lt;/strong&gt; — because even tech can bring a little joy!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This is my &lt;strong&gt;happy place&lt;/strong&gt; — a colorful mix of creativity, curiosity, and sunshine vibes! ☀️💫&lt;br&gt;
-Grab a cup of tea, take a peek around, and maybe you’ll find a spark of happiness too! 🌻💖&lt;/p&gt;</description></item><item><title>KaTeX</title><link>http://localhost/math/KaTeX/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/math/KaTeX/</guid><description>&lt;p&gt;Just a reminder how to do stuff&lt;/p&gt;
+&lt;p&gt;To install ImageMagick on macOS, you can use Homebrew:&lt;/p&gt;</description></item><item><title>Katex</title><link>http://localhost/math/KaTeX/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/math/KaTeX/</guid><description>&lt;p&gt;Just a reminder how to do stuff&lt;/p&gt;
 &lt;p&gt;A simple way to make a expression devide&lt;/p&gt;
 &lt;pre tabindex="0"&gt;&lt;code class="language-katex" data-lang="katex"&gt;\frac {(4+b)} {(b-2)}
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;$$\frac {(4+b)} {(b-2)}$$&lt;/p&gt;
@@ -2239,7 +2216,7 @@ keywords:
 &lt;li&gt;&lt;a href="https://youtu.be/_olf3ZwHpTg?si=VblHm-FeZcBHBcpO"&gt;perfect day in NL&lt;/a&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;vertalen naar engels of nog spelen&lt;/p&gt;</description></item><item><title>NL Anticiperend Plannen</title><link>http://localhost/slices_of_life/reminders/NL_anticiperend_plannen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL_anticiperend_plannen/</guid><description>&lt;h2 id="anticiperend-plannen"&gt;
+&lt;p&gt;vertalen naar engels of nog spelen&lt;/p&gt;</description></item><item><title>Nl Anticiperend Plannen</title><link>http://localhost/slices_of_life/reminders/NL/NL_anticiperend_plannen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_anticiperend_plannen/</guid><description>&lt;h2 id="anticiperend-plannen"&gt;
  Anticiperend plannen
  &lt;a class="heading-link" href="#anticiperend-plannen"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2249,7 +2226,7 @@ keywords:
 &lt;p&gt;Wanneer je hoofd overloopt van stressvolle gedachten over hoe mensen zich voelen&lt;br&gt;
 of hoe ze elkaar bejegenen, ben je aan het anticiperen.&lt;/p&gt;
 &lt;p&gt;Daardoor kom je in een staat van &lt;strong&gt;hyperalertheid&lt;/strong&gt; terecht.&lt;/p&gt;
-&lt;p&gt;Dit gebeurt nog vóórdat een situatie daadwerkelijk plaatsvindt.&lt;/p&gt;</description></item><item><title>NL Compassion Determination</title><link>http://localhost/slices_of_life/reminders/NL_compassion_determination/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL_compassion_determination/</guid><description>&lt;h1 id="drie-dingen-die-altijd-helpen"&gt;
+&lt;p&gt;Dit gebeurt nog vóórdat een situatie daadwerkelijk plaatsvindt.&lt;/p&gt;</description></item><item><title>Nl Compassion Determination</title><link>http://localhost/slices_of_life/reminders/NL/NL_compassion_determination/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_compassion_determination/</guid><description>&lt;h1 id="drie-dingen-die-altijd-helpen"&gt;
  Drie Dingen Die Altijd Helpen
  &lt;a class="heading-link" href="#drie-dingen-die-altijd-helpen"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2268,7 +2245,7 @@ of hoe ze elkaar bejegenen, ben je aan het anticiperen.&lt;/p&gt;
 &lt;p&gt;Allereerst: heb compassie voor andere mensen.
 Behandel mensen zoals jij zelf behandeld wilt worden.
 Behandel mensen vriendelijk terwijl je omhoog klimt — je kunt ze zomaar weer tegenkomen als je omlaag gaat.&lt;/p&gt;
-&lt;p&gt;Het is fijn om belangrijk te zijn, maar het is nóg belangrijker om aardig te zijn.&lt;/p&gt;</description></item><item><title>NL Deal With Situations</title><link>http://localhost/slices_of_life/reminders/NL_deal_with_situations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL_deal_with_situations/</guid><description>&lt;h1 id="-de-eckhart-tolle-formule-voor-omgaan-met-ongemakkelijke-situaties"&gt;
+&lt;p&gt;Het is fijn om belangrijk te zijn, maar het is nóg belangrijker om aardig te zijn.&lt;/p&gt;</description></item><item><title>Nl Deal With Situations</title><link>http://localhost/slices_of_life/reminders/NL/NL_deal_with_situations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_deal_with_situations/</guid><description>&lt;h1 id="-de-eckhart-tolle-formule-voor-omgaan-met-ongemakkelijke-situaties"&gt;
  🌿 De Eckhart Tolle-Formule voor Omgaan met Ongemakkelijke Situaties
  &lt;a class="heading-link" href="#-de-eckhart-tolle-formule-voor-omgaan-met-ongemakkelijke-situaties"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2284,7 +2261,7 @@ Behandel mensen vriendelijk terwijl je omhoog klimt — je kunt ze zomaar weer t
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Vraag:&lt;/strong&gt; &lt;em&gt;Kan ik de situatie accepteren zoals die nu is?&lt;/em&gt;
-Soms kun je een situatie niet direct veranderen. Door volledig te accepteren wat er gebeurt, laat je innerlijke weerstand los en ontstaat er ruimte voor rust en helderheid.&lt;/p&gt;</description></item><item><title>NL Esther Perel Wat Wij Zoeken</title><link>http://localhost/slices_of_life/reminders/in_a_relationship/NL_Esther_Perel_Wat_wij_zoeken/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/in_a_relationship/NL_Esther_Perel_Wat_wij_zoeken/</guid><description>&lt;h1 id="1-de-paradox-binnen-een-veilige-relatie"&gt;
+Soms kun je een situatie niet direct veranderen. Door volledig te accepteren wat er gebeurt, laat je innerlijke weerstand los en ontstaat er ruimte voor rust en helderheid.&lt;/p&gt;</description></item><item><title>Nl Esther Perel Wat Wij Zoeken</title><link>http://localhost/slices_of_life/reminders/NL/NL_Esther_Perel_Wat_wij_zoeken/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_Esther_Perel_Wat_wij_zoeken/</guid><description>&lt;h1 id="1-de-paradox-binnen-een-veilige-relatie"&gt;
  1. De paradox binnen een veilige relatie
  &lt;a class="heading-link" href="#1-de-paradox-binnen-een-veilige-relatie"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2306,7 +2283,7 @@ Soms kun je een situatie niet direct veranderen. Door volledig te accepteren wat
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;Volgens Perel draait “geliefd zijn” om:&lt;/p&gt;</description></item><item><title>NL HATA</title><link>http://localhost/slices_of_life/reminders/NL_HATA/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL_HATA/</guid><description>&lt;h1 id="hata--snelle-emotie-check"&gt;
+&lt;p&gt;Volgens Perel draait “geliefd zijn” om:&lt;/p&gt;</description></item><item><title>Nl Hata</title><link>http://localhost/slices_of_life/reminders/NL/NL_HATA/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_HATA/</guid><description>&lt;h1 id="hata--snelle-emotie-check"&gt;
  &lt;strong&gt;HATA – Snelle Emotie-Check&lt;/strong&gt;
  &lt;a class="heading-link" href="#hata--snelle-emotie-check"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2344,7 +2321,7 @@ Soms kun je een situatie niet direct veranderen. Door volledig te accepteren wat
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;Laat het gevoel er zijn zonder oordeel.&lt;/p&gt;</description></item><item><title>NL How To Get Old</title><link>http://localhost/slices_of_life/reminders/NL_how_to_get_old/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL_how_to_get_old/</guid><description>&lt;h1 id="-de-formule-voor-gelukkig-en-gezond-oud-worden"&gt;
+&lt;p&gt;Laat het gevoel er zijn zonder oordeel.&lt;/p&gt;</description></item><item><title>Nl How To Get Old</title><link>http://localhost/slices_of_life/reminders/NL/NL_how_to_get_old/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_how_to_get_old/</guid><description>&lt;h1 id="-de-formule-voor-gelukkig-en-gezond-oud-worden"&gt;
  🌿 De Formule voor Gelukkig en Gezond Oud Worden
  &lt;a class="heading-link" href="#-de-formule-voor-gelukkig-en-gezond-oud-worden"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2361,7 +2338,7 @@ Soms kun je een situatie niet direct veranderen. Door volledig te accepteren wat
 &lt;/h2&gt;
 &lt;p&gt;Een goede nachtrust is de basis van herstel.
 Tijdens het slapen herstelt je lichaam, verwerk je emoties en laadt je energie opnieuw op.
-&lt;strong&gt;Aanbevolen:&lt;/strong&gt; 8–10 uur slaap per nacht, afhankelijk van je leeftijd en wat je lichaam aangeeft.&lt;/p&gt;</description></item><item><title>NL How To Say No</title><link>http://localhost/slices_of_life/reminders/NL_how_to_say_no/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL_how_to_say_no/</guid><description>&lt;h1 id="hoe-zeg-je-correct-nee"&gt;
+&lt;strong&gt;Aanbevolen:&lt;/strong&gt; 8–10 uur slaap per nacht, afhankelijk van je leeftijd en wat je lichaam aangeeft.&lt;/p&gt;</description></item><item><title>Nl How To Say No</title><link>http://localhost/slices_of_life/reminders/NL/NL_how_to_say_no/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_how_to_say_no/</guid><description>&lt;h1 id="hoe-zeg-je-correct-nee"&gt;
  Hoe zeg je correct nee
  &lt;a class="heading-link" href="#hoe-zeg-je-correct-nee"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2373,7 +2350,7 @@ We denken &lt;em&gt;“Ik wil hen niet teleurstellen. Ik wil niet dat ze me niet
 En dan zeggen we iets als: &lt;em&gt;“Oh wauw, dat klinkt geweldig, ik zou heel graag willen… &lt;strong&gt;maar&lt;/strong&gt; ik kan niet, ik heb de hele dag meetings.”&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Het probleem is het woord &lt;strong&gt;“maar.”&lt;/strong&gt;
 “&lt;strong&gt;Maar&lt;/strong&gt;” heeft de neiging alles ervoor te laten verdwijnen.
-Als je zegt: &lt;em&gt;“Ik hou van je, maar…”&lt;/em&gt; dan voelt alles wat je daarvoor zei ineens minder oprecht.&lt;/p&gt;</description></item><item><title>NL Modern Love</title><link>http://localhost/slices_of_life/reminders/NL_modern_love/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL_modern_love/</guid><description>&lt;h1 id="moderne-liefde-en-emotionele-verdediging"&gt;
+Als je zegt: &lt;em&gt;“Ik hou van je, maar…”&lt;/em&gt; dan voelt alles wat je daarvoor zei ineens minder oprecht.&lt;/p&gt;</description></item><item><title>Nl Modern Love</title><link>http://localhost/slices_of_life/reminders/NL/NL_modern_love/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_modern_love/</guid><description>&lt;h1 id="moderne-liefde-en-emotionele-verdediging"&gt;
  Moderne Liefde en Emotionele Verdediging
  &lt;a class="heading-link" href="#moderne-liefde-en-emotionele-verdediging"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2390,7 +2367,7 @@ Ze willen zichzelf beschermen.&lt;/p&gt;
 &lt;p&gt;Dus bij het minste of geringste conflict met hun partner trekken ze zich terug en kruipen ze in hun schulp.
 Mensen zijn defensiever.
 Ze zitten meer opgesloten in zichzelf.
-Ze zitten meer opgesloten in hun telefoon.&lt;/p&gt;</description></item><item><title>NL Selfcare Janice W</title><link>http://localhost/slices_of_life/reminders/NL_Selfcare_Janice_w/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL_Selfcare_Janice_w/</guid><description>&lt;h1 id="-zelfzorg-checklist-dagelijks"&gt;
+Ze zitten meer opgesloten in hun telefoon.&lt;/p&gt;</description></item><item><title>Nl Selfcare Janice W</title><link>http://localhost/slices_of_life/reminders/NL/NL_Selfcare_Janice_w/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_Selfcare_Janice_w/</guid><description>&lt;h1 id="-zelfzorg-checklist-dagelijks"&gt;
  🧩 Zelfzorg-Checklist (Dagelijks)
  &lt;a class="heading-link" href="#-zelfzorg-checklist-dagelijks"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2467,7 +2444,7 @@ Ze zitten meer opgesloten in hun telefoon.&lt;/p&gt;</description></item><item><
 &lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Heb ik vandaag één kleine vriendelijke actie voor mezelf gedaan?&lt;/li&gt;
 &lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Heb ik mezelf niet gekleineerd of streng benaderd?&lt;/li&gt;
 &lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Heb ik mezelf behandeld zoals ik een vriend(in) zou behandelen?&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>NL Sitting In The Mud</title><link>http://localhost/slices_of_life/reminders/NL_sitting_in_the_mud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL_sitting_in_the_mud/</guid><description>&lt;h1 id="vriendschap-loyaliteit-en-de-eer-om-er-te-zijn"&gt;
+&lt;/ul&gt;</description></item><item><title>Nl Sitting In The Mud</title><link>http://localhost/slices_of_life/reminders/NL/NL_sitting_in_the_mud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_sitting_in_the_mud/</guid><description>&lt;h1 id="vriendschap-loyaliteit-en-de-eer-om-er-te-zijn"&gt;
  Vriendschap, Loyaliteit en de Eer om Er Te Zijn
  &lt;a class="heading-link" href="#vriendschap-loyaliteit-en-de-eer-om-er-te-zijn"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2475,7 +2452,7 @@ Ze zitten meer opgesloten in hun telefoon.&lt;/p&gt;</description></item><item><
  &lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;Ik herinner me dat ik ooit tegen een van mijn beste vrienden zei—we waren ergens aan het fietsen, het leven voelde licht, en uit het niets, zonder dat ik wist waarom, keek ik hem aan en zei:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;“Je bent zo’n vriend… als ik ooit echt in de ellende zou zitten, dan zou ik jóu bellen.”&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>NL The Inner Ceiling</title><link>http://localhost/slices_of_life/reminders/NL_the_inner_ceiling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL_the_inner_ceiling/</guid><description>&lt;h1 id="waarom-stellen-intelligente-mensen-dingen-uit"&gt;
+&lt;p&gt;&lt;strong&gt;“Je bent zo’n vriend… als ik ooit echt in de ellende zou zitten, dan zou ik jóu bellen.”&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Nl The Inner Ceiling</title><link>http://localhost/slices_of_life/reminders/NL/NL_the_inner_ceiling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_the_inner_ceiling/</guid><description>&lt;h1 id="waarom-stellen-intelligente-mensen-dingen-uit"&gt;
  Waarom Stellen Intelligente Mensen Dingen Uit?
  &lt;a class="heading-link" href="#waarom-stellen-intelligente-mensen-dingen-uit"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2483,7 +2460,7 @@ Ze zitten meer opgesloten in hun telefoon.&lt;/p&gt;</description></item><item><
  &lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;Waarom stellen intelligente mensen dingen uit? Waarom saboteren mensen die zo gemotiveerd zijn vaak zichzelf? En waarom is het zo dat, hoeveel nieuwe kansen of vaardigheden we ook krijgen, veel van ons toch eindigen met ongeveer hetzelfde inkomen of hetzelfde niveau van succes?&lt;/p&gt;
-&lt;p&gt;Het voelt vaak alsof er een &lt;strong&gt;glazen plafond&lt;/strong&gt; boven ons hoofd hangt waar we maar niet doorheen breken.&lt;/p&gt;</description></item><item><title>NL Whats Behind The Emotions</title><link>http://localhost/slices_of_life/reminders/NL_whats_behind_the_emotions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL_whats_behind_the_emotions/</guid><description>&lt;h1 id="echte-gevoelens-versus-afweerreacties"&gt;
+&lt;p&gt;Het voelt vaak alsof er een &lt;strong&gt;glazen plafond&lt;/strong&gt; boven ons hoofd hangt waar we maar niet doorheen breken.&lt;/p&gt;</description></item><item><title>Nl Whats Behind The Emotions</title><link>http://localhost/slices_of_life/reminders/NL/NL_whats_behind_the_emotions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_whats_behind_the_emotions/</guid><description>&lt;h1 id="echte-gevoelens-versus-afweerreacties"&gt;
  echte gevoelens versus afweerreacties
  &lt;a class="heading-link" href="#echte-gevoelens-versus-afweerreacties"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2506,7 +2483,7 @@ Ze zitten meer opgesloten in hun telefoon.&lt;/p&gt;</description></item><item><
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;Het gevoel van gemis, pijn of verlatenheid.&lt;/p&gt;</description></item><item><title>NL Yubikey Ingebruikname</title><link>http://localhost/Linux/yubikey/NL_yubikey_ingebruikname/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/NL_yubikey_ingebruikname/</guid><description>&lt;h1 id="yubikey-basisconfiguratie"&gt;
+&lt;p&gt;Het gevoel van gemis, pijn of verlatenheid.&lt;/p&gt;</description></item><item><title>Nl Yubikey Ingebruikname</title><link>http://localhost/Linux/yubikey/NL_yubikey_ingebruikname/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/NL_yubikey_ingebruikname/</guid><description>&lt;h1 id="yubikey-basisconfiguratie"&gt;
  &lt;strong&gt;YubiKey basisconfiguratie&lt;/strong&gt;
  &lt;a class="heading-link" href="#yubikey-basisconfiguratie"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2523,7 +2500,7 @@ Ze zitten meer opgesloten in hun telefoon.&lt;/p&gt;</description></item><item><
 &lt;p&gt;Stap 1 t/m stap 8 zijn het &lt;strong&gt;absolute minimum&lt;/strong&gt; dat je moet uitvoeren voordat je je YubiKey in gebruik neemt.
 Als je deze stappen overslaat, is er &lt;strong&gt;niets echt veilig&lt;/strong&gt; aan het gebruik van je YubiKey.&lt;/p&gt;
 &lt;p&gt;Hardware-tokens zijn een krachtig hulpmiddel en kunnen je beveiliging naar een zeer hoog niveau tillen — &lt;strong&gt;maar alleen wanneer je ze correct gebruikt&lt;/strong&gt;.
-Wees je ervan bewust dat hardware-tokens &lt;strong&gt;verkeerd gebruiken níét&lt;/strong&gt; resulteert in een veiliger gebruikersomgeving.&lt;/p&gt;</description></item><item><title>NL Yubikey Linux Gui Login</title><link>http://localhost/Linux/yubikey/NL_yubikey_linux_gui_login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/NL_yubikey_linux_gui_login/</guid><description>&lt;p&gt;Hier is een &lt;strong&gt;duidelijke en complete handleiding&lt;/strong&gt; om &lt;strong&gt;op Ubuntu in te loggen met je YubiKey&lt;/strong&gt; (PAM + FIDO2 / WebAuthn).
+Wees je ervan bewust dat hardware-tokens &lt;strong&gt;verkeerd gebruiken níét&lt;/strong&gt; resulteert in een veiliger gebruikersomgeving.&lt;/p&gt;</description></item><item><title>Nl Yubikey Linux Gui Login</title><link>http://localhost/Linux/yubikey/NL_yubikey_linux_gui_login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/NL_yubikey_linux_gui_login/</guid><description>&lt;p&gt;Hier is een &lt;strong&gt;duidelijke en complete handleiding&lt;/strong&gt; om &lt;strong&gt;op Ubuntu in te loggen met je YubiKey&lt;/strong&gt; (PAM + FIDO2 / WebAuthn).
 Dit werkt voor:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Ubuntu desktop login (GDM)&lt;/strong&gt;&lt;/li&gt;
@@ -2552,7 +2529,7 @@ Dit werkt voor:&lt;/p&gt;
 &lt;li&gt;Registreer je YubiKey:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pamu2fcfg &amp;gt; ~/.config/Yubico/u2f_keys
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(raak de YubiKey aan)&lt;/p&gt;</description></item><item><title>OpenPGP GnuPG Cheat Sheet</title><link>http://localhost/Linux/OpenPGP_GnuPG_cheat_sheet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/OpenPGP_GnuPG_cheat_sheet/</guid><description>&lt;h1 id="a-small-list-with-som-important-commands-i-use-with-gnupg"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(raak de YubiKey aan)&lt;/p&gt;</description></item><item><title>Openpgp Gnupg Cheat Sheet</title><link>http://localhost/Linux/OpenPGP_GnuPG_cheat_sheet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/OpenPGP_GnuPG_cheat_sheet/</guid><description>&lt;h1 id="a-small-list-with-som-important-commands-i-use-with-gnupg"&gt;
  A small list with som important commands i use with GnuPG
  &lt;a class="heading-link" href="#a-small-list-with-som-important-commands-i-use-with-gnupg"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2652,7 +2629,32 @@ sdgf gfgf gdfg dgdffdg&lt;/p&gt;
 &lt;p&gt;and you like to convert it in seperat the words per line
 The most easiest way of removing whitespace from a pattern like&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat ./somefile.txt | xargs -n &lt;span style="color:#a5d6ff"&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Some Instruction Aboutssl I Found Online</title><link>http://localhost/Linux/ssl/some-instruction-aboutssl-i-found-online/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssl/some-instruction-aboutssl-i-found-online/</guid><description>&lt;p&gt;i found this useful instruction &lt;a href="https://gist.github.com/soarez/9688998"&gt;here&lt;/a&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Site Builder</title><link>http://localhost/site-builder/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/site-builder/</guid><description>&lt;h1 id="-benjamins-life"&gt;
+ 🌈 Benjamin&amp;rsquo;s Life
+ &lt;a class="heading-link" href="#-benjamins-life"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="hey-there-"&gt;
+ Hey there! 🌞
+ &lt;a class="heading-link" href="#hey-there-"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m &lt;strong&gt;Benjamin Italiaander&lt;/strong&gt; — and welcome to my &lt;em&gt;cheerful little corner of the world&lt;/em&gt;! 💛✨&lt;br&gt;
+This is where I collect and share all the things that make my days brighter and my heart lighter! 🌸&lt;/p&gt;
+&lt;p&gt;Here you’ll find:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🍲 Delicious &lt;strong&gt;food recipes&lt;/strong&gt; I love to make (and of course, eat!)&lt;/li&gt;
+&lt;li&gt;📚 My &lt;strong&gt;favorite books&lt;/strong&gt; that inspire me, surprise me, or simply make me smile&lt;/li&gt;
+&lt;li&gt;💬 Uplifting &lt;strong&gt;quotes &amp;amp; thoughts&lt;/strong&gt; that fill me with calm and positivity&lt;/li&gt;
+&lt;li&gt;🎸 Fun &lt;strong&gt;music tabs&lt;/strong&gt; I enjoy playing and learning&lt;/li&gt;
+&lt;li&gt;💻 My handy &lt;strong&gt;Linux notes&lt;/strong&gt; — because even tech can bring a little joy!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is my &lt;strong&gt;happy place&lt;/strong&gt; — a colorful mix of creativity, curiosity, and sunshine vibes! ☀️💫&lt;br&gt;
+Grab a cup of tea, take a peek around, and maybe you’ll find a spark of happiness too! 🌻💖&lt;/p&gt;</description></item><item><title>Some Instruction Aboutssl I Found Online</title><link>http://localhost/Linux/ssl/some-instruction-aboutssl-i-found-online/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssl/some-instruction-aboutssl-i-found-online/</guid><description>&lt;p&gt;i found this useful instruction &lt;a href="https://gist.github.com/soarez/9688998"&gt;here&lt;/a&gt;
  Thank you for sharing &lt;a href="https://uk.linkedin.com/in/soarez"&gt;Igor Soarez&lt;/a&gt;
 &lt;/p&gt;
 &lt;h1 id="how-to-setup-your-own-ca-with-openssl"&gt;
@@ -2681,7 +2683,34 @@ Here is what I learned.&lt;/p&gt;
 &lt;/h2&gt;
 &lt;p&gt;AKA asymmetric cryptography solves the problem of two entities communicating
 securely without ever exchanging a common key, by using two related keys,
-one private, one public.&lt;/p&gt;</description></item><item><title>SSL Certificate Signing Request Best Practices</title><link>http://localhost/Linux/ssl/SSL-Certificate-Signing-Request-best-practices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssl/SSL-Certificate-Signing-Request-best-practices/</guid><description>&lt;h1 id="certificate-signing-request-best-practices-using-openssl"&gt;
+one private, one public.&lt;/p&gt;</description></item><item><title>SSH config file</title><link>http://localhost/Linux/ssh/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssh/config/</guid><description>&lt;h3 id="ssh-config-client-config-file"&gt;
+ ssh config client config file
+ &lt;a class="heading-link" href="#ssh-config-client-config-file"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;h4 id="file-is-located-at"&gt;
+ File is located at
+ &lt;a class="heading-link" href="#file-is-located-at"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;~/.ssh/config
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="example-1"&gt;
+ Example 1
+ &lt;a class="heading-link" href="#example-1"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;This is a regular config&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Host server.tld
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; User username
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; IdentityFile /home/username/.ssh/id_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ForwardAgent yes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The ForwardAgent option allows you to use your private, local SSH key remotely without worrying about leaving confidential data on the server you&amp;rsquo;re working with. It&amp;rsquo;s built into ssh, and is easy to set up and use.&lt;/p&gt;</description></item><item><title>Ssl Certificate Signing Request Best Practices</title><link>http://localhost/Linux/ssl/SSL-Certificate-Signing-Request-best-practices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/ssl/SSL-Certificate-Signing-Request-best-practices/</guid><description>&lt;h1 id="certificate-signing-request-best-practices-using-openssl"&gt;
  Certificate Signing Request Best Practices Using OpenSSL
  &lt;a class="heading-link" href="#certificate-signing-request-best-practices-using-openssl"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;

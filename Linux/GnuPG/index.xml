@@ -1,25 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GnuPG on Benjamin Italiaander</title><link>http://localhost/Linux/GnuPG/</link><description>Recent content in GnuPG on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 01 Jan 1970 01:33:42 +0100</lastBuildDate><atom:link href="http://localhost/Linux/GnuPG/index.xml" rel="self" type="application/rss+xml"/><item><title>GnuPG Unusable public key"</title><link>http://localhost/Linux/GnuPG/GPG_unusable_public_key/</link><pubDate>Thu, 01 Jan 1970 01:33:42 +0100</pubDate><guid>http://localhost/Linux/GnuPG/GPG_unusable_public_key/</guid><description>&lt;h1 id="fix-unusable-public-key-error-in-gpg"&gt;
- Fix: &amp;ldquo;Unusable public key&amp;rdquo; error in GPG
- &lt;a class="heading-link" href="#fix-unusable-public-key-error-in-gpg"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h1&gt;
-&lt;h2 id="error-message"&gt;
- Error message
- &lt;a class="heading-link" href="#error-message"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;If you encounter the following error, it usually means that no trusted public key is available:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;There is no assurance this key belongs to the named user
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;encryption failed: Unusable public key
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="cause"&gt;
- Cause
- &lt;a class="heading-link" href="#cause"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;GPG refuses to encrypt because the public key is not trusted.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GnuPG on Benjamin Italiaander</title>
+    <link>http://localhost:1313/Linux/GnuPG/</link>
+    <description>Recent content in GnuPG on Benjamin Italiaander</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Jan 1970 01:33:42 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/Linux/GnuPG/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GnuPG Unusable public key&#34;</title>
+      <link>http://localhost:1313/Linux/GnuPG/GPG_unusable_public_key/</link>
+      <pubDate>Thu, 01 Jan 1970 01:33:42 +0100</pubDate>
+      <guid>http://localhost:1313/Linux/GnuPG/GPG_unusable_public_key/</guid>
+      <description>&lt;h1 id=&#34;fix-unusable-public-key-error-in-gpg&#34;&gt;&#xA;  Fix: &amp;ldquo;Unusable public key&amp;rdquo; error in GPG&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#fix-unusable-public-key-error-in-gpg&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;error-message&#34;&gt;&#xA;  Error message&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#error-message&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;If you encounter the following error, it usually means that no trusted public key is available:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;There is no assurance this key belongs to the named user&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;encryption failed: Unusable public key&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cause&#34;&gt;&#xA;  Cause&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#cause&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;GPG refuses to encrypt because the public key is not trusted.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

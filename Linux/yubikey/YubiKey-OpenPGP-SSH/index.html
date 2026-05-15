@@ -1,5 +1,20 @@
-<!doctype html><html lang=en><head><title>YubiKey OpenPGP SSH · Benjamin Italiaander</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Benjamin Italiaander"><meta name=description content="
-  🔐 YubiKey + GPG + SSH Setup Guide
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  YubiKey OpenPGP SSH · Benjamin Italiaander
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Benjamin Italiaander">
+<meta name="description" content="
+  🔐 YubiKey &#43; GPG &#43; SSH Setup Guide
   
     
     Link to heading
@@ -29,96 +44,418 @@ Werken met ProxyJump / multi-hop SSH
   
 
 gpg -K --with-keygrip
-Voorbeeld:"><meta name=keywords content="python,keras,Bash,kitty,kitten"><meta name=twitter:card content="summary"><meta name=twitter:title content="YubiKey OpenPGP SSH"><meta name=twitter:description content="🔐 YubiKey + GPG + SSH Setup Guide Link to heading in deze handleiding ben ik het onderwerp kdf-setup vergeten, dit moet ik nog toevoegen.
-🎯 Doel Link to heading GPG subkeys op YubiKey zetten SSH authenticatie via YubiKey gebruiken Werken met ProxyJump / multi-hop SSH 1. 🔍 Check bestaande GPG keys Link to heading gpg -K --with-keygrip Voorbeeld:"><meta property="og:url" content="http://localhost/Linux/yubikey/YubiKey-OpenPGP-SSH/"><meta property="og:site_name" content="Benjamin Italiaander"><meta property="og:title" content="YubiKey OpenPGP SSH"><meta property="og:description" content="🔐 YubiKey + GPG + SSH Setup Guide Link to heading in deze handleiding ben ik het onderwerp kdf-setup vergeten, dit moet ik nog toevoegen.
-🎯 Doel Link to heading GPG subkeys op YubiKey zetten SSH authenticatie via YubiKey gebruiken Werken met ProxyJump / multi-hop SSH 1. 🔍 Check bestaande GPG keys Link to heading gpg -K --with-keygrip Voorbeeld:"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="linux"><link rel=canonical href=http://localhost/Linux/yubikey/YubiKey-OpenPGP-SSH/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css integrity="sha256-9rGzWnsCUhslM49s9Yl1+ZgKbBKEd2P+NaSDB3WM0ec=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/img/favicon.svg sizes=any><link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://localhost/>Benjamin Italiaander
-</a><input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/>Home</a></li><li class=navigation-item><a class=navigation-link href=/>Books</a></li><li class=navigation-item><a class=navigation-link href=/Linux/yubikey/>Yubikey cli</a></li><li class=navigation-item><a class=navigation-link href=/Linux/>Linux</a></li><li class=navigation-item><a class=navigation-link href=/slices_of_life/art_i_enjoy/>Art I Enjoy</a></li></ul></section></nav><div class=content><section class="container page"><article><header><h1 class=title><a class=title-link href=http://localhost/Linux/yubikey/YubiKey-OpenPGP-SSH/>YubiKey OpenPGP SSH</a></h1></header><h1 id=-yubikey--gpg--ssh-setup-guide>🔐 YubiKey + GPG + SSH Setup Guide
-<a class=heading-link href=#-yubikey--gpg--ssh-setup-guide><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><blockquote><p>in deze handleiding ben ik het onderwerp kdf-setup vergeten, dit moet ik nog toevoegen.</p></blockquote><h2 id=-doel>🎯 Doel
-<a class=heading-link href=#-doel><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><ul><li>GPG subkeys op YubiKey zetten</li><li>SSH authenticatie via YubiKey gebruiken</li><li>Werken met ProxyJump / multi-hop SSH</li></ul><hr><h1 id=1--check-bestaande-gpg-keys>1. 🔍 Check bestaande GPG keys
-<a class=heading-link href=#1--check-bestaande-gpg-keys><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>gpg -K --with-keygrip
-</span></span></code></pre></div><p>Voorbeeld:</p><pre tabindex=0><code>sec#  ed25519 ... [C]
+Voorbeeld:">
+<meta name="keywords" content="python, keras, Bash, kitty, kitten">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YubiKey OpenPGP SSH">
+  <meta name="twitter:description" content="🔐 YubiKey &#43; GPG &#43; SSH Setup Guide Link to heading in deze handleiding ben ik het onderwerp kdf-setup vergeten, dit moet ik nog toevoegen.
+🎯 Doel Link to heading GPG subkeys op YubiKey zetten SSH authenticatie via YubiKey gebruiken Werken met ProxyJump / multi-hop SSH 1. 🔍 Check bestaande GPG keys Link to heading gpg -K --with-keygrip Voorbeeld:">
+
+<meta property="og:url" content="http://localhost:1313/Linux/yubikey/YubiKey-OpenPGP-SSH/">
+  <meta property="og:site_name" content="Benjamin Italiaander">
+  <meta property="og:title" content="YubiKey OpenPGP SSH">
+  <meta property="og:description" content="🔐 YubiKey &#43; GPG &#43; SSH Setup Guide Link to heading in deze handleiding ben ik het onderwerp kdf-setup vergeten, dit moet ik nog toevoegen.
+🎯 Doel Link to heading GPG subkeys op YubiKey zetten SSH authenticatie via YubiKey gebruiken Werken met ProxyJump / multi-hop SSH 1. 🔍 Check bestaande GPG keys Link to heading gpg -K --with-keygrip Voorbeeld:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="linux">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/Linux/yubikey/YubiKey-OpenPGP-SSH/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+  
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Benjamin Italiaander
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/">Home</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/">Books</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/Linux/yubikey/">Yubikey cli</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/Linux/">Linux</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/slices_of_life/art_i_enjoy/">Art I Enjoy</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/Linux/yubikey/YubiKey-OpenPGP-SSH/">
+          YubiKey OpenPGP SSH
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="-yubikey--gpg--ssh-setup-guide">
+  🔐 YubiKey + GPG + SSH Setup Guide
+  <a class="heading-link" href="#-yubikey--gpg--ssh-setup-guide">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<blockquote>
+<p>in deze handleiding ben ik het onderwerp kdf-setup vergeten, dit moet ik nog toevoegen.</p>
+</blockquote>
+<h2 id="-doel">
+  🎯 Doel
+  <a class="heading-link" href="#-doel">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>GPG subkeys op YubiKey zetten</li>
+<li>SSH authenticatie via YubiKey gebruiken</li>
+<li>Werken met ProxyJump / multi-hop SSH</li>
+</ul>
+<hr>
+<h1 id="1--check-bestaande-gpg-keys">
+  1. 🔍 Check bestaande GPG keys
+  <a class="heading-link" href="#1--check-bestaande-gpg-keys">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg -K --with-keygrip
+</span></span></code></pre></div><p>Voorbeeld:</p>
+<pre tabindex="0"><code>sec#  ed25519 ... [C]
 ssb   ed25519 ... [S]
 ssb   cv25519 ... [E]
 ssb   ed25519 ... [A]
-</code></pre><h3 id=betekenis>Betekenis
-<a class=heading-link href=#betekenis><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><table><thead><tr><th>Type</th><th>Betekenis</th></tr></thead><tbody><tr><td><code>[S]</code></td><td>Signing</td></tr><tr><td><code>[E]</code></td><td>Encryption</td></tr><tr><td><code>[A]</code></td><td>Authentication</td></tr><tr><td><code>sec#</code></td><td>master key niet lokaal</td></tr><tr><td><code>ssb></code></td><td>key staat al op YubiKey</td></tr><tr><td><code>ssb</code></td><td>key staat lokaal</td></tr></tbody></table><hr><h1 id=2--check-yubikey-status>2. 🔐 Check YubiKey status
-<a class=heading-link href=#2--check-yubikey-status><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>gpg --card-status
-</span></span></code></pre></div><p>Controleer:</p><ul><li>serial number</li><li>welke keys aanwezig zijn</li><li>PIN retry counters</li></ul><hr><h1 id=3--backup-belangrijk>3. 💾 Backup (BELANGRIJK)
-<a class=heading-link href=#3--backup-belangrijk><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>gpg --export-secret-subkeys benjamin.italiaander@cwi.nl &gt; secret-subkeys-backup.asc
-</span></span><span style=display:flex><span>chmod <span style=color:#a5d6ff>600</span> secret-subkeys-backup.asc
-</span></span></code></pre></div><hr><h1 id=4--subkeys-naar-yubikey-kopiëren>4. 🔑 Subkeys naar YubiKey kopiëren
-<a class=heading-link href=#4--subkeys-naar-yubikey-kopi%c3%abren><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>gpg --edit-key benjamin.italiaander@cwi.nl
-</span></span></code></pre></div><h2 id=-belangrijk>⚠️ Belangrijk
-<a class=heading-link href=#-belangrijk><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><p><code>key N</code> is een toggle — zorg dat <strong>exact 1 key geselecteerd is</strong></p><p>Controleer met:</p><pre tabindex=0><code>list
-</code></pre><hr><h2 id=41-signing-key>4.1 Signing key
-<a class=heading-link href=#41-signing-key><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><pre tabindex=0><code>key 1
+</code></pre><h3 id="betekenis">
+  Betekenis
+  <a class="heading-link" href="#betekenis">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Betekenis</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>[S]</code></td>
+          <td>Signing</td>
+      </tr>
+      <tr>
+          <td><code>[E]</code></td>
+          <td>Encryption</td>
+      </tr>
+      <tr>
+          <td><code>[A]</code></td>
+          <td>Authentication</td>
+      </tr>
+      <tr>
+          <td><code>sec#</code></td>
+          <td>master key niet lokaal</td>
+      </tr>
+      <tr>
+          <td><code>ssb&gt;</code></td>
+          <td>key staat al op YubiKey</td>
+      </tr>
+      <tr>
+          <td><code>ssb</code></td>
+          <td>key staat lokaal</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h1 id="2--check-yubikey-status">
+  2. 🔐 Check YubiKey status
+  <a class="heading-link" href="#2--check-yubikey-status">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --card-status
+</span></span></code></pre></div><p>Controleer:</p>
+<ul>
+<li>serial number</li>
+<li>welke keys aanwezig zijn</li>
+<li>PIN retry counters</li>
+</ul>
+<hr>
+<h1 id="3--backup-belangrijk">
+  3. 💾 Backup (BELANGRIJK)
+  <a class="heading-link" href="#3--backup-belangrijk">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --export-secret-subkeys benjamin.italiaander@cwi.nl &gt; secret-subkeys-backup.asc
+</span></span><span style="display:flex;"><span>chmod <span style="color:#a5d6ff">600</span> secret-subkeys-backup.asc
+</span></span></code></pre></div><hr>
+<h1 id="4--subkeys-naar-yubikey-kopiëren">
+  4. 🔑 Subkeys naar YubiKey kopiëren
+  <a class="heading-link" href="#4--subkeys-naar-yubikey-kopi%c3%abren">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --edit-key benjamin.italiaander@cwi.nl
+</span></span></code></pre></div><h2 id="-belangrijk">
+  ⚠️ Belangrijk
+  <a class="heading-link" href="#-belangrijk">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><code>key N</code> is een toggle — zorg dat <strong>exact 1 key geselecteerd is</strong></p>
+<p>Controleer met:</p>
+<pre tabindex="0"><code>list
+</code></pre><hr>
+<h2 id="41-signing-key">
+  4.1 Signing key
+  <a class="heading-link" href="#41-signing-key">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<pre tabindex="0"><code>key 1
 keytocard
-</code></pre><p>Kies:</p><pre tabindex=0><code>1 (Signature)
-</code></pre><hr><h2 id=42-encryption-key>4.2 Encryption key
-<a class=heading-link href=#42-encryption-key><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><pre tabindex=0><code>key 1
+</code></pre><p>Kies:</p>
+<pre tabindex="0"><code>1 (Signature)
+</code></pre><hr>
+<h2 id="42-encryption-key">
+  4.2 Encryption key
+  <a class="heading-link" href="#42-encryption-key">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<pre tabindex="0"><code>key 1
 key 2
 keytocard
-</code></pre><p>Kies:</p><pre tabindex=0><code>2 (Encryption)
-</code></pre><hr><h2 id=43-authentication-key-ssh>4.3 Authentication key (SSH)
-<a class=heading-link href=#43-authentication-key-ssh><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><pre tabindex=0><code>key 2
+</code></pre><p>Kies:</p>
+<pre tabindex="0"><code>2 (Encryption)
+</code></pre><hr>
+<h2 id="43-authentication-key-ssh">
+  4.3 Authentication key (SSH)
+  <a class="heading-link" href="#43-authentication-key-ssh">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<pre tabindex="0"><code>key 2
 key 3
 keytocard
-</code></pre><p>Kies:</p><pre tabindex=0><code>3 (Authentication)
-</code></pre><hr><h2 id=44-opslaan>4.4 Opslaan
-<a class=heading-link href=#44-opslaan><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><pre tabindex=0><code>save
-</code></pre><hr><h1 id=5--controle>5. ✅ Controle
-<a class=heading-link href=#5--controle><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>gpg --card-status
-</span></span></code></pre></div><p>Je wilt zien:</p><pre tabindex=0><code>Signature key ....: ...
+</code></pre><p>Kies:</p>
+<pre tabindex="0"><code>3 (Authentication)
+</code></pre><hr>
+<h2 id="44-opslaan">
+  4.4 Opslaan
+  <a class="heading-link" href="#44-opslaan">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<pre tabindex="0"><code>save
+</code></pre><hr>
+<h1 id="5--controle">
+  5. ✅ Controle
+  <a class="heading-link" href="#5--controle">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --card-status
+</span></span></code></pre></div><p>Je wilt zien:</p>
+<pre tabindex="0"><code>Signature key ....: ...
 Encryption key....: ...
 Authentication key: ...
-</code></pre><hr><h1 id=6--ssh-public-key-exporteren>6. 🔑 SSH public key exporteren
-<a class=heading-link href=#6--ssh-public-key-exporteren><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>gpg --export-ssh-key benjamin.italiaander@cwi.nl
-</span></span></code></pre></div><p>Opslaan:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>gpg --export-ssh-key benjamin.italiaander@cwi.nl &gt; ~/.ssh/yubikey.pub
-</span></span></code></pre></div><hr><h1 id=7--public-key-op-server-zetten>7. 🖥️ Public key op server zetten
-<a class=heading-link href=#7--public-key-op-server-zetten><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>mkdir -p ~/.ssh
-</span></span><span style=display:flex><span>chmod <span style=color:#a5d6ff>700</span> ~/.ssh
-</span></span><span style=display:flex><span>nano ~/.ssh/authorized_keys
-</span></span></code></pre></div><p>Plak de key en:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>chmod <span style=color:#a5d6ff>600</span> ~/.ssh/authorized_keys
-</span></span></code></pre></div><hr><h1 id=8--gpg-agent-configureren>8. ⚙️ gpg-agent configureren
-<a class=heading-link href=#8--gpg-agent-configureren><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><p>Bestand:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>~/.gnupg/gpg-agent.conf
-</span></span></code></pre></div><p>Inhoud:</p><pre tabindex=0><code class=language-conf data-lang=conf>enable-ssh-support
+</code></pre><hr>
+<h1 id="6--ssh-public-key-exporteren">
+  6. 🔑 SSH public key exporteren
+  <a class="heading-link" href="#6--ssh-public-key-exporteren">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --export-ssh-key benjamin.italiaander@cwi.nl
+</span></span></code></pre></div><p>Opslaan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --export-ssh-key benjamin.italiaander@cwi.nl &gt; ~/.ssh/yubikey.pub
+</span></span></code></pre></div><hr>
+<h1 id="7--public-key-op-server-zetten">
+  7. 🖥️ Public key op server zetten
+  <a class="heading-link" href="#7--public-key-op-server-zetten">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p ~/.ssh
+</span></span><span style="display:flex;"><span>chmod <span style="color:#a5d6ff">700</span> ~/.ssh
+</span></span><span style="display:flex;"><span>nano ~/.ssh/authorized_keys
+</span></span></code></pre></div><p>Plak de key en:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#a5d6ff">600</span> ~/.ssh/authorized_keys
+</span></span></code></pre></div><hr>
+<h1 id="8--gpg-agent-configureren">
+  8. ⚙️ gpg-agent configureren
+  <a class="heading-link" href="#8--gpg-agent-configureren">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Bestand:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/.gnupg/gpg-agent.conf
+</span></span></code></pre></div><p>Inhoud:</p>
+<pre tabindex="0"><code class="language-conf" data-lang="conf">enable-ssh-support
 pinentry-program /usr/bin/pinentry-curses
-</code></pre><hr><h1 id=9--agent-herstarten>9. 🔄 Agent herstarten
-<a class=heading-link href=#9--agent-herstarten><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>gpgconf --kill gpg-agent
-</span></span></code></pre></div><hr><h1 id=10--environment-variables>10. 🧠 Environment variables
-<a class=heading-link href=#10--environment-variables><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><h2 id=zet-in-bashrc>Zet in <code>~/.bashrc</code>
-<a class=heading-link href=#zet-in-bashrc><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>export <span style=color:#79c0ff>GPG_TTY</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>tty<span style=color:#ff7b72>)</span>
-</span></span><span style=display:flex><span>export <span style=color:#79c0ff>SSH_AUTH_SOCK</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>gpgconf --list-dirs agent-ssh-socket<span style=color:#ff7b72>)</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>gpg-connect-agent updatestartuptty /bye &gt;/dev/null 2&gt;&amp;<span style=color:#a5d6ff>1</span>
-</span></span></code></pre></div><p>Daarna:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>source ~/.bashrc
-</span></span></code></pre></div><hr><h1 id=11--check-ssh-agent>11. 🔍 Check SSH agent
-<a class=heading-link href=#11--check-ssh-agent><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>ssh-add -L
-</span></span></code></pre></div><p>Je wilt zien:</p><pre tabindex=0><code>ssh-ed25519 ... cardno:XXXX
-</code></pre><hr><h1 id=12--ssh-config-voorbeeld>12. 🔗 SSH config voorbeeld
-<a class=heading-link href=#12--ssh-config-voorbeeld><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><pre tabindex=0><code class=language-sshconfig data-lang=sshconfig>Host doorgang.cwi.nl
+</code></pre><hr>
+<h1 id="9--agent-herstarten">
+  9. 🔄 Agent herstarten
+  <a class="heading-link" href="#9--agent-herstarten">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpgconf --kill gpg-agent
+</span></span></code></pre></div><hr>
+<h1 id="10--environment-variables">
+  10. 🧠 Environment variables
+  <a class="heading-link" href="#10--environment-variables">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h2 id="zet-in-bashrc">
+  Zet in <code>~/.bashrc</code>
+  <a class="heading-link" href="#zet-in-bashrc">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export <span style="color:#79c0ff">GPG_TTY</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#ff7b72">$(</span>tty<span style="color:#ff7b72">)</span>
+</span></span><span style="display:flex;"><span>export <span style="color:#79c0ff">SSH_AUTH_SOCK</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#ff7b72">$(</span>gpgconf --list-dirs agent-ssh-socket<span style="color:#ff7b72">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gpg-connect-agent updatestartuptty /bye &gt;/dev/null 2&gt;&amp;<span style="color:#a5d6ff">1</span>
+</span></span></code></pre></div><p>Daarna:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source ~/.bashrc
+</span></span></code></pre></div><hr>
+<h1 id="11--check-ssh-agent">
+  11. 🔍 Check SSH agent
+  <a class="heading-link" href="#11--check-ssh-agent">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-add -L
+</span></span></code></pre></div><p>Je wilt zien:</p>
+<pre tabindex="0"><code>ssh-ed25519 ... cardno:XXXX
+</code></pre><hr>
+<h1 id="12--ssh-config-voorbeeld">
+  12. 🔗 SSH config voorbeeld
+  <a class="heading-link" href="#12--ssh-config-voorbeeld">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<pre tabindex="0"><code class="language-sshconfig" data-lang="sshconfig">Host doorgang.cwi.nl
     User italiaan
     IdentityFile ~/.ssh/id_ed25519
 
@@ -134,40 +471,172 @@ Host cwi-www-proxy
     ProxyJump turku-proxy
     ForwardAgent yes
     IdentitiesOnly no
-</code></pre><hr><h1 id=13--debugging>13. 🔍 Debugging
-<a class=heading-link href=#13--debugging><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>ssh -vvv cwi-www-proxy
-</span></span></code></pre></div><p>Zoek naar:</p><pre tabindex=0><code>Offering public key: cardno:...
+</code></pre><hr>
+<h1 id="13--debugging">
+  13. 🔍 Debugging
+  <a class="heading-link" href="#13--debugging">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -vvv cwi-www-proxy
+</span></span></code></pre></div><p>Zoek naar:</p>
+<pre tabindex="0"><code>Offering public key: cardno:...
 Server accepts key: cardno:...
-</code></pre><hr><h1 id=14--veelvoorkomende-problemen>14. ⚠️ Veelvoorkomende problemen
-<a class=heading-link href=#14--veelvoorkomende-problemen><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><h2 id=-verkeerde-agent>❌ Verkeerde agent
-<a class=heading-link href=#-verkeerde-agent><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>echo <span style=color:#79c0ff>$SSH_AUTH_SOCK</span>
-</span></span></code></pre></div><p>Moet zijn:</p><pre tabindex=0><code>/run/user/.../gnupg/S.gpg-agent.ssh
-</code></pre><p>Niet:</p><pre tabindex=0><code>/run/user/.../keyring/ssh
-</code></pre><hr><h2 id=-signing-failed--agent-refused>❌ Signing failed / agent refused
-<a class=heading-link href=#-signing-failed--agent-refused><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><p>Fix:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>export <span style=color:#79c0ff>GPG_TTY</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>tty<span style=color:#ff7b72>)</span>
-</span></span><span style=display:flex><span>gpg-connect-agent updatestartuptty /bye
-</span></span></code></pre></div><hr><h2 id=-verkeerde-key-gebruikt>❌ Verkeerde key gebruikt
-<a class=heading-link href=#-verkeerde-key-gebruikt><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><p>Check:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>ssh-add -L
-</span></span></code></pre></div><hr><h2 id=-server-accepteert-key-niet>❌ Server accepteert key niet
-<a class=heading-link href=#-server-accepteert-key-niet><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><p>Vergelijk:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>gpg --export-ssh-key benjamin.italiaander@cwi.nl
-</span></span></code></pre></div><p>met:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>~/.ssh/authorized_keys
-</span></span></code></pre></div><hr><h1 id=15--snelle-checks>15. 🧪 Snelle checks
-<a class=heading-link href=#15--snelle-checks><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>gpg --card-status
-</span></span><span style=display:flex><span>gpg -K
-</span></span><span style=display:flex><span>ssh-add -L
-</span></span><span style=display:flex><span>echo <span style=color:#79c0ff>$SSH_AUTH_SOCK</span>
-</span></span><span style=display:flex><span>ssh -vvv host
-</span></span></code></pre></div><hr><h1 id=-samenvatting>🧠 Samenvatting
-<a class=heading-link href=#-samenvatting><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><ul><li>🔐 private keys → op YubiKey</li><li>📄 public keys → op server</li><li>🔗 SSH → via gpg-agent</li><li>⚙️ env vars → in <code>.bashrc</code></li></ul><hr><ul><li>Gebruik 2 YubiKeys (backup)</li><li>Gebruik <code>pinentry-curses</code> voor SSH</li><li>Vermijd <code>IdentitiesOnly yes</code> tenzij nodig</li></ul></article></section></div><footer class=footer><section class=container>©
-2016 -
-2026
-Benjamin Italiaander
-·</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script></body></html>
+</code></pre><hr>
+<h1 id="14--veelvoorkomende-problemen">
+  14. ⚠️ Veelvoorkomende problemen
+  <a class="heading-link" href="#14--veelvoorkomende-problemen">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h2 id="-verkeerde-agent">
+  ❌ Verkeerde agent
+  <a class="heading-link" href="#-verkeerde-agent">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#79c0ff">$SSH_AUTH_SOCK</span>
+</span></span></code></pre></div><p>Moet zijn:</p>
+<pre tabindex="0"><code>/run/user/.../gnupg/S.gpg-agent.ssh
+</code></pre><p>Niet:</p>
+<pre tabindex="0"><code>/run/user/.../keyring/ssh
+</code></pre><hr>
+<h2 id="-signing-failed--agent-refused">
+  ❌ Signing failed / agent refused
+  <a class="heading-link" href="#-signing-failed--agent-refused">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Fix:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export <span style="color:#79c0ff">GPG_TTY</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#ff7b72">$(</span>tty<span style="color:#ff7b72">)</span>
+</span></span><span style="display:flex;"><span>gpg-connect-agent updatestartuptty /bye
+</span></span></code></pre></div><hr>
+<h2 id="-verkeerde-key-gebruikt">
+  ❌ Verkeerde key gebruikt
+  <a class="heading-link" href="#-verkeerde-key-gebruikt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Check:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-add -L
+</span></span></code></pre></div><hr>
+<h2 id="-server-accepteert-key-niet">
+  ❌ Server accepteert key niet
+  <a class="heading-link" href="#-server-accepteert-key-niet">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Vergelijk:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --export-ssh-key benjamin.italiaander@cwi.nl
+</span></span></code></pre></div><p>met:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/.ssh/authorized_keys
+</span></span></code></pre></div><hr>
+<h1 id="15--snelle-checks">
+  15. 🧪 Snelle checks
+  <a class="heading-link" href="#15--snelle-checks">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gpg --card-status
+</span></span><span style="display:flex;"><span>gpg -K
+</span></span><span style="display:flex;"><span>ssh-add -L
+</span></span><span style="display:flex;"><span>echo <span style="color:#79c0ff">$SSH_AUTH_SOCK</span>
+</span></span><span style="display:flex;"><span>ssh -vvv host
+</span></span></code></pre></div><hr>
+<h1 id="-samenvatting">
+  🧠 Samenvatting
+  <a class="heading-link" href="#-samenvatting">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<ul>
+<li>🔐 private keys → op YubiKey</li>
+<li>📄 public keys → op server</li>
+<li>🔗 SSH → via gpg-agent</li>
+<li>⚙️ env vars → in <code>.bashrc</code></li>
+</ul>
+<hr>
+<ul>
+<li>Gebruik 2 YubiKeys (backup)</li>
+<li>Gebruik <code>pinentry-curses</code> voor SSH</li>
+<li>Vermijd <code>IdentitiesOnly yes</code> tenzij nodig</li>
+</ul>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2016 -
+    
+    2026
+     Benjamin Italiaander 
+    ·
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

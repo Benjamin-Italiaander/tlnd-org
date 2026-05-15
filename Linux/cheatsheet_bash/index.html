@@ -1,9 +1,24 @@
-<!doctype html><html lang=en><head><title>Cheatsheet Bash · Benjamin Italiaander</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Benjamin Italiaander"><meta name=description content="# 🧠 Linux CLI Cheatsheet (Daily Use)
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Cheatsheet Bash · Benjamin Italiaander
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Benjamin Italiaander">
+<meta name="description" content="# 🧠 Linux CLI Cheatsheet (Daily Use)
 
 ## 🔎 Search in History
 ```bash
-Ctrl + r        # Reverse search (type to search, keep pressing for older matches)
-Ctrl + s        # Forward search (often disabled by default)
+Ctrl &#43; r        # Reverse search (type to search, keep pressing for older matches)
+Ctrl &#43; s        # Forward search (often disabled by default)
 
 history         # Show command history
 history | grep ssh   # Search history with grep
@@ -19,26 +34,26 @@ history | grep ssh   # Search history with grep
     Link to heading
   
 
-Ctrl + a        # Go to beginning of line
-Ctrl + e        # Go to end of line
-Alt + b         # Move back one word
-Alt + f         # Move forward one word
-Ctrl + xx       # Jump between start and cursor
+Ctrl &#43; a        # Go to beginning of line
+Ctrl &#43; e        # Go to end of line
+Alt &#43; b         # Move back one word
+Alt &#43; f         # Move forward one word
+Ctrl &#43; xx       # Jump between start and cursor
 
 
-  ✂️ Editing & Deleting
+  ✂️ Editing &amp; Deleting
   
     
     Link to heading
   
 
-Ctrl + u        # Delete from cursor → start
-Ctrl + k        # Delete from cursor → end
-Ctrl + w        # Delete previous word
-Ctrl + d        # Delete character under cursor
-Ctrl + h        # Delete character before cursor (backspace)
+Ctrl &#43; u        # Delete from cursor → start
+Ctrl &#43; k        # Delete from cursor → end
+Ctrl &#43; w        # Delete previous word
+Ctrl &#43; d        # Delete character under cursor
+Ctrl &#43; h        # Delete character before cursor (backspace)
 
-Ctrl + y        # Paste last deleted text (yank)
+Ctrl &#43; y        # Paste last deleted text (yank)
 
 
   🧹 Clear Screen / Reset
@@ -47,7 +62,7 @@ Ctrl + y        # Paste last deleted text (yank)
     Link to heading
   
 
-Ctrl + l        # Clear screen (same as 'clear')
+Ctrl &#43; l        # Clear screen (same as &#39;clear&#39;)
 clear           # Clear screen
 reset           # Full terminal reset (fix broken terminal)
 
@@ -58,15 +73,15 @@ reset           # Full terminal reset (fix broken terminal)
     Link to heading
   
 
-Ctrl + c        # Stop current command
-Ctrl + z        # Suspend (background)
+Ctrl &#43; c        # Stop current command
+Ctrl &#43; z        # Suspend (background)
 
 fg              # Bring back to foreground
 bg              # Resume in background
 jobs            # List background jobs
 
 
-  📁 Navigation & Basics
+  📁 Navigation &amp; Basics
   
     
     Link to heading
@@ -74,7 +89,7 @@ jobs            # List background jobs
 
 cd -            # Go to previous directory
 pwd             # Show current directory
-ls -lah         # List files (detailed + human readable)
+ls -lah         # List files (detailed &#43; human readable)
 
 tree            # Show directory structure (if installed)
 
@@ -88,8 +103,8 @@ tree            # Show directory structure (if installed)
 Tab             # Auto-complete files/commands
 Tab Tab         # Show all possibilities
 
-Ctrl + p        # Previous command (like ↑)
-Ctrl + n        # Next command (like ↓)
+Ctrl &#43; p        # Previous command (like ↑)
+Ctrl &#43; n        # Next command (like ↓)
 
 
   🧠 Pro Tips
@@ -127,93 +142,353 @@ history -w      # Write changes to ~/.bash_history
     Link to heading
   
 
-Ctrl + r        # Fuzzy search (better in zsh)
+Ctrl &#43; r        # Fuzzy search (better in zsh)
 
 # install fzf for even better search:
-# Ctrl + r becomes interactive fuzzy search
-"><meta name=keywords content="python,keras,Bash,kitty,kitten"><meta name=twitter:card content="summary"><meta name=twitter:title content="Cheatsheet Bash"><meta name=twitter:description content="# 🧠 Linux CLI Cheatsheet (Daily Use) ## 🔎 Search in History ```bash Ctrl + r # Reverse search (type to search, keep pressing for older matches) Ctrl + s # Forward search (often disabled by default) history # Show command history history | grep ssh # Search history with grep !123 # Run command number 123 from history !! # Run last command !ssh # Run last command starting with &#34;ssh&#34; ✏️ Cursor Movement (SUPER useful) Link to heading Ctrl + a # Go to beginning of line Ctrl + e # Go to end of line Alt + b # Move back one word Alt + f # Move forward one word Ctrl + xx # Jump between start and cursor ✂️ Editing & Deleting Link to heading Ctrl + u # Delete from cursor → start Ctrl + k # Delete from cursor → end Ctrl + w # Delete previous word Ctrl + d # Delete character under cursor Ctrl + h # Delete character before cursor (backspace) Ctrl + y # Paste last deleted text (yank) 🧹 Clear Screen / Reset Link to heading Ctrl + l # Clear screen (same as 'clear') clear # Clear screen reset # Full terminal reset (fix broken terminal) ⏸️ Process Control Link to heading Ctrl + c # Stop current command Ctrl + z # Suspend (background) fg # Bring back to foreground bg # Resume in background jobs # List background jobs 📁 Navigation & Basics Link to heading cd - # Go to previous directory pwd # Show current directory ls -lah # List files (detailed + human readable) tree # Show directory structure (if installed) ⚡ Handy Shortcuts Link to heading Tab # Auto-complete files/commands Tab Tab # Show all possibilities Ctrl + p # Previous command (like ↑) Ctrl + n # Next command (like ↓) 🧠 Pro Tips Link to heading sudo !! # Rerun last command with sudo !$ # Last argument of previous command # example: mkdir test cd !$ # goes into test ^old^new # Replace text in last command # example: ls /var/logg ^logg^log # fixes typo 🧼 Clear History (careful 😄) Link to heading history -c # Clear current session history history -w # Write changes to ~/.bash_history 🔧 Bonus (zsh / oh-my-zsh) Link to heading Ctrl + r # Fuzzy search (better in zsh) # install fzf for even better search: # Ctrl + r becomes interactive fuzzy search"><meta property="og:url" content="http://localhost/Linux/cheatsheet_bash/"><meta property="og:site_name" content="Benjamin Italiaander"><meta property="og:title" content="Cheatsheet Bash"><meta property="og:description" content="# 🧠 Linux CLI Cheatsheet (Daily Use) ## 🔎 Search in History ```bash Ctrl + r # Reverse search (type to search, keep pressing for older matches) Ctrl + s # Forward search (often disabled by default) history # Show command history history | grep ssh # Search history with grep !123 # Run command number 123 from history !! # Run last command !ssh # Run last command starting with &#34;ssh&#34; ✏️ Cursor Movement (SUPER useful) Link to heading Ctrl + a # Go to beginning of line Ctrl + e # Go to end of line Alt + b # Move back one word Alt + f # Move forward one word Ctrl + xx # Jump between start and cursor ✂️ Editing & Deleting Link to heading Ctrl + u # Delete from cursor → start Ctrl + k # Delete from cursor → end Ctrl + w # Delete previous word Ctrl + d # Delete character under cursor Ctrl + h # Delete character before cursor (backspace) Ctrl + y # Paste last deleted text (yank) 🧹 Clear Screen / Reset Link to heading Ctrl + l # Clear screen (same as 'clear') clear # Clear screen reset # Full terminal reset (fix broken terminal) ⏸️ Process Control Link to heading Ctrl + c # Stop current command Ctrl + z # Suspend (background) fg # Bring back to foreground bg # Resume in background jobs # List background jobs 📁 Navigation & Basics Link to heading cd - # Go to previous directory pwd # Show current directory ls -lah # List files (detailed + human readable) tree # Show directory structure (if installed) ⚡ Handy Shortcuts Link to heading Tab # Auto-complete files/commands Tab Tab # Show all possibilities Ctrl + p # Previous command (like ↑) Ctrl + n # Next command (like ↓) 🧠 Pro Tips Link to heading sudo !! # Rerun last command with sudo !$ # Last argument of previous command # example: mkdir test cd !$ # goes into test ^old^new # Replace text in last command # example: ls /var/logg ^logg^log # fixes typo 🧼 Clear History (careful 😄) Link to heading history -c # Clear current session history history -w # Write changes to ~/.bash_history 🔧 Bonus (zsh / oh-my-zsh) Link to heading Ctrl + r # Fuzzy search (better in zsh) # install fzf for even better search: # Ctrl + r becomes interactive fuzzy search"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="linux"><link rel=canonical href=http://localhost/Linux/cheatsheet_bash/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css integrity="sha256-9rGzWnsCUhslM49s9Yl1+ZgKbBKEd2P+NaSDB3WM0ec=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/img/favicon.svg sizes=any><link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://localhost/>Benjamin Italiaander
-</a><input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/>Home</a></li><li class=navigation-item><a class=navigation-link href=/>Books</a></li><li class=navigation-item><a class=navigation-link href=/Linux/yubikey/>Yubikey cli</a></li><li class=navigation-item><a class=navigation-link href=/Linux/>Linux</a></li><li class=navigation-item><a class=navigation-link href=/slices_of_life/art_i_enjoy/>Art I Enjoy</a></li></ul></section></nav><div class=content><section class="container page"><article><header><h1 class=title><a class=title-link href=http://localhost/Linux/cheatsheet_bash/>Cheatsheet Bash</a></h1></header><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-markdown data-lang=markdown><span style=display:flex><span><span style=color:#79c0ff;font-weight:700># 🧠 Linux CLI Cheatsheet (Daily Use)
-</span></span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#79c0ff>## 🔎 Search in History
-</span></span></span><span style=display:flex><span>```bash
-</span></span><span style=display:flex><span>Ctrl + r        # Reverse search (type to search, keep pressing for older matches)
-</span></span><span style=display:flex><span>Ctrl + s        # Forward search (often disabled by default)
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>history         # Show command history
-</span></span><span style=display:flex><span>history | grep ssh   # Search history with grep
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>!123            # Run command number 123 from history
-</span></span><span style=display:flex><span>!!              # Run last command
-</span></span><span style=display:flex><span>!ssh            # Run last command starting with &#34;ssh&#34;
-</span></span></code></pre></div><hr><h2 id=-cursor-movement-super-useful>✏️ Cursor Movement (SUPER useful)
-<a class=heading-link href=#-cursor-movement-super-useful><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>Ctrl + a        <span style=color:#8b949e;font-style:italic># Go to beginning of line</span>
-</span></span><span style=display:flex><span>Ctrl + e        <span style=color:#8b949e;font-style:italic># Go to end of line</span>
-</span></span><span style=display:flex><span>Alt + b         <span style=color:#8b949e;font-style:italic># Move back one word</span>
-</span></span><span style=display:flex><span>Alt + f         <span style=color:#8b949e;font-style:italic># Move forward one word</span>
-</span></span><span style=display:flex><span>Ctrl + xx       <span style=color:#8b949e;font-style:italic># Jump between start and cursor</span>
-</span></span></code></pre></div><hr><h2 id=-editing--deleting>✂️ Editing & Deleting
-<a class=heading-link href=#-editing--deleting><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>Ctrl + u        <span style=color:#8b949e;font-style:italic># Delete from cursor → start</span>
-</span></span><span style=display:flex><span>Ctrl + k        <span style=color:#8b949e;font-style:italic># Delete from cursor → end</span>
-</span></span><span style=display:flex><span>Ctrl + w        <span style=color:#8b949e;font-style:italic># Delete previous word</span>
-</span></span><span style=display:flex><span>Ctrl + d        <span style=color:#8b949e;font-style:italic># Delete character under cursor</span>
-</span></span><span style=display:flex><span>Ctrl + h        <span style=color:#8b949e;font-style:italic># Delete character before cursor (backspace)</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>Ctrl + y        <span style=color:#8b949e;font-style:italic># Paste last deleted text (yank)</span>
-</span></span></code></pre></div><hr><h2 id=-clear-screen--reset>🧹 Clear Screen / Reset
-<a class=heading-link href=#-clear-screen--reset><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>Ctrl + l        <span style=color:#8b949e;font-style:italic># Clear screen (same as &#39;clear&#39;)</span>
-</span></span><span style=display:flex><span>clear           <span style=color:#8b949e;font-style:italic># Clear screen</span>
-</span></span><span style=display:flex><span>reset           <span style=color:#8b949e;font-style:italic># Full terminal reset (fix broken terminal)</span>
-</span></span></code></pre></div><hr><h2 id=-process-control>⏸️ Process Control
-<a class=heading-link href=#-process-control><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>Ctrl + c        <span style=color:#8b949e;font-style:italic># Stop current command</span>
-</span></span><span style=display:flex><span>Ctrl + z        <span style=color:#8b949e;font-style:italic># Suspend (background)</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>fg              <span style=color:#8b949e;font-style:italic># Bring back to foreground</span>
-</span></span><span style=display:flex><span>bg              <span style=color:#8b949e;font-style:italic># Resume in background</span>
-</span></span><span style=display:flex><span>jobs            <span style=color:#8b949e;font-style:italic># List background jobs</span>
-</span></span></code></pre></div><hr><h2 id=-navigation--basics>📁 Navigation & Basics
-<a class=heading-link href=#-navigation--basics><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>cd -            <span style=color:#8b949e;font-style:italic># Go to previous directory</span>
-</span></span><span style=display:flex><span>pwd             <span style=color:#8b949e;font-style:italic># Show current directory</span>
-</span></span><span style=display:flex><span>ls -lah         <span style=color:#8b949e;font-style:italic># List files (detailed + human readable)</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>tree            <span style=color:#8b949e;font-style:italic># Show directory structure (if installed)</span>
-</span></span></code></pre></div><hr><h2 id=-handy-shortcuts>⚡ Handy Shortcuts
-<a class=heading-link href=#-handy-shortcuts><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>Tab             <span style=color:#8b949e;font-style:italic># Auto-complete files/commands</span>
-</span></span><span style=display:flex><span>Tab Tab         <span style=color:#8b949e;font-style:italic># Show all possibilities</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>Ctrl + p        <span style=color:#8b949e;font-style:italic># Previous command (like ↑)</span>
-</span></span><span style=display:flex><span>Ctrl + n        <span style=color:#8b949e;font-style:italic># Next command (like ↓)</span>
-</span></span></code></pre></div><hr><h2 id=-pro-tips>🧠 Pro Tips
-<a class=heading-link href=#-pro-tips><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>sudo !!         <span style=color:#8b949e;font-style:italic># Rerun last command with sudo</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>!$              <span style=color:#8b949e;font-style:italic># Last argument of previous command</span>
-</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># example:</span>
-</span></span><span style=display:flex><span>mkdir test
-</span></span><span style=display:flex><span>cd !$           <span style=color:#8b949e;font-style:italic># goes into test</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>^old^new        <span style=color:#8b949e;font-style:italic># Replace text in last command</span>
-</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># example:</span>
-</span></span><span style=display:flex><span>ls /var/logg
-</span></span><span style=display:flex><span>^logg^log       <span style=color:#8b949e;font-style:italic># fixes typo</span>
-</span></span></code></pre></div><hr><h2 id=-clear-history-careful->🧼 Clear History (careful 😄)
-<a class=heading-link href=#-clear-history-careful-><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>history -c      <span style=color:#8b949e;font-style:italic># Clear current session history</span>
-</span></span><span style=display:flex><span>history -w      <span style=color:#8b949e;font-style:italic># Write changes to ~/.bash_history</span>
-</span></span></code></pre></div><hr><h2 id=-bonus-zsh--oh-my-zsh>🔧 Bonus (zsh / oh-my-zsh)
-<a class=heading-link href=#-bonus-zsh--oh-my-zsh><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>Ctrl + r        <span style=color:#8b949e;font-style:italic># Fuzzy search (better in zsh)</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># install fzf for even better search:</span>
-</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Ctrl + r becomes interactive fuzzy search</span>
-</span></span></code></pre></div><pre tabindex=0><code></code></pre></article></section></div><footer class=footer><section class=container>©
-2016 -
-2026
-Benjamin Italiaander
-·</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script></body></html>
+# Ctrl &#43; r becomes interactive fuzzy search
+">
+<meta name="keywords" content="python, keras, Bash, kitty, kitten">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cheatsheet Bash">
+  <meta name="twitter:description" content="# 🧠 Linux CLI Cheatsheet (Daily Use) ## 🔎 Search in History ```bash Ctrl &#43; r # Reverse search (type to search, keep pressing for older matches) Ctrl &#43; s # Forward search (often disabled by default) history # Show command history history | grep ssh # Search history with grep !123 # Run command number 123 from history !! # Run last command !ssh # Run last command starting with &#34;ssh&#34; ✏️ Cursor Movement (SUPER useful) Link to heading Ctrl &#43; a # Go to beginning of line Ctrl &#43; e # Go to end of line Alt &#43; b # Move back one word Alt &#43; f # Move forward one word Ctrl &#43; xx # Jump between start and cursor ✂️ Editing &amp; Deleting Link to heading Ctrl &#43; u # Delete from cursor → start Ctrl &#43; k # Delete from cursor → end Ctrl &#43; w # Delete previous word Ctrl &#43; d # Delete character under cursor Ctrl &#43; h # Delete character before cursor (backspace) Ctrl &#43; y # Paste last deleted text (yank) 🧹 Clear Screen / Reset Link to heading Ctrl &#43; l # Clear screen (same as &#39;clear&#39;) clear # Clear screen reset # Full terminal reset (fix broken terminal) ⏸️ Process Control Link to heading Ctrl &#43; c # Stop current command Ctrl &#43; z # Suspend (background) fg # Bring back to foreground bg # Resume in background jobs # List background jobs 📁 Navigation &amp; Basics Link to heading cd - # Go to previous directory pwd # Show current directory ls -lah # List files (detailed &#43; human readable) tree # Show directory structure (if installed) ⚡ Handy Shortcuts Link to heading Tab # Auto-complete files/commands Tab Tab # Show all possibilities Ctrl &#43; p # Previous command (like ↑) Ctrl &#43; n # Next command (like ↓) 🧠 Pro Tips Link to heading sudo !! # Rerun last command with sudo !$ # Last argument of previous command # example: mkdir test cd !$ # goes into test ^old^new # Replace text in last command # example: ls /var/logg ^logg^log # fixes typo 🧼 Clear History (careful 😄) Link to heading history -c # Clear current session history history -w # Write changes to ~/.bash_history 🔧 Bonus (zsh / oh-my-zsh) Link to heading Ctrl &#43; r # Fuzzy search (better in zsh) # install fzf for even better search: # Ctrl &#43; r becomes interactive fuzzy search">
+
+<meta property="og:url" content="http://localhost:1313/Linux/cheatsheet_bash/">
+  <meta property="og:site_name" content="Benjamin Italiaander">
+  <meta property="og:title" content="Cheatsheet Bash">
+  <meta property="og:description" content="# 🧠 Linux CLI Cheatsheet (Daily Use) ## 🔎 Search in History ```bash Ctrl &#43; r # Reverse search (type to search, keep pressing for older matches) Ctrl &#43; s # Forward search (often disabled by default) history # Show command history history | grep ssh # Search history with grep !123 # Run command number 123 from history !! # Run last command !ssh # Run last command starting with &#34;ssh&#34; ✏️ Cursor Movement (SUPER useful) Link to heading Ctrl &#43; a # Go to beginning of line Ctrl &#43; e # Go to end of line Alt &#43; b # Move back one word Alt &#43; f # Move forward one word Ctrl &#43; xx # Jump between start and cursor ✂️ Editing &amp; Deleting Link to heading Ctrl &#43; u # Delete from cursor → start Ctrl &#43; k # Delete from cursor → end Ctrl &#43; w # Delete previous word Ctrl &#43; d # Delete character under cursor Ctrl &#43; h # Delete character before cursor (backspace) Ctrl &#43; y # Paste last deleted text (yank) 🧹 Clear Screen / Reset Link to heading Ctrl &#43; l # Clear screen (same as &#39;clear&#39;) clear # Clear screen reset # Full terminal reset (fix broken terminal) ⏸️ Process Control Link to heading Ctrl &#43; c # Stop current command Ctrl &#43; z # Suspend (background) fg # Bring back to foreground bg # Resume in background jobs # List background jobs 📁 Navigation &amp; Basics Link to heading cd - # Go to previous directory pwd # Show current directory ls -lah # List files (detailed &#43; human readable) tree # Show directory structure (if installed) ⚡ Handy Shortcuts Link to heading Tab # Auto-complete files/commands Tab Tab # Show all possibilities Ctrl &#43; p # Previous command (like ↑) Ctrl &#43; n # Next command (like ↓) 🧠 Pro Tips Link to heading sudo !! # Rerun last command with sudo !$ # Last argument of previous command # example: mkdir test cd !$ # goes into test ^old^new # Replace text in last command # example: ls /var/logg ^logg^log # fixes typo 🧼 Clear History (careful 😄) Link to heading history -c # Clear current session history history -w # Write changes to ~/.bash_history 🔧 Bonus (zsh / oh-my-zsh) Link to heading Ctrl &#43; r # Fuzzy search (better in zsh) # install fzf for even better search: # Ctrl &#43; r becomes interactive fuzzy search">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="linux">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/Linux/cheatsheet_bash/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+  
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Benjamin Italiaander
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/">Home</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/">Books</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/Linux/yubikey/">Yubikey cli</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/Linux/">Linux</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/slices_of_life/art_i_enjoy/">Art I Enjoy</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/Linux/cheatsheet_bash/">
+          Cheatsheet Bash
+        </a>
+      </h1>
+    </header>
+
+    <div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#79c0ff;font-weight:bold"># 🧠 Linux CLI Cheatsheet (Daily Use)
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff">## 🔎 Search in History
+</span></span></span><span style="display:flex;"><span>```bash
+</span></span><span style="display:flex;"><span>Ctrl + r        # Reverse search (type to search, keep pressing for older matches)
+</span></span><span style="display:flex;"><span>Ctrl + s        # Forward search (often disabled by default)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>history         # Show command history
+</span></span><span style="display:flex;"><span>history | grep ssh   # Search history with grep
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>!123            # Run command number 123 from history
+</span></span><span style="display:flex;"><span>!!              # Run last command
+</span></span><span style="display:flex;"><span>!ssh            # Run last command starting with &#34;ssh&#34;
+</span></span></code></pre></div><hr>
+<h2 id="-cursor-movement-super-useful">
+  ✏️ Cursor Movement (SUPER useful)
+  <a class="heading-link" href="#-cursor-movement-super-useful">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Ctrl + a        <span style="color:#8b949e;font-style:italic"># Go to beginning of line</span>
+</span></span><span style="display:flex;"><span>Ctrl + e        <span style="color:#8b949e;font-style:italic"># Go to end of line</span>
+</span></span><span style="display:flex;"><span>Alt + b         <span style="color:#8b949e;font-style:italic"># Move back one word</span>
+</span></span><span style="display:flex;"><span>Alt + f         <span style="color:#8b949e;font-style:italic"># Move forward one word</span>
+</span></span><span style="display:flex;"><span>Ctrl + xx       <span style="color:#8b949e;font-style:italic"># Jump between start and cursor</span>
+</span></span></code></pre></div><hr>
+<h2 id="-editing--deleting">
+  ✂️ Editing &amp; Deleting
+  <a class="heading-link" href="#-editing--deleting">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Ctrl + u        <span style="color:#8b949e;font-style:italic"># Delete from cursor → start</span>
+</span></span><span style="display:flex;"><span>Ctrl + k        <span style="color:#8b949e;font-style:italic"># Delete from cursor → end</span>
+</span></span><span style="display:flex;"><span>Ctrl + w        <span style="color:#8b949e;font-style:italic"># Delete previous word</span>
+</span></span><span style="display:flex;"><span>Ctrl + d        <span style="color:#8b949e;font-style:italic"># Delete character under cursor</span>
+</span></span><span style="display:flex;"><span>Ctrl + h        <span style="color:#8b949e;font-style:italic"># Delete character before cursor (backspace)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Ctrl + y        <span style="color:#8b949e;font-style:italic"># Paste last deleted text (yank)</span>
+</span></span></code></pre></div><hr>
+<h2 id="-clear-screen--reset">
+  🧹 Clear Screen / Reset
+  <a class="heading-link" href="#-clear-screen--reset">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Ctrl + l        <span style="color:#8b949e;font-style:italic"># Clear screen (same as &#39;clear&#39;)</span>
+</span></span><span style="display:flex;"><span>clear           <span style="color:#8b949e;font-style:italic"># Clear screen</span>
+</span></span><span style="display:flex;"><span>reset           <span style="color:#8b949e;font-style:italic"># Full terminal reset (fix broken terminal)</span>
+</span></span></code></pre></div><hr>
+<h2 id="-process-control">
+  ⏸️ Process Control
+  <a class="heading-link" href="#-process-control">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Ctrl + c        <span style="color:#8b949e;font-style:italic"># Stop current command</span>
+</span></span><span style="display:flex;"><span>Ctrl + z        <span style="color:#8b949e;font-style:italic"># Suspend (background)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fg              <span style="color:#8b949e;font-style:italic"># Bring back to foreground</span>
+</span></span><span style="display:flex;"><span>bg              <span style="color:#8b949e;font-style:italic"># Resume in background</span>
+</span></span><span style="display:flex;"><span>jobs            <span style="color:#8b949e;font-style:italic"># List background jobs</span>
+</span></span></code></pre></div><hr>
+<h2 id="-navigation--basics">
+  📁 Navigation &amp; Basics
+  <a class="heading-link" href="#-navigation--basics">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd -            <span style="color:#8b949e;font-style:italic"># Go to previous directory</span>
+</span></span><span style="display:flex;"><span>pwd             <span style="color:#8b949e;font-style:italic"># Show current directory</span>
+</span></span><span style="display:flex;"><span>ls -lah         <span style="color:#8b949e;font-style:italic"># List files (detailed + human readable)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tree            <span style="color:#8b949e;font-style:italic"># Show directory structure (if installed)</span>
+</span></span></code></pre></div><hr>
+<h2 id="-handy-shortcuts">
+  ⚡ Handy Shortcuts
+  <a class="heading-link" href="#-handy-shortcuts">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Tab             <span style="color:#8b949e;font-style:italic"># Auto-complete files/commands</span>
+</span></span><span style="display:flex;"><span>Tab Tab         <span style="color:#8b949e;font-style:italic"># Show all possibilities</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Ctrl + p        <span style="color:#8b949e;font-style:italic"># Previous command (like ↑)</span>
+</span></span><span style="display:flex;"><span>Ctrl + n        <span style="color:#8b949e;font-style:italic"># Next command (like ↓)</span>
+</span></span></code></pre></div><hr>
+<h2 id="-pro-tips">
+  🧠 Pro Tips
+  <a class="heading-link" href="#-pro-tips">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo !!         <span style="color:#8b949e;font-style:italic"># Rerun last command with sudo</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>!$              <span style="color:#8b949e;font-style:italic"># Last argument of previous command</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># example:</span>
+</span></span><span style="display:flex;"><span>mkdir test
+</span></span><span style="display:flex;"><span>cd !$           <span style="color:#8b949e;font-style:italic"># goes into test</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>^old^new        <span style="color:#8b949e;font-style:italic"># Replace text in last command</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># example:</span>
+</span></span><span style="display:flex;"><span>ls /var/logg
+</span></span><span style="display:flex;"><span>^logg^log       <span style="color:#8b949e;font-style:italic"># fixes typo</span>
+</span></span></code></pre></div><hr>
+<h2 id="-clear-history-careful-">
+  🧼 Clear History (careful 😄)
+  <a class="heading-link" href="#-clear-history-careful-">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>history -c      <span style="color:#8b949e;font-style:italic"># Clear current session history</span>
+</span></span><span style="display:flex;"><span>history -w      <span style="color:#8b949e;font-style:italic"># Write changes to ~/.bash_history</span>
+</span></span></code></pre></div><hr>
+<h2 id="-bonus-zsh--oh-my-zsh">
+  🔧 Bonus (zsh / oh-my-zsh)
+  <a class="heading-link" href="#-bonus-zsh--oh-my-zsh">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Ctrl + r        <span style="color:#8b949e;font-style:italic"># Fuzzy search (better in zsh)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># install fzf for even better search:</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Ctrl + r becomes interactive fuzzy search</span>
+</span></span></code></pre></div><pre tabindex="0"><code></code></pre>
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2016 -
+    
+    2026
+     Benjamin Italiaander 
+    ·
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

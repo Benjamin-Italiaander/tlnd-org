@@ -1,55 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dutch on Benjamin Italiaander</title><link>http://localhost/slices_of_life/culinary_notes_by_benjamin/dutch/</link><description>Recent content in Dutch on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><atom:link href="http://localhost/slices_of_life/culinary_notes_by_benjamin/dutch/index.xml" rel="self" type="application/rss+xml"/><item><title>Linzen Garam Masala</title><link>http://localhost/slices_of_life/culinary_notes_by_benjamin/dutch/linzen_garam_masala/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/culinary_notes_by_benjamin/dutch/linzen_garam_masala/</guid><description>&lt;h1 id="-linzen-met-garam-masala"&gt;
- 🍲 Linzen met Garam Masala
- &lt;a class="heading-link" href="#-linzen-met-garam-masala"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h1&gt;
-&lt;p&gt;Een eenvoudig en aromatisch linzengerecht met warme Indiase kruiden. Heerlijk met rijst.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id="ingrediënten"&gt;
- Ingrediënten
- &lt;a class="heading-link" href="#ingredi%c3%abnten"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;h3 id="kruidenmengsel"&gt;
- Kruidenmengsel
- &lt;a class="heading-link" href="#kruidenmengsel"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;2 eetlepels &lt;strong&gt;garam masala&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;1 eetlepel &lt;strong&gt;komijnzaad&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;1 eetlepel &lt;strong&gt;kurkuma&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;1 theelepel &lt;strong&gt;chilipoeder&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;1 theelepel &lt;strong&gt;zout&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="overige"&gt;
- Overige
- &lt;a class="heading-link" href="#overige"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;1 theelepel &lt;strong&gt;ghee&lt;/strong&gt; (of olie)&lt;/li&gt;
-&lt;li&gt;200–250 g &lt;strong&gt;linzen&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;100-200 g &lt;strong&gt;tomatenconcentraat&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Water (genoeg om de linzen net onder te zetten)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rijst&lt;/strong&gt; om erbij te serveren&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id="bereiding"&gt;
- Bereiding
- &lt;a class="heading-link" href="#bereiding"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Meng de kruiden&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dutch on Benjamin Italiaander</title>
+    <link>http://localhost:1313/slices_of_life/culinary_notes_by_benjamin/dutch/</link>
+    <description>Recent content in Dutch on Benjamin Italiaander</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/slices_of_life/culinary_notes_by_benjamin/dutch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linzen Garam Masala</title>
+      <link>http://localhost:1313/slices_of_life/culinary_notes_by_benjamin/dutch/linzen_garam_masala/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/slices_of_life/culinary_notes_by_benjamin/dutch/linzen_garam_masala/</guid>
+      <description>&lt;h1 id=&#34;-linzen-met-garam-masala&#34;&gt;&#xA;  🍲 Linzen met Garam Masala&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-linzen-met-garam-masala&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Een eenvoudig en aromatisch linzengerecht met warme Indiase kruiden. Heerlijk met rijst.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;ingrediënten&#34;&gt;&#xA;  Ingrediënten&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#ingredi%c3%abnten&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;kruidenmengsel&#34;&gt;&#xA;  Kruidenmengsel&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#kruidenmengsel&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;2 eetlepels &lt;strong&gt;garam masala&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;1 eetlepel &lt;strong&gt;komijnzaad&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;1 eetlepel &lt;strong&gt;kurkuma&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;1 theelepel &lt;strong&gt;chilipoeder&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;1 theelepel &lt;strong&gt;zout&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;overige&#34;&gt;&#xA;  Overige&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#overige&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;1 theelepel &lt;strong&gt;ghee&lt;/strong&gt; (of olie)&lt;/li&gt;&#xA;&lt;li&gt;200–250 g &lt;strong&gt;linzen&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;100-200 g &lt;strong&gt;tomatenconcentraat&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Water (genoeg om de linzen net onder te zetten)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Rijst&lt;/strong&gt; om erbij te serveren&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;bereiding&#34;&gt;&#xA;  Bereiding&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#bereiding&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Meng de kruiden&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

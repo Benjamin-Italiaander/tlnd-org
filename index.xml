@@ -419,7 +419,31 @@ So here a short one how to generate qrcode from pipe in linux cli.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat ./somefile.txt | qrencode -t ansiutf8
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or i manage my passowords with pass and needed to copy a password to my phone by qr&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pass work/someaccount | head -n1 | tr -d &lt;span style="color:#79c0ff"&gt;\\&lt;/span&gt;n | qrencode -t ansiutf8
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;rsquo;tr&amp;rsquo; removes the newline at the end witch is added.&lt;/p&gt;</description></item><item><title>Install linux fujitsu lifebook</title><link>http://localhost/Linux/fedora/Install_Linux_from_USB_on_fujitsu_lifebook/</link><pubDate>Thu, 01 Jan 1970 01:33:41 +0100</pubDate><guid>http://localhost/Linux/fedora/Install_Linux_from_USB_on_fujitsu_lifebook/</guid><description>&lt;p&gt;I was trying to run a USB-install with Fedora 36 on my fujitsu lifebook u7410 but it did not boot from usb.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;rsquo;tr&amp;rsquo; removes the newline at the end witch is added.&lt;/p&gt;</description></item><item><title>GnuPG Unusable public key"</title><link>http://localhost/Linux/GnuPG/GPG_unusable_public_key/</link><pubDate>Thu, 01 Jan 1970 01:33:42 +0100</pubDate><guid>http://localhost/Linux/GnuPG/GPG_unusable_public_key/</guid><description>&lt;h1 id="fix-unusable-public-key-error-in-gpg"&gt;
+ Fix: &amp;ldquo;Unusable public key&amp;rdquo; error in GPG
+ &lt;a class="heading-link" href="#fix-unusable-public-key-error-in-gpg"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="error-message"&gt;
+ Error message
+ &lt;a class="heading-link" href="#error-message"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;If you encounter the following error, it usually means that no trusted public key is available:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;There is no assurance this key belongs to the named user
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;encryption failed: Unusable public key
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="cause"&gt;
+ Cause
+ &lt;a class="heading-link" href="#cause"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;GPG refuses to encrypt because the public key is not trusted.&lt;/p&gt;</description></item><item><title>Install linux fujitsu lifebook</title><link>http://localhost/Linux/fedora/Install_Linux_from_USB_on_fujitsu_lifebook/</link><pubDate>Thu, 01 Jan 1970 01:33:41 +0100</pubDate><guid>http://localhost/Linux/fedora/Install_Linux_from_USB_on_fujitsu_lifebook/</guid><description>&lt;p&gt;I was trying to run a USB-install with Fedora 36 on my fujitsu lifebook u7410 but it did not boot from usb.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;set_second_stage&lt;span style="color:#ff7b72;font-weight:bold"&gt;()&lt;/span&gt; failed: invalid Parameter
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Something has &lt;span style="color:#ff7b72"&gt;done&lt;/span&gt; seriously wrong: shim_init&lt;span style="color:#ff7b72;font-weight:bold"&gt;()&lt;/span&gt; failed Invalid Parameter
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Avoid this problem by making a bootable USB with &lt;a href="https://www.ventoy.net/en/index.html"&gt;ventoy USB tool&lt;/a&gt;
@@ -486,7 +510,7 @@ Ik houd het overzichtelijk maar technisch correct.&lt;/p&gt;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;For advanced users, there are several ways to install the &lt;strong&gt;latest development version&lt;/strong&gt; of YubiKey Manager (&lt;code&gt;ykman&lt;/code&gt;) directly from source.
-Choose the method that best fits your workflow.&lt;/p&gt;
+Choose the method that best fits your workflow. For me pipx works the best.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id="1--install-ykman-in-a-python-virtual-environment-recommended"&gt;
  1. 📦 Install &lt;code&gt;ykman&lt;/code&gt; in a Python Virtual Environment (Recommended)
@@ -495,9 +519,9 @@ Choose the method that best fits your workflow.&lt;/p&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;This keeps the installation &lt;strong&gt;isolated&lt;/strong&gt; from your system Python and avoids conflicts.&lt;/p&gt;</description></item><item><title>YubiKey OATH / TOTP Guide</title><link>http://localhost/Linux/yubikey/EN_yubikey_otp/</link><pubDate>Thu, 01 Jan 1970 01:33:40 +0100</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_otp/</guid><description>&lt;h1 id="-yubikey-oath--totp-guide"&gt;
- 🔐 YubiKey OATH / TOTP Guide
- &lt;a class="heading-link" href="#-yubikey-oath--totp-guide"&gt;
+&lt;p&gt;This keeps the installation &lt;strong&gt;isolated&lt;/strong&gt; from your system Python and avoids conflicts.&lt;/p&gt;</description></item><item><title>YubiKey OATH / TOTP Guide</title><link>http://localhost/Linux/yubikey/EN_yubikey_otp/</link><pubDate>Thu, 01 Jan 1970 01:33:40 +0100</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_otp/</guid><description>&lt;h1 id="yubikey-oath--totp-guide"&gt;
+ YubiKey OATH / TOTP Guide
+ &lt;a class="heading-link" href="#yubikey-oath--totp-guide"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
@@ -510,17 +534,17 @@ Choose the method that best fits your workflow.&lt;/p&gt;
  &lt;/a&gt;
 &lt;/h3&gt;
 &lt;hr&gt;
-&lt;h2 id="-about-this-guide"&gt;
- ⚠️ About This Guide
- &lt;a class="heading-link" href="#-about-this-guide"&gt;
+&lt;h2 id="about-this-guide"&gt;
+ About This Guide
+ &lt;a class="heading-link" href="#about-this-guide"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This guide explains &lt;strong&gt;how to copy your existing TOTP secrets into your YubiKey&lt;/strong&gt;.&lt;/p&gt;
-&lt;h3 id="-warning-1"&gt;
- ⚠️ Warning 1
- &lt;a class="heading-link" href="#-warning-1"&gt;
+&lt;h3 id="warning-1"&gt;
+ Warning 1
+ &lt;a class="heading-link" href="#warning-1"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
@@ -533,10 +557,23 @@ TOTP secrets are &lt;strong&gt;extremely sensitive&lt;/strong&gt; — if someone
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Make sure you do the &lt;a href="https://github.com/Benjamin-Italiaander/My_Notes/blob/main/Linux/yubikey/README/"&gt;first steps&lt;/a&gt;
- of initiating your YubiKey before you will start using the SSH functionality on your yubikey.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;There are still two keys generated: your private key and your public key.
-The private key remains important when using your YubiKey. In fact, the private key functions as a challenge key and works together with your YubiKey.&lt;/p&gt;</description></item><item><title/><link>http://localhost/img/wood_block_prints/uchida_woodblock_prints/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/img/wood_block_prints/uchida_woodblock_prints/</guid><description>&lt;HTML&gt;
+&lt;p&gt;Make sure you complete the &lt;a href="https://github.com/Benjamin-Italiaander/My_Notes/blob/main/Linux/yubikey/README/"&gt;initial setup steps&lt;/a&gt;
+ before using SSH with your YubiKey.&lt;/p&gt;
+&lt;p&gt;This guide assumes you already understand:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the difference between &lt;strong&gt;private&lt;/strong&gt; and &lt;strong&gt;public keys&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;basic SSH usage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more advanced setups, OpenPGP can be used, but FIDO2 is a simpler and very secure alternative.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="how-it-works"&gt;
+ How it works
+ &lt;a class="heading-link" href="#how-it-works"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;When using FIDO2 with SSH:&lt;/p&gt;</description></item><item><title/><link>http://localhost/img/wood_block_prints/uchida_woodblock_prints/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/img/wood_block_prints/uchida_woodblock_prints/</guid><description>&lt;HTML&gt;
 
 &lt;!-- Mirrored from www.baxleystamps.com/litho/misc/uchida_woodblock_prints.shtml by HTTrack Website Copier/3.x [XR&amp;CO'2014], Wed, 29 Oct 2025 14:32:45 GMT --&gt;
 &lt;HEAD&gt;
@@ -1726,7 +1763,16 @@ It is what you think about it.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Don&amp;rsquo;t be afraid of enemies who attack you.&lt;br&gt;
-Be afraid of the friends who flatter you.&lt;/p&gt;</description></item><item><title>Bash Otp Generator</title><link>http://localhost/Linux/bash_otp_generator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/bash_otp_generator/</guid><description>&lt;h1 id="create-an-otp-mfa-tool-in-the-bash-terminal"&gt;
+Be afraid of the friends who flatter you.&lt;/p&gt;</description></item><item><title>Adhd Huidige Samenleving</title><link>http://localhost/slices_of_life/my_anthropology_neurophilosophy_sociobiology/adhd_huidige_samenleving/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/my_anthropology_neurophilosophy_sociobiology/adhd_huidige_samenleving/</guid><description>&lt;h3 id="stelling-over-adhd"&gt;
+ Stelling over ADHD
+ &lt;a class="heading-link" href="#stelling-over-adhd"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Mensen met ADHD worden doorgaans niet als “ziek” beschouwd, in tegenstelling tot bijvoorbeeld mensen met psychotische aandoeningen. Er kan worden beargumenteerd dat mensen met ADHD in een samenleving die minder draait om deadlines, prestaties en productiviteit, mogelijk nooit het label ADHD zouden hebben gekregen of deze in ieder geval niet als “aandoening” zouden worden gezien.&lt;/p&gt;
+&lt;p&gt;Vanuit dit perspectief zou ADHD deels kunnen worden beschouwd als een bijproduct van de &lt;a href="./neoliberale_samenleving/"&gt;neo liberale sameleveng&lt;/a&gt;
+ waarin wij tegenwoordig leven.&lt;/p&gt;</description></item><item><title>Bash Otp Generator</title><link>http://localhost/Linux/bash_otp_generator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/bash_otp_generator/</guid><description>&lt;h1 id="create-an-otp-mfa-tool-in-the-bash-terminal"&gt;
  Create an OTP MFA Tool in the Bash Terminal
  &lt;a class="heading-link" href="#create-an-otp-mfa-tool-in-the-bash-terminal"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2105,7 +2151,27 @@ They want to protect themselves.&lt;/p&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h4&gt;
-&lt;p&gt;Why is it that intelligent people procrastinate? Why is it that people who are so self-motivated often self-sabotage? And why is it that no matter how many new business opportunities we get or new skills we try to learn, many of us simply find different ways of earning the same amount of money or achieving the same level of success?&lt;/p&gt;</description></item><item><title>En Yubikey Firts Time Use</title><link>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</guid><description>&lt;h1 id="yubikey-bare-minimum"&gt;
+&lt;p&gt;Why is it that intelligent people procrastinate? Why is it that people who are so self-motivated often self-sabotage? And why is it that no matter how many new business opportunities we get or new skills we try to learn, many of us simply find different ways of earning the same amount of money or achieving the same level of success?&lt;/p&gt;</description></item><item><title>EN Yubikey Age Encryption PIV</title><link>http://localhost/Linux/yubikey/EN_Yubikey_Age_encryption_PIV/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_Yubikey_Age_encryption_PIV/</guid><description>&lt;h1 id="using-age-with-a-yubikey-and-post-quantum-notes"&gt;
+ Using &lt;code&gt;age&lt;/code&gt; with a YubiKey (and Post-Quantum Notes)
+ &lt;a class="heading-link" href="#using-age-with-a-yubikey-and-post-quantum-notes"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="-post-quantum-considerations"&gt;
+ ⚠️ Post-Quantum Considerations
+ &lt;a class="heading-link" href="#-post-quantum-considerations"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Using age with a YubiKey is &lt;strong&gt;not post-quantum (PQ) secure&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Only manually generated age keys (depending on implementation/algorithm) can be considered PQ-resistant.&lt;/li&gt;
+&lt;li&gt;You &lt;strong&gt;cannot import an existing age identity (private key)&lt;/strong&gt; into a YubiKey.&lt;/li&gt;
+&lt;li&gt;A YubiKey can only &lt;strong&gt;generate and store its own keys&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👉 If you are strictly aiming for &lt;strong&gt;post-quantum–resistant encryption&lt;/strong&gt;, a YubiKey is currently &lt;strong&gt;not the right tool&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>En Yubikey Firts Time Use</title><link>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</guid><description>&lt;h1 id="yubikey-bare-minimum"&gt;
  YubiKey bare minimum
  &lt;a class="heading-link" href="#yubikey-bare-minimum"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2223,7 +2289,15 @@ you may try this script&lt;/p&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;To install ImageMagick on macOS, you can use Homebrew:&lt;/p&gt;</description></item><item><title>Katex</title><link>http://localhost/math/KaTeX/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/math/KaTeX/</guid><description>&lt;p&gt;Just a reminder how to do stuff&lt;/p&gt;
+&lt;p&gt;To install ImageMagick on macOS, you can use Homebrew:&lt;/p&gt;</description></item><item><title>Joy Of Missig Out</title><link>http://localhost/slices_of_life/reminders/EN/joy_of_missig_out/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/EN/joy_of_missig_out/</guid><description>&lt;h2 id="the-joy-of-missing-out-jomo"&gt;
+ The Joy of Missing Out (JOMO)
+ &lt;a class="heading-link" href="#the-joy-of-missing-out-jomo"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;JOMO is the conscious choice to step away from the noise, pressure, and constant comparison of modern life—especially driven by social media—and instead focus on what truly matters.&lt;/p&gt;
+&lt;p&gt;Rather than fearing what you might miss (FOMO), JOMO is about being present, intentional, and content with your own path. It means valuing real experiences over digital ones, protecting your time and energy, and finding happiness in simplicity.&lt;/p&gt;</description></item><item><title>Katex</title><link>http://localhost/math/KaTeX/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/math/KaTeX/</guid><description>&lt;p&gt;Just a reminder how to do stuff&lt;/p&gt;
 &lt;p&gt;A simple way to make a expression devide&lt;/p&gt;
 &lt;pre tabindex="0"&gt;&lt;code class="language-katex" data-lang="katex"&gt;\frac {(4+b)} {(b-2)}
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;$$\frac {(4+b)} {(b-2)}$$&lt;/p&gt;
@@ -2349,7 +2423,23 @@ keywords:
 &lt;li&gt;&lt;a href="https://youtu.be/_olf3ZwHpTg?si=VblHm-FeZcBHBcpO"&gt;perfect day in NL&lt;/a&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;vertalen naar engels of nog spelen&lt;/p&gt;</description></item><item><title>Nl Anticiperend Plannen</title><link>http://localhost/slices_of_life/reminders/NL/NL_anticiperend_plannen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_anticiperend_plannen/</guid><description>&lt;h2 id="anticiperend-plannen"&gt;
+&lt;p&gt;vertalen naar engels of nog spelen&lt;/p&gt;</description></item><item><title>Neo Liberale Samenleving</title><link>http://localhost/slices_of_life/reminders/NL/neo_liberale_samenleving/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/neo_liberale_samenleving/</guid><description>&lt;p&gt;Een neoliberale samenleving is een maatschappij waarin veel nadruk ligt op &lt;strong&gt;vrije marktwerking, concurrentie en individuele verantwoordelijkheid&lt;/strong&gt;. Het idee is dat bedrijven en markten vaak efficiënter werken dan de overheid.&lt;/p&gt;
+&lt;p&gt;Kort gezegd zegt neoliberalisme ongeveer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;de overheid moet zich minder bemoeien met economie en bedrijven&lt;/li&gt;
+&lt;li&gt;meer dingen mogen geprivatiseerd worden&lt;/li&gt;
+&lt;li&gt;concurrentie zorgt voor betere prijzen en innovatie&lt;/li&gt;
+&lt;li&gt;mensen zijn grotendeels zelf verantwoordelijk voor hun succes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bekende onderwerpen die vaak met neoliberalisme worden verbonden:&lt;/p&gt;</description></item><item><title>Neoliberale Samenleving</title><link>http://localhost/slices_of_life/my_anthropology_neurophilosophy_sociobiology/neoliberale_samenleving/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/my_anthropology_neurophilosophy_sociobiology/neoliberale_samenleving/</guid><description>&lt;p&gt;Een neoliberale samenleving is een maatschappij waarin veel nadruk ligt op &lt;strong&gt;vrije marktwerking, concurrentie en individuele verantwoordelijkheid&lt;/strong&gt;. Het idee is dat bedrijven en markten vaak efficiënter werken dan de overheid.&lt;/p&gt;
+&lt;p&gt;Kort gezegd zegt neoliberalisme ongeveer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;de overheid moet zich minder bemoeien met economie en bedrijven&lt;/li&gt;
+&lt;li&gt;meer dingen mogen geprivatiseerd worden&lt;/li&gt;
+&lt;li&gt;concurrentie zorgt voor betere prijzen en innovatie&lt;/li&gt;
+&lt;li&gt;mensen zijn grotendeels zelf verantwoordelijk voor hun succes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bekende onderwerpen die vaak met neoliberalisme worden verbonden:&lt;/p&gt;</description></item><item><title>Nl Anticiperend Plannen</title><link>http://localhost/slices_of_life/reminders/NL/NL_anticiperend_plannen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/NL_anticiperend_plannen/</guid><description>&lt;h2 id="anticiperend-plannen"&gt;
  Anticiperend plannen
  &lt;a class="heading-link" href="#anticiperend-plannen"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -2712,7 +2802,8 @@ This is a small example how&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Filter out going UDP connections&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-style:italic"&gt;# Show outgoing UDP connections&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;netstat -aun | tr -s &lt;span style="color:#a5d6ff"&gt;&amp;#39; &amp;#39;&lt;/span&gt;| cut -f5 -d &lt;span style="color:#a5d6ff"&gt;&amp;#39; &amp;#39;&lt;/span&gt; | grep -v &lt;span style="color:#a5d6ff"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Quotations From Jana</title><link>http://localhost/slices_of_life/assorted/what_i_asked_chatgpt/Quotations_from_Jana/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/assorted/what_i_asked_chatgpt/Quotations_from_Jana/</guid><description>&lt;p&gt;De uitdrukking &lt;strong&gt;“beminnelijke deugd der inschikkelijkheid”&lt;/strong&gt; klinkt heel ouderwets en plechtig.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Psychose En Kindertijd</title><link>http://localhost/slices_of_life/my_anthropology_neurophilosophy_sociobiology/psychose_en_kindertijd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/my_anthropology_neurophilosophy_sociobiology/psychose_en_kindertijd/</guid><description>&lt;p&gt;in tegenstelling tot Pycoose wordt gezien als het meesst boilogische Documantaire over Pschychoses: &amp;ldquo;The dessert of the real&amp;rdquo;&lt;/p&gt;</description></item><item><title>Psychose En Kindertijd</title><link>http://localhost/slices_of_life/reminders/NL/psychose_en_kindertijd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/reminders/NL/psychose_en_kindertijd/</guid><description>&lt;p&gt;in tegenstelling tot Pycoose wordt gezien als het meesst boilogische
+Documantaire over Pschychoses: &amp;ldquo;The dessert of the real&amp;rdquo;&lt;/p&gt;</description></item><item><title>Quotations From Jana</title><link>http://localhost/slices_of_life/assorted/what_i_asked_chatgpt/Quotations_from_Jana/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/slices_of_life/assorted/what_i_asked_chatgpt/Quotations_from_Jana/</guid><description>&lt;p&gt;De uitdrukking &lt;strong&gt;“beminnelijke deugd der inschikkelijkheid”&lt;/strong&gt; klinkt heel ouderwets en plechtig.
 Hier is wat het betekent in normaal, modern taalgebruik:&lt;/p&gt;
 &lt;h3 id="-betekenis"&gt;
  📘 Betekenis
@@ -3020,4 +3111,35 @@ one private, one public.&lt;/p&gt;</description></item><item><title>SSH config f
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Find local port&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8b949e;font-style:italic"&gt;# virsh domdisplay --domain debian12 &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;spice://127.0.0.1:5900
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item></channel></rss>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>YubiKey OpenPGP SSH</title><link>http://localhost/Linux/yubikey/YubiKey-OpenPGP-SSH/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/YubiKey-OpenPGP-SSH/</guid><description>&lt;h1 id="-yubikey--gpg--ssh-setup-guide"&gt;
+ 🔐 YubiKey + GPG + SSH Setup Guide
+ &lt;a class="heading-link" href="#-yubikey--gpg--ssh-setup-guide"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;in deze handleiding ben ik het onderwerp kdf-setup vergeten, dit moet ik nog toevoegen.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="-doel"&gt;
+ 🎯 Doel
+ &lt;a class="heading-link" href="#-doel"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GPG subkeys op YubiKey zetten&lt;/li&gt;
+&lt;li&gt;SSH authenticatie via YubiKey gebruiken&lt;/li&gt;
+&lt;li&gt;Werken met ProxyJump / multi-hop SSH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id="1--check-bestaande-gpg-keys"&gt;
+ 1. 🔍 Check bestaande GPG keys
+ &lt;a class="heading-link" href="#1--check-bestaande-gpg-keys"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gpg -K --with-keygrip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Voorbeeld:&lt;/p&gt;</description></item></channel></rss>

@@ -51,7 +51,7 @@ Ik houd het overzichtelijk maar technisch correct.&lt;/p&gt;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;For advanced users, there are several ways to install the &lt;strong&gt;latest development version&lt;/strong&gt; of YubiKey Manager (&lt;code&gt;ykman&lt;/code&gt;) directly from source.
-Choose the method that best fits your workflow.&lt;/p&gt;
+Choose the method that best fits your workflow. For me pipx works the best.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id="1--install-ykman-in-a-python-virtual-environment-recommended"&gt;
  1. 📦 Install &lt;code&gt;ykman&lt;/code&gt; in a Python Virtual Environment (Recommended)
@@ -60,9 +60,9 @@ Choose the method that best fits your workflow.&lt;/p&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;This keeps the installation &lt;strong&gt;isolated&lt;/strong&gt; from your system Python and avoids conflicts.&lt;/p&gt;</description></item><item><title>YubiKey OATH / TOTP Guide</title><link>http://localhost/Linux/yubikey/EN_yubikey_otp/</link><pubDate>Thu, 01 Jan 1970 01:33:40 +0100</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_otp/</guid><description>&lt;h1 id="-yubikey-oath--totp-guide"&gt;
- 🔐 YubiKey OATH / TOTP Guide
- &lt;a class="heading-link" href="#-yubikey-oath--totp-guide"&gt;
+&lt;p&gt;This keeps the installation &lt;strong&gt;isolated&lt;/strong&gt; from your system Python and avoids conflicts.&lt;/p&gt;</description></item><item><title>YubiKey OATH / TOTP Guide</title><link>http://localhost/Linux/yubikey/EN_yubikey_otp/</link><pubDate>Thu, 01 Jan 1970 01:33:40 +0100</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_otp/</guid><description>&lt;h1 id="yubikey-oath--totp-guide"&gt;
+ YubiKey OATH / TOTP Guide
+ &lt;a class="heading-link" href="#yubikey-oath--totp-guide"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
@@ -75,17 +75,17 @@ Choose the method that best fits your workflow.&lt;/p&gt;
  &lt;/a&gt;
 &lt;/h3&gt;
 &lt;hr&gt;
-&lt;h2 id="-about-this-guide"&gt;
- ⚠️ About This Guide
- &lt;a class="heading-link" href="#-about-this-guide"&gt;
+&lt;h2 id="about-this-guide"&gt;
+ About This Guide
+ &lt;a class="heading-link" href="#about-this-guide"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This guide explains &lt;strong&gt;how to copy your existing TOTP secrets into your YubiKey&lt;/strong&gt;.&lt;/p&gt;
-&lt;h3 id="-warning-1"&gt;
- ⚠️ Warning 1
- &lt;a class="heading-link" href="#-warning-1"&gt;
+&lt;h3 id="warning-1"&gt;
+ Warning 1
+ &lt;a class="heading-link" href="#warning-1"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
@@ -98,10 +98,23 @@ TOTP secrets are &lt;strong&gt;extremely sensitive&lt;/strong&gt; — if someone
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Make sure you do the &lt;a href="https://github.com/Benjamin-Italiaander/My_Notes/blob/main/Linux/yubikey/README/"&gt;first steps&lt;/a&gt;
- of initiating your YubiKey before you will start using the SSH functionality on your yubikey.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;There are still two keys generated: your private key and your public key.
-The private key remains important when using your YubiKey. In fact, the private key functions as a challenge key and works together with your YubiKey.&lt;/p&gt;</description></item><item><title>En Install All Dependencies</title><link>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</guid><description>&lt;hr&gt;
+&lt;p&gt;Make sure you complete the &lt;a href="https://github.com/Benjamin-Italiaander/My_Notes/blob/main/Linux/yubikey/README/"&gt;initial setup steps&lt;/a&gt;
+ before using SSH with your YubiKey.&lt;/p&gt;
+&lt;p&gt;This guide assumes you already understand:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the difference between &lt;strong&gt;private&lt;/strong&gt; and &lt;strong&gt;public keys&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;basic SSH usage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more advanced setups, OpenPGP can be used, but FIDO2 is a simpler and very secure alternative.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="how-it-works"&gt;
+ How it works
+ &lt;a class="heading-link" href="#how-it-works"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;When using FIDO2 with SSH:&lt;/p&gt;</description></item><item><title>En Install All Dependencies</title><link>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_Install_all_dependencies/</guid><description>&lt;hr&gt;
 &lt;p&gt;date: 2025-10-01T12:30:21+01:00
 title: &amp;ldquo;Before installing YubiKey&amp;rsquo;s ykman software&amp;rdquo;
 draft: false
@@ -121,7 +134,27 @@ description: &amp;ldquo;1. Install the first dependicies on your system&amp;rdqu
 &lt;li&gt;scdaemon - Smartcard daemon for the GnuPG system&lt;/li&gt;
 &lt;li&gt;pcscd - PC/SC Smart Card Daemon&lt;/li&gt;
 &lt;li&gt;pipx - execute binaries from Python packages in isolated environments&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>En Yubikey Firts Time Use</title><link>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</guid><description>&lt;h1 id="yubikey-bare-minimum"&gt;
+&lt;/ul&gt;</description></item><item><title>EN Yubikey Age Encryption PIV</title><link>http://localhost/Linux/yubikey/EN_Yubikey_Age_encryption_PIV/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_Yubikey_Age_encryption_PIV/</guid><description>&lt;h1 id="using-age-with-a-yubikey-and-post-quantum-notes"&gt;
+ Using &lt;code&gt;age&lt;/code&gt; with a YubiKey (and Post-Quantum Notes)
+ &lt;a class="heading-link" href="#using-age-with-a-yubikey-and-post-quantum-notes"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="-post-quantum-considerations"&gt;
+ ⚠️ Post-Quantum Considerations
+ &lt;a class="heading-link" href="#-post-quantum-considerations"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Using age with a YubiKey is &lt;strong&gt;not post-quantum (PQ) secure&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Only manually generated age keys (depending on implementation/algorithm) can be considered PQ-resistant.&lt;/li&gt;
+&lt;li&gt;You &lt;strong&gt;cannot import an existing age identity (private key)&lt;/strong&gt; into a YubiKey.&lt;/li&gt;
+&lt;li&gt;A YubiKey can only &lt;strong&gt;generate and store its own keys&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👉 If you are strictly aiming for &lt;strong&gt;post-quantum–resistant encryption&lt;/strong&gt;, a YubiKey is currently &lt;strong&gt;not the right tool&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>En Yubikey Firts Time Use</title><link>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/EN_yubikey_firts_time_use/</guid><description>&lt;h1 id="yubikey-bare-minimum"&gt;
  YubiKey bare minimum
  &lt;a class="heading-link" href="#yubikey-bare-minimum"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
@@ -184,4 +217,35 @@ Dit werkt voor:&lt;/p&gt;
 &lt;li&gt;Registreer je YubiKey:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pamu2fcfg &amp;gt; ~/.config/Yubico/u2f_keys
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(raak de YubiKey aan)&lt;/p&gt;</description></item></channel></rss>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(raak de YubiKey aan)&lt;/p&gt;</description></item><item><title>YubiKey OpenPGP SSH</title><link>http://localhost/Linux/yubikey/YubiKey-OpenPGP-SSH/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/Linux/yubikey/YubiKey-OpenPGP-SSH/</guid><description>&lt;h1 id="-yubikey--gpg--ssh-setup-guide"&gt;
+ 🔐 YubiKey + GPG + SSH Setup Guide
+ &lt;a class="heading-link" href="#-yubikey--gpg--ssh-setup-guide"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;in deze handleiding ben ik het onderwerp kdf-setup vergeten, dit moet ik nog toevoegen.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="-doel"&gt;
+ 🎯 Doel
+ &lt;a class="heading-link" href="#-doel"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GPG subkeys op YubiKey zetten&lt;/li&gt;
+&lt;li&gt;SSH authenticatie via YubiKey gebruiken&lt;/li&gt;
+&lt;li&gt;Werken met ProxyJump / multi-hop SSH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id="1--check-bestaande-gpg-keys"&gt;
+ 1. 🔍 Check bestaande GPG keys
+ &lt;a class="heading-link" href="#1--check-bestaande-gpg-keys"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gpg -K --with-keygrip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Voorbeeld:&lt;/p&gt;</description></item></channel></rss>

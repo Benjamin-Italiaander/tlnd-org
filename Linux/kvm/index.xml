@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Virsh: find the display port of a VM on Benjamin Italiaander</title><link>https://tlnd.org/Linux/kvm/</link><description>Recent content in Virsh: find the display port of a VM on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tlnd.org/Linux/kvm/index.xml" rel="self" type="application/rss+xml"/><item><title>Virsh: de displaypoort van een VM vinden</title><link>https://tlnd.org/Linux/kvm/virsh_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/kvm/virsh_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/kvm/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="de-lokale-displaypoort-van-een-vm-opvragen"&gt;De lokale displaypoort van een VM opvragen&lt;/h1&gt;
+&lt;p&gt;Toon alle draaiende VM&amp;rsquo;s:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# virsh list&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Id Name State
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;--------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="m"&gt;1&lt;/span&gt; debian12 running
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="m"&gt;4&lt;/span&gt; AGENDA running
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Vind de lokale displaypoort:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# virsh domdisplay --domain debian12&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;spice://127.0.0.1:5900
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item></channel></rss>

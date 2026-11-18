@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SSH on Benjamin Italiaander</title><link>https://tlnd.org/Linux/ssh/</link><description>Recent content in SSH on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tlnd.org/Linux/ssh/index.xml" rel="self" type="application/rss+xml"/><item><title>Best practice: een SSH-sleutelpaar maken</title><link>https://tlnd.org/Linux/ssh/ssh_keygen_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssh/ssh_keygen_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/ssh/ssh_keygen/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src="https://tlnd.org/Linux/ssh/ssh-150x150.png" alt="" title="ssh-150x150.png" loading="lazy"&gt;&lt;/p&gt;
+&lt;h3 id="inleiding"&gt;Inleiding&lt;/h3&gt;
+&lt;p&gt;Een korte best-practice-handleiding voor het maken van een SSH-sleutelpaar op de Linux-commandoregel.&lt;/p&gt;
+&lt;p&gt;Een publiek/privé-sleutelpaar is een paar wiskundig verwante sleutels dat in asymmetrische cryptografie wordt gebruikt voor authenticatie, digitale handtekeningen of het afspreken van sleutels. Zoals de naam al zegt, wordt de privésleutel gebruikt door de eigenaar van het sleutelpaar, blijft hij geheim en moet hij altijd beschermd worden. De publieke sleutel mag je openbaar maken; de andere partij gebruikt die om het protocol af te ronden of om te controleren wat met de privésleutel is gedaan.&lt;/p&gt;</description></item><item><title>E-mailmeldingen bij inloggen met PAM</title><link>https://tlnd.org/Linux/ssh/login_notification_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssh/login_notification_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/ssh/login_notification/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt; Het script zelf is niet vertaald.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="e-mailmeldingen-bij-inloggen-op-linux-met-pam"&gt;E-mailmeldingen bij inloggen op Linux met PAM&lt;/h1&gt;
+&lt;p&gt;Deze opzet stuurt een e-mail zodra iemand via SSH of op een lokale console inlogt op het Linux-systeem.&lt;/p&gt;
+&lt;p&gt;Handig voor:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Onverwachte toegang opmerken&lt;/li&gt;
+&lt;li&gt;Servers op afstand in de gaten houden&lt;/li&gt;
+&lt;li&gt;Beveiligingsaudits&lt;/li&gt;
+&lt;li&gt;Meldingen in je homelab&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id="het-benodigde-mailprogramma-installeren"&gt;Het benodigde mailprogramma installeren&lt;/h1&gt;
+&lt;p&gt;Installeer een eenvoudige mailclient:&lt;/p&gt;</description></item><item><title>Het SSH-configuratiebestand</title><link>https://tlnd.org/Linux/ssh/config_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssh/config_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/ssh/config/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="het-configuratiebestand-van-de-ssh-client"&gt;Het configuratiebestand van de SSH-client&lt;/h3&gt;
+&lt;h4 id="het-bestand-staat-in"&gt;Het bestand staat in&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;~/.ssh/config
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="voorbeeld-1"&gt;Voorbeeld 1&lt;/h4&gt;
+&lt;p&gt;Een gewone configuratie:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Host server.tld
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; User username
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; IdentityFile /home/username/.ssh/id_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ForwardAgent yes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Met de optie &lt;code&gt;ForwardAgent&lt;/code&gt; kun je je lokale SSH-sleutel op de externe server gebruiken (bijvoorbeeld om daar een &lt;code&gt;git pull&lt;/code&gt; te doen) zonder je privésleutel naar die server te kopiëren. Het zit standaard in SSH en is makkelijk in te stellen. Zet het alleen aan voor servers die je vertrouwt: iedereen met root-toegang op die server kan je doorgestuurde agent gebruiken zolang je verbonden bent.&lt;/p&gt;</description></item><item><title>Rechten voor SSH-bestanden</title><link>https://tlnd.org/Linux/ssh/chmod_ssh_files_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssh/chmod_ssh_files_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/ssh/chmod_ssh_files/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="rechten-voor-ssh-bestanden"&gt;Rechten voor SSH-bestanden&lt;/h1&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Wat&lt;/th&gt;
+ &lt;th&gt;Pad&lt;/th&gt;
+ &lt;th&gt;chmod&lt;/th&gt;
+ &lt;th&gt;Resultaat&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;SSH-map&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;~/.ssh&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;700&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;drwx------&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Publieke sleutel&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;644&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;-rw-r--r--&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Privésleutel&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;~/.ssh/id_rsa&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;600&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;-rw-------&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Toegestane sleutels&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;600&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;-rw-------&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Configuratie&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;~/.ssh/config&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;600&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;-rw-------&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="thuismap"&gt;Thuismap&lt;/h2&gt;
+&lt;p&gt;Je thuismap mag niet schrijfbaar zijn voor anderen, anders weigert SSH je sleutels. 755 (&lt;code&gt;drwxr-xr-x&lt;/code&gt;) is het maximum:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;chmod g-w,o-w ~
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Verbinden met een Cisco-switch via SSH</title><link>https://tlnd.org/Linux/ssh/cisco_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssh/cisco_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/ssh/cisco/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="inleiding"&gt;Inleiding&lt;/h3&gt;
+&lt;p&gt;Ik kreeg deze foutmelding toen ik met SSH wilde inloggen op mijn Cisco-switch.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cisco&lt;/strong&gt;: SSH kan geen verbinding maken&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Unable to negotiate with [hostname or ip] port 22: no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1,diffie-hellman-group14-sha1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Je lost dit op door de oude sleuteluitwisselingsmethode expliciet toe te staan:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssh -o &lt;span class="nv"&gt;KexAlgorithms&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;+diffie-hellman-group1-sha1 &lt;span class="o"&gt;[&lt;/span&gt;hostname or ip&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;⚠️ Deze SHA-1-algoritmes zijn verouderd en onveilig. Gebruik ze alleen voor oude netwerkapparatuur, het liefst op een apart beheernetwerk.&lt;/p&gt;</description></item><item><title>Best practice: generate an SSH key pair</title><link>https://tlnd.org/Linux/ssh/ssh_keygen/</link><pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssh/ssh_keygen/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/ssh/ssh_keygen_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://tlnd.org/Linux/ssh/ssh-150x150.png" alt="" title="ssh-150x150.png" loading="lazy"&gt;&lt;/p&gt;
+&lt;h3 id="introduction"&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;A short best-practice guide on how to generate an SSH key pair on the Linux command line.&lt;/p&gt;
+&lt;p&gt;A public/private key pair is a pair of mathematically related keys used in asymmetric cryptography for authentication, digital signatures or key establishment. As the name indicates, the private key is used by the owner of the key pair, is kept secret and should be protected at all times, while the public key can be published and used by the other party to complete the protocol or to verify the operations performed with the private key.&lt;/p&gt;</description></item><item><title>Connect to a Cisco switch with SSH</title><link>https://tlnd.org/Linux/ssh/cisco/</link><pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssh/cisco/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/ssh/cisco_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id="introduction"&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;I got this error message when I tried to log in to my Cisco switch with SSH.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cisco&lt;/strong&gt;: SSH fails to connect&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Unable to negotiate with [hostname or ip] port 22: no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1,diffie-hellman-group14-sha1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can solve this by explicitly allowing the old key exchange method:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssh -o &lt;span class="nv"&gt;KexAlgorithms&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;+diffie-hellman-group1-sha1 &lt;span class="o"&gt;[&lt;/span&gt;hostname or ip&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;⚠️ These SHA-1 algorithms are outdated and insecure. Only use them for old network equipment, ideally on a management network.&lt;/p&gt;</description></item><item><title>Permissions for SSH Files</title><link>https://tlnd.org/Linux/ssh/chmod_ssh_files/</link><pubDate>Fri, 09 Dec 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssh/chmod_ssh_files/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/ssh/chmod_ssh_files_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="permissions-for-ssh-files"&gt;Permissions for SSH files&lt;/h1&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;What&lt;/th&gt;
+ &lt;th&gt;Path&lt;/th&gt;
+ &lt;th&gt;chmod&lt;/th&gt;
+ &lt;th&gt;Result&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;SSH folder&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;~/.ssh&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;700&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;drwx------&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Public key&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;644&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;-rw-r--r--&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Private key&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;~/.ssh/id_rsa&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;600&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;-rw-------&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Authorized keys&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;600&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;-rw-------&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Config&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;~/.ssh/config&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;600&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;-rw-------&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="home-folder"&gt;Home folder&lt;/h2&gt;
+&lt;p&gt;Your home folder must not be writable by others, or SSH will refuse your keys. 755 (&lt;code&gt;drwxr-xr-x&lt;/code&gt;) is the most it may be:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;chmod g-w,o-w ~
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>SSH config file</title><link>https://tlnd.org/Linux/ssh/config/</link><pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssh/config/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/ssh/config_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id="the-ssh-client-configuration-file"&gt;The SSH client configuration file&lt;/h3&gt;
+&lt;h4 id="the-file-is-located-at"&gt;The file is located at&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;~/.ssh/config
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="example-1"&gt;Example 1&lt;/h4&gt;
+&lt;p&gt;A regular configuration:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Host server.tld
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; User username
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; IdentityFile /home/username/.ssh/id_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ForwardAgent yes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;ForwardAgent&lt;/code&gt; option lets you use your local SSH key on the remote server (for example to &lt;code&gt;git pull&lt;/code&gt; there) without copying your private key to that server. It&amp;rsquo;s built into SSH and easy to set up. Only enable it for servers you trust: anyone with root access on that server can use your forwarded agent while you are connected.&lt;/p&gt;</description></item><item><title>Login Email Notifications with PAM</title><link>https://tlnd.org/Linux/ssh/login_notification/</link><pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssh/login_notification/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/ssh/login_notification_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="linux-login-email-notifications-using-pam"&gt;Linux Login Email Notifications using PAM&lt;/h1&gt;
+&lt;p&gt;This setup sends an email notification whenever someone logs into the Linux system over SSH or on a local console.&lt;/p&gt;
+&lt;p&gt;Useful for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Detecting unexpected access&lt;/li&gt;
+&lt;li&gt;Monitoring servers remotely&lt;/li&gt;
+&lt;li&gt;Security auditing&lt;/li&gt;
+&lt;li&gt;Home lab notifications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id="install-the-required-mail-utility"&gt;Install the Required Mail Utility&lt;/h1&gt;
+&lt;p&gt;Install a simple mail client:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;apt install bsd-mailx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id="create-the-login-notification-script"&gt;Create the Login Notification Script&lt;/h1&gt;
+&lt;p&gt;Create the script:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;nano /usr/local/bin/login-notify.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Contents:&lt;/p&gt;</description></item></channel></rss>

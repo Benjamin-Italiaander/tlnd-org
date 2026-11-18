@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SSL on Benjamin Italiaander</title><link>https://tlnd.org/Linux/ssl/</link><description>Recent content in SSL on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tlnd.org/Linux/ssl/index.xml" rel="self" type="application/rss+xml"/><item><title>Best practices voor een Certificate Signing Request</title><link>https://tlnd.org/Linux/ssl/SSL-Certificate-Signing-Request-best-practices_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssl/SSL-Certificate-Signing-Request-best-practices_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/ssl/SSL-Certificate-Signing-Request-best-practices/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="best-practices-voor-een-certificate-signing-request-met-openssl"&gt;Best practices voor een Certificate Signing Request met OpenSSL&lt;/h1&gt;
+&lt;p&gt;Een Certificate Signing Request (CSR) kun je maken met OpenSSL. Daarbij ontstaan twee bestanden: een privésleutel (&lt;code&gt;.key&lt;/code&gt;-bestand) en een certificaataanvraag (&lt;code&gt;.csr&lt;/code&gt;-bestand).&lt;/p&gt;
+&lt;p&gt;De beste manier om een CSR te maken is met een configuratiebestand waarin alle gegevens van het certificaat staan. Hier noem ik dat bestand &lt;code&gt;request.cnf&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>De publieke sleutel uit een privésleutel halen met OpenSSL</title><link>https://tlnd.org/Linux/ssl/extract-publickey-from-privatekey-openssl_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssl/extract-publickey-from-privatekey-openssl_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/ssl/extract-publickey-from-privatekey-openssl/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="de-publieke-rsa-sleutel-uit-een-privésleutel-halen"&gt;De publieke RSA-sleutel uit een privésleutel halen&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# write the public key to a file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;openssl rsa -in domain.tld.key -pubout -out domain.tld.pubkey
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# show the public key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;openssl rsa -in domain.tld.pubkey -pubin -noout -text
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Je eigen CA opzetten met OpenSSL</title><link>https://tlnd.org/Linux/ssl/some-instruction-aboutssl-i-found-online_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssl/some-instruction-aboutssl-i-found-online_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/ssl/some-instruction-aboutssl-i-found-online/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt; Commando&amp;rsquo;s, uitvoer en configuratiebestanden zijn niet vertaald. Het origineel is uit 2014; gebruik tegenwoordig SHA-256 in plaats van SHA-1.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ik vond deze handige handleiding &lt;a href="https://gist.github.com/soarez/9688998" class="external-link" target="_blank" rel="noopener"&gt;hier&lt;/a&gt;. Bedankt voor het delen, &lt;a href="https://uk.linkedin.com/in/soarez" class="external-link" target="_blank" rel="noopener"&gt;Igor Soarez&lt;/a&gt;!&lt;/p&gt;
+&lt;h1 id="je-eigen-ca-opzetten-met-openssl"&gt;Je eigen CA opzetten met OpenSSL&lt;/h1&gt;
+&lt;p&gt;Om ervan te leren heb ik besloten mijn eigen CA (certificaatautoriteit) te maken.
+Dit is wat ik heb geleerd.&lt;/p&gt;
+&lt;h1 id="eerst-de-basis"&gt;Eerst de basis&lt;/h1&gt;
+&lt;p&gt;Eerst wat achtergrond.&lt;/p&gt;</description></item><item><title>SSL-controles</title><link>https://tlnd.org/Linux/ssl/ssl-checks_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssl/ssl-checks_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/ssl/ssl-checks/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="standaard-ssl-controles"&gt;Standaard SSL-controles&lt;/h2&gt;
+&lt;p&gt;Een Certificate Signing Request (CSR) controleren&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;openssl req -text -noout -verify -in CSR.csr
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Een privésleutel controleren&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;openssl rsa -in privateKey.key -check
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Een certificaat controleren&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;openssl x509 -in certificate.crt -text -noout
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Een PKCS#12-bestand (.pfx of .p12) controleren&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;openssl pkcs12 -info -in keyStore.p12
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="controleren-of-een-certificaat-en-sleutel-bij-elkaar-horen"&gt;Controleren of een certificaat en sleutel bij elkaar horen&lt;/h2&gt;
+&lt;p&gt;Je kunt controleren of een &lt;code&gt;.crt&lt;/code&gt;- en een &lt;code&gt;.key&lt;/code&gt;-bestand bij elkaar horen door een MD5-hash van hun modulus te vergelijken. Zijn beide uitkomsten gelijk, dan heb je een passend paar.&lt;/p&gt;</description></item><item><title>SSL-rehash en bestandsrechten</title><link>https://tlnd.org/Linux/ssl/ssl-rehash-and-filepermissions_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssl/ssl-rehash-and-filepermissions_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/ssl/ssl-rehash-and-filepermissions/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="certificaten-rehashen-en-bestandsrechten-instellen"&gt;Certificaten rehashen en bestandsrechten instellen&lt;/h1&gt;
+&lt;p&gt;Een script dat ik in een map met certificaten gebruik. Het:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;maakt de OpenSSL-hashlinks (&lt;code&gt;&amp;lt;hash&amp;gt;.0&lt;/code&gt;) voor de CA-bundel en de certificaatbundels,&lt;/li&gt;
+&lt;li&gt;bouwt &lt;code&gt;ssl-bundle.crt&lt;/code&gt; (certificaat + CA-bundel),&lt;/li&gt;
+&lt;li&gt;maakt certificaten alleen-lezen (&lt;code&gt;0444&lt;/code&gt;) en sleutels alleen leesbaar voor de eigenaar (&lt;code&gt;0400&lt;/code&gt;),&lt;/li&gt;
+&lt;li&gt;geeft de bestanden aan de webservergebruiker (standaard &lt;code&gt;nginx&lt;/code&gt;, of de gebruiker/groep die je als argumenten meegeeft).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Voer het uit in de map met certificaten: &lt;code&gt;./rehash.sh [user] [group]&lt;/code&gt;&lt;/p&gt;</description></item><item><title>How to Set Up Your Own CA with OpenSSL</title><link>https://tlnd.org/Linux/ssl/some-instruction-aboutssl-i-found-online/</link><pubDate>Sun, 03 Jul 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssl/some-instruction-aboutssl-i-found-online/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/ssl/some-instruction-aboutssl-i-found-online_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I found this useful guide &lt;a href="https://gist.github.com/soarez/9688998" class="external-link" target="_blank" rel="noopener"&gt;here&lt;/a&gt;. Thank you for sharing, &lt;a href="https://uk.linkedin.com/in/soarez" class="external-link" target="_blank" rel="noopener"&gt;Igor Soarez&lt;/a&gt;!&lt;/p&gt;
+&lt;h1 id="how-to-set-up-your-own-ca-with-openssl"&gt;How to set up your own CA with OpenSSL&lt;/h1&gt;
+&lt;p&gt;For educational reasons I&amp;rsquo;ve decided to create my own CA.
+Here is what I learned.&lt;/p&gt;
+&lt;h1 id="first-things-first"&gt;First things first&lt;/h1&gt;
+&lt;p&gt;Lets get some context first.&lt;/p&gt;
+&lt;h2 id="public-key-cryptography"&gt;Public Key Cryptography&lt;/h2&gt;
+&lt;p&gt;AKA asymmetric cryptography solves the problem of two entities communicating
+securely without ever exchanging a common key, by using two related keys,
+one private, one public.&lt;/p&gt;</description></item><item><title>SSL Certificate Signing Request Best Practices</title><link>https://tlnd.org/Linux/ssl/SSL-Certificate-Signing-Request-best-practices/</link><pubDate>Wed, 04 May 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssl/SSL-Certificate-Signing-Request-best-practices/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/ssl/SSL-Certificate-Signing-Request-best-practices_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="certificate-signing-request-best-practices-using-openssl"&gt;Certificate Signing Request Best Practices Using OpenSSL&lt;/h1&gt;
+&lt;p&gt;A Certificate Signing Request (CSR) can be generated with OpenSSL. When you create a CSR, you generate two files: a private key (&lt;code&gt;.key&lt;/code&gt; file) and a certificate signing request (&lt;code&gt;.csr&lt;/code&gt; file).&lt;/p&gt;
+&lt;p&gt;The best way to generate a CSR is to create a request configuration file that contains all the certificate details. In this case I call the config file &lt;code&gt;request.cnf&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Extract the Public Key from a Private Key with OpenSSL</title><link>https://tlnd.org/Linux/ssl/extract-publickey-from-privatekey-openssl/</link><pubDate>Fri, 15 Apr 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssl/extract-publickey-from-privatekey-openssl/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/ssl/extract-publickey-from-privatekey-openssl_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="extract-the-rsa-public-key-from-a-private-key"&gt;Extract the RSA public key from a private key&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# write the public key to a file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;openssl rsa -in domain.tld.key -pubout -out domain.tld.pubkey
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# show the public key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;openssl rsa -in domain.tld.pubkey -pubin -noout -text
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>SSL Rehash and File Permissions</title><link>https://tlnd.org/Linux/ssl/ssl-rehash-and-filepermissions/</link><pubDate>Sun, 06 Mar 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssl/ssl-rehash-and-filepermissions/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/ssl/ssl-rehash-and-filepermissions_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="rehash-certificates-and-set-file-permissions"&gt;Rehash certificates and set file permissions&lt;/h1&gt;
+&lt;p&gt;A script I use in a certificate folder. It:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;creates the OpenSSL hash links (&lt;code&gt;&amp;lt;hash&amp;gt;.0&lt;/code&gt;) for the CA bundle and the certificate bundles,&lt;/li&gt;
+&lt;li&gt;builds &lt;code&gt;ssl-bundle.crt&lt;/code&gt; (certificate + CA bundle),&lt;/li&gt;
+&lt;li&gt;makes certificates read-only (&lt;code&gt;0444&lt;/code&gt;) and keys readable by the owner only (&lt;code&gt;0400&lt;/code&gt;),&lt;/li&gt;
+&lt;li&gt;gives the files to the web server user (default &lt;code&gt;nginx&lt;/code&gt;, or the user/group you pass as arguments).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Run it inside the certificate folder: &lt;code&gt;./rehash.sh [user] [group]&lt;/code&gt;&lt;/p&gt;</description></item><item><title>SSL Checks</title><link>https://tlnd.org/Linux/ssl/ssl-checks/</link><pubDate>Mon, 08 Feb 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/ssl/ssl-checks/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/ssl/ssl-checks_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id="regular-ssl-checks"&gt;Regular SSL checks&lt;/h2&gt;
+&lt;p&gt;Check a Certificate Signing Request (CSR)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;openssl req -text -noout -verify -in CSR.csr
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check a private key&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;openssl rsa -in privateKey.key -check
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check a certificate&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;openssl x509 -in certificate.crt -text -noout
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check a PKCS#12 file (.pfx or .p12)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;openssl pkcs12 -info -in keyStore.p12
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="check-whether-a-certificate-and-key-are-a-pair"&gt;Check whether a certificate and key are a pair&lt;/h2&gt;
+&lt;p&gt;You can check whether a &lt;code&gt;.crt&lt;/code&gt; and a &lt;code&gt;.key&lt;/code&gt; file match by comparing an MD5 hash of their modulus. If both outputs are the same, you have a matching pair.&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Permissions on Benjamin Italiaander</title><link>https://tlnd.org/Linux/permissions/</link><description>Recent content in Permissions on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tlnd.org/Linux/permissions/index.xml" rel="self" type="application/rss+xml"/><item><title>Rechten</title><link>https://tlnd.org/Linux/permissions/nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/permissions/nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/permissions/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="rechten-en-eigenaar-van-het-ene-bestand-naar-het-andere-kopiëren"&gt;Rechten en eigenaar van het ene bestand naar het andere kopiëren&lt;/h1&gt;
+&lt;h2 id="chmod"&gt;chmod&lt;/h2&gt;
+&lt;p&gt;Om de rechten van het ene bestand naar het andere te kopiëren, gebruik je &lt;code&gt;chmod&lt;/code&gt; met de optie &lt;code&gt;--reference&lt;/code&gt;. In plaats van een modus op te geven (zoals octale rechten als &lt;code&gt;644&lt;/code&gt;), wijs je een referentiebestand aan waarvan de rechten worden overgenomen:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;chmod --reference&lt;span class="o"&gt;=&lt;/span&gt;reference_file target_file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="chown"&gt;chown&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;chown&lt;/code&gt; werkt op dezelfde manier voor eigenaar en groep:&lt;/p&gt;</description></item></channel></rss>

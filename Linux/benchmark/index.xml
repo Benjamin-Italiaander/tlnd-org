@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Benchmark write speed on Benjamin Italiaander</title><link>https://tlnd.org/Linux/benchmark/</link><description>Recent content in Benchmark write speed on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tlnd.org/Linux/benchmark/index.xml" rel="self" type="application/rss+xml"/><item><title>Schrijfsnelheid benchmarken</title><link>https://tlnd.org/Linux/benchmark/benchmark_writespeed_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/benchmark/benchmark_writespeed_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/benchmark/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="-de-schrijfsnelheid-van-een-schijf-benchmarken"&gt;💾 De schrijfsnelheid van een schijf benchmarken&lt;/h1&gt;
+&lt;p&gt;Soms wil je testen hoe snel een (netwerk)schijf schrijfacties aankan.&lt;/p&gt;
+&lt;p&gt;Een gebruikelijke methode:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Schrijf &lt;strong&gt;één groot bestand&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Splits het in &lt;strong&gt;veel kleine bestanden&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Meet hoe snel je ze kopieert met &lt;code&gt;rsync&lt;/code&gt; of &lt;code&gt;cp&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Waarom?
+Sommige opslagsystemen kunnen grote opeenvolgende schrijfacties prima aan, maar hebben moeite met veel kleine bestanden (metadata-overhead, IOPS-limieten, enzovoort).&lt;/p&gt;</description></item></channel></rss>

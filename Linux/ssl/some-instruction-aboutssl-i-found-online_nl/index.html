@@ -1,0 +1,490 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width"><script type=application/javascript src=https://tlnd.org/js/theme-mode.js></script><link rel=stylesheet href=https://tlnd.org/css/frameworks.min.css><link rel=stylesheet href=https://tlnd.org/css/github.min.css><link rel=stylesheet href=https://tlnd.org/css/github-style.css><link rel=stylesheet href=https://tlnd.org/css/light.css><link rel=stylesheet href=https://tlnd.org/css/dark.css><link rel=stylesheet href=https://tlnd.org/css/syntax.css><title>Je eigen CA opzetten met OpenSSL - Benjamin Italiaander</title><link rel=icon type=image/x-icon href=/img/favicon-32x32.png><meta name=theme-color content="#1e2327"><link rel=stylesheet href=https://tlnd.org/css/notes-github.css><meta name=description content="Een handleiding (van Igor Soarez) om je eigen certificaatautoriteit op te zetten met OpenSSL."><meta name=keywords content='python,keras,Bash,kitty,kitten'><meta name=author content="Benjamin Italiaander"><link rel=canonical href=https://tlnd.org/Linux/ssl/some-instruction-aboutssl-i-found-online_nl/><meta name=twitter:card content="summary"><meta name=twitter:title content="Je eigen CA opzetten met OpenSSL - Benjamin Italiaander"><meta name=twitter:description content="Een handleiding (van Igor Soarez) om je eigen certificaatautoriteit op te zetten met OpenSSL."><meta name=twitter:image content="https://tlnd.org/avatar.png"><meta property="og:type" content="article"><meta property="og:title" content="Je eigen CA opzetten met OpenSSL - Benjamin Italiaander"><meta property="og:description" content="Een handleiding (van Igor Soarez) om je eigen certificaatautoriteit op te zetten met OpenSSL."><meta property="og:url" content="https://tlnd.org/Linux/ssl/some-instruction-aboutssl-i-found-online_nl/"><meta property="og:site_name" content="Benjamin Italiaander"><meta property="og:image" content="https://tlnd.org/avatar.png"><meta property="article:published_time" content="2025-11-18T00:00:00Z"></head><body><div style=position:relative><header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on"><div class="Header-item mobile-none" style=margin-top:-4px;margin-bottom:-4px><a class=Header-link href=https://tlnd.org/><img class=octicon height=32 width=32 src=/images/icon-192.png></a></div><div class="Header-item d-md-none"><button class="Header-link btn-link js-details-target" type=button onclick='document.querySelector("#header-search").style.display=document.querySelector("#header-search").style.display=="none"?"block":"none"'>
+<svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M1 2.75A.75.75.0 011.75 2h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 2.75zm0 5A.75.75.0 011.75 7h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 7.75zM1.75 12a.75.75.0 100 1.5h12.5a.75.75.0 100-1.5H1.75z"/></svg></button></div><div style=display:none id=header-search class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex"><div class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to"><div class=position-relative><form target=_blank id=search-form accept-charset=UTF-8 method=get autocomplete=off><label class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center"><input type=text class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable" name=q placeholder=Search autocomplete=off></label></form></div></div></div><div class="Header-item Header-item--full flex-justify-center d-md-none position-relative"><a class=Header-link href=https://tlnd.org/><img class="octicon octicon-mark-github v-align-middle" height=32 width=32 src=/images/icon-192.png></a></div><div class=Header-item style=margin-right:0><a href=javascript:void(0) class="Header-link no-select" onclick=switchTheme()><svg style="fill:var(--color-profile-color-modes-toggle-moon)" class="no-select" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.52208 7.71754c3.05612.0 5.53362-2.47748 5.53362-5.5336C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961 9.95801 1.07727 10.3495.771159 10.6474.99992c1.4679 1.12724 2.4141 2.90007 2.4141 4.89391.0 3.40575-2.7609 6.16667-6.16665 6.16667-2.94151.0-5.40199-2.0595-6.018122-4.81523C.794841 6.87902 1.23668 6.65289 1.55321 6.85451 2.41106 7.40095 3.4296 7.71754 4.52208 7.71754z"/></svg></a></div></header></div><div id=search-result class="container-lg px-3 new-discussion-timeline" style=display:none></div><div class=application-main><div><main><div class="mt-4 position-sticky top-0 d-none d-md-block bg-white width-full border-bottom color-border-secondary" style=z-index:3><div class="container-xl px-3 px-md-4 px-lg-5"><div class="gutter-condensed gutter-lg flex-column flex-md-row d-flex"><div class="flex-shrink-0 col-12 mb-4 mb-md-0"><div class="UnderlineNav width-full box-shadow-none"><nav class="UnderlineNav-body nb-tabs"><a class=UnderlineNav-item href=/><svg class="octicon octicon-book" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 1.75A.75.75.0 01.75 1h4.253c1.227.0 2.317.59 3 1.501A3.744 3.744.0 0111.006 1h4.245a.75.75.0 01.75.75v10.5a.75.75.0 01-.75.75h-4.507a2.25 2.25.0 00-1.591.659l-.622.621a.75.75.0 01-1.06.0l-.622-.621A2.25 2.25.0 005.258 13H.75A.75.75.0 010 12.25V1.75zm8.755 3a2.25 2.25.0 012.25-2.25H14.5v9h-3.757c-.71.0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324.004-5.073-.002-2.253A2.25 2.25.0 005.003 2.5H1.5v9h3.757a3.75 3.75.0 011.994.574z"/></svg> Overview
+</a><a class="UnderlineNav-item selected" href=/Linux/><svg class="octicon octicon-repo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5.0 014.5.0h8.75a.75.75.0 01.75.75v12.5a.75.75.0 01-.75.75h-2.5a.75.75.0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75.0 01-1.072 1.05A2.495 2.495.0 012 11.5v-9zm10.5-1V9h-8c-.356.0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25.0 00.4.2l1.45-1.087a.25.25.0 01.3.0L8.6 15.7a.25.25.0 00.4-.2v-3.25A.25.25.0 008.75 12h-3.5a.25.25.0 00-.25.25z"/></svg> Linux
+<span class=Counter>49</span>
+</a><a class=UnderlineNav-item href=/math/><svg class="octicon octicon-repo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5.0 014.5.0h8.75a.75.75.0 01.75.75v12.5a.75.75.0 01-.75.75h-2.5a.75.75.0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75.0 01-1.072 1.05A2.495 2.495.0 012 11.5v-9zm10.5-1V9h-8c-.356.0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25.0 00.4.2l1.45-1.087a.25.25.0 01.3.0L8.6 15.7a.25.25.0 00.4-.2v-3.25A.25.25.0 008.75 12h-3.5a.25.25.0 00-.25.25z"/></svg> Math
+<span class=Counter>3</span>
+</a><a class=UnderlineNav-item href=/Misc/><svg class="octicon octicon-repo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5.0 014.5.0h8.75a.75.75.0 01.75.75v12.5a.75.75.0 01-.75.75h-2.5a.75.75.0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75.0 01-1.072 1.05A2.495 2.495.0 012 11.5v-9zm10.5-1V9h-8c-.356.0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25.0 00.4.2l1.45-1.087a.25.25.0 01.3.0L8.6 15.7a.25.25.0 00.4-.2v-3.25A.25.25.0 008.75 12h-3.5a.25.25.0 00-.25.25z"/></svg> Misc
+<span class=Counter>4</span>
+</a><a class=UnderlineNav-item href=/Quiz/><svg class="octicon octicon-repo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5.0 014.5.0h8.75a.75.75.0 01.75.75v12.5a.75.75.0 01-.75.75h-2.5a.75.75.0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75.0 01-1.072 1.05A2.495 2.495.0 012 11.5v-9zm10.5-1V9h-8c-.356.0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25.0 00.4.2l1.45-1.087a.25.25.0 01.3.0L8.6 15.7a.25.25.0 00.4-.2v-3.25A.25.25.0 008.75 12h-3.5a.25.25.0 00-.25.25z"/></svg> Quiz
+<span class=Counter>2</span>
+</a><a class=UnderlineNav-item href=/slices_of_life/><svg class="octicon octicon-repo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5.0 014.5.0h8.75a.75.75.0 01.75.75v12.5a.75.75.0 01-.75.75h-2.5a.75.75.0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75.0 01-1.072 1.05A2.495 2.495.0 012 11.5v-9zm10.5-1V9h-8c-.356.0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25.0 00.4.2l1.45-1.087a.25.25.0 01.3.0L8.6 15.7a.25.25.0 00.4-.2v-3.25A.25.25.0 008.75 12h-3.5a.25.25.0 00-.25.25z"/></svg> Slices Of Life
+<span class=Counter>69</span>
+</a><a class=UnderlineNav-item href=/site-index/><svg class="octicon octicon-list" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75.0 000 1.5h8.5a.75.75.0 000-1.5h-8.5zm0 5a.75.75.0 000 1.5h8.5a.75.75.0 000-1.5h-8.5zm0 5a.75.75.0 000 1.5h8.5a.75.75.0 000-1.5h-8.5zM3 8A1 1 0 111 8a1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"/></svg> Index</a></nav></div></div></div></div></div><div class=px-3><div class="UnderlineNav user-profile-nav d-block d-md-none position-sticky top-0 pl-3 ml-n3 mr-n3 pr-3 bg-white" style=z-index:3><nav class="UnderlineNav-body nb-tabs"><a class=UnderlineNav-item href=/><svg class="octicon octicon-book" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 1.75A.75.75.0 01.75 1h4.253c1.227.0 2.317.59 3 1.501A3.744 3.744.0 0111.006 1h4.245a.75.75.0 01.75.75v10.5a.75.75.0 01-.75.75h-4.507a2.25 2.25.0 00-1.591.659l-.622.621a.75.75.0 01-1.06.0l-.622-.621A2.25 2.25.0 005.258 13H.75A.75.75.0 010 12.25V1.75zm8.755 3a2.25 2.25.0 012.25-2.25H14.5v9h-3.757c-.71.0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324.004-5.073-.002-2.253A2.25 2.25.0 005.003 2.5H1.5v9h3.757a3.75 3.75.0 011.994.574z"/></svg> Overview
+</a><a class="UnderlineNav-item selected" href=/Linux/><svg class="octicon octicon-repo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5.0 014.5.0h8.75a.75.75.0 01.75.75v12.5a.75.75.0 01-.75.75h-2.5a.75.75.0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75.0 01-1.072 1.05A2.495 2.495.0 012 11.5v-9zm10.5-1V9h-8c-.356.0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25.0 00.4.2l1.45-1.087a.25.25.0 01.3.0L8.6 15.7a.25.25.0 00.4-.2v-3.25A.25.25.0 008.75 12h-3.5a.25.25.0 00-.25.25z"/></svg> Linux
+<span class=Counter>49</span>
+</a><a class=UnderlineNav-item href=/math/><svg class="octicon octicon-repo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5.0 014.5.0h8.75a.75.75.0 01.75.75v12.5a.75.75.0 01-.75.75h-2.5a.75.75.0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75.0 01-1.072 1.05A2.495 2.495.0 012 11.5v-9zm10.5-1V9h-8c-.356.0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25.0 00.4.2l1.45-1.087a.25.25.0 01.3.0L8.6 15.7a.25.25.0 00.4-.2v-3.25A.25.25.0 008.75 12h-3.5a.25.25.0 00-.25.25z"/></svg> Math
+<span class=Counter>3</span>
+</a><a class=UnderlineNav-item href=/Misc/><svg class="octicon octicon-repo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5.0 014.5.0h8.75a.75.75.0 01.75.75v12.5a.75.75.0 01-.75.75h-2.5a.75.75.0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75.0 01-1.072 1.05A2.495 2.495.0 012 11.5v-9zm10.5-1V9h-8c-.356.0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25.0 00.4.2l1.45-1.087a.25.25.0 01.3.0L8.6 15.7a.25.25.0 00.4-.2v-3.25A.25.25.0 008.75 12h-3.5a.25.25.0 00-.25.25z"/></svg> Misc
+<span class=Counter>4</span>
+</a><a class=UnderlineNav-item href=/Quiz/><svg class="octicon octicon-repo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5.0 014.5.0h8.75a.75.75.0 01.75.75v12.5a.75.75.0 01-.75.75h-2.5a.75.75.0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75.0 01-1.072 1.05A2.495 2.495.0 012 11.5v-9zm10.5-1V9h-8c-.356.0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25.0 00.4.2l1.45-1.087a.25.25.0 01.3.0L8.6 15.7a.25.25.0 00.4-.2v-3.25A.25.25.0 008.75 12h-3.5a.25.25.0 00-.25.25z"/></svg> Quiz
+<span class=Counter>2</span>
+</a><a class=UnderlineNav-item href=/slices_of_life/><svg class="octicon octicon-repo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5.0 014.5.0h8.75a.75.75.0 01.75.75v12.5a.75.75.0 01-.75.75h-2.5a.75.75.0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75.0 01-1.072 1.05A2.495 2.495.0 012 11.5v-9zm10.5-1V9h-8c-.356.0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25.0 00.4.2l1.45-1.087a.25.25.0 01.3.0L8.6 15.7a.25.25.0 00.4-.2v-3.25A.25.25.0 008.75 12h-3.5a.25.25.0 00-.25.25z"/></svg> Slices Of Life
+<span class=Counter>69</span>
+</a><a class=UnderlineNav-item href=/site-index/><svg class="octicon octicon-list" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75.0 000 1.5h8.5a.75.75.0 000-1.5h-8.5zm0 5a.75.75.0 000 1.5h8.5a.75.75.0 000-1.5h-8.5zm0 5a.75.75.0 000 1.5h8.5a.75.75.0 000-1.5h-8.5zM3 8A1 1 0 111 8a1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"/></svg> Index</a></nav></div></div><div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4"><div class=px-0><div class="mb-3 d-flex px-3 px-md-3 px-lg-5"><div class="flex-auto min-width-0 width-fit mr-3"><div class=d-flex><div class="d-none d-md-block"><a class="avatar mr-2 flex-shrink-0" href=https://tlnd.org/><img class=avatar-user src=/avatar.png width=32 height=32></a></div><div class="d-flex flex-column min-width-0"><h1 class="nb-path break-word f3 text-normal mb-2"><svg class="octicon octicon-file" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 1.75C2 .784 2.784.0 3.75.0h6.586c.464.0.909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75.0 0113.25 16h-9.5A1.75 1.75.0 012 14.25V1.75zm1.75-.25a.25.25.0 00-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25.0 00.25-.25V6h-2.75A1.75 1.75.0 019 4.25V1.5H3.75zm6.75.062V4.25c0 .138.112.25.25.25h2.688a.252.252.0 00-.011-.013l-2.914-2.914a.272.272.0 00-.013-.011z"/></svg>
+<a href=/>Benjamin Italiaander</a>
+<span class=path-divider>/</span>
+<a href=/Linux/>Linux</a>
+<span class=path-divider>/</span>
+<a href=/Linux/ssl/>SSL</a>
+<span class=path-divider>/</span>
+<strong><a href=/Linux/ssl/some-instruction-aboutssl-i-found-online_nl/>Je eigen CA opzetten met OpenSSL</a></strong></h1><div class="note m-0">Created <relative-time datetime="Tue, 18 Nov 2025 00:00:00 +0000" class=no-wrap>Tue, 18 Nov 2025 00:00:00 +0000</relative-time></div></div></div></div></div></div></div><div class="container-lg px-3 new-discussion-timeline"><div class="repository-content gist-content"><div><div class="js-gist-file-update-container js-task-list-container file-box"><div id=file-pytest class="file my-2"><div id=post-header class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style=z-index:2><div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto"><div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0"><summary id=toc-toggle onclick=clickToc() class="btn btn-octicon m-0 mr-2 p-2"><svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered"><path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75.0 000 1.5h8.5a.75.75.0 000-1.5h-8.5zm0 5a.75.75.0 000 1.5h8.5a.75.75.0 000-1.5h-8.5zm0 5a.75.75.0 000 1.5h8.5a.75.75.0 000-1.5h-8.5zM3 8A1 1 0 111 8a1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"/></svg></summary><details-menu class=SelectMenu id=toc-details style="display: none;"><div class="SelectMenu-modal rounded-3 mt-1" style=max-height:340px><div class="SelectMenu-list SelectMenu-list--borderless p-2" style=overscroll-behavior:contain id=toc-list></div></div></details-menu>4263 Words</div><div class="file-actions flex-order-2 pt-0"></div></div></div><div class="Box-body px-5 pb-5" style=z-index:1><article class="markdown-body entry-content container-lg"><blockquote><p>🤖 <em>Deze pagina is met AI vertaald uit het Engels. <a href=/Linux/ssl/some-instruction-aboutssl-i-found-online/>Lees het origineel in het Engels</a>.</em> Commando&rsquo;s, uitvoer en configuratiebestanden zijn niet vertaald. Het origineel is uit 2014; gebruik tegenwoordig SHA-256 in plaats van SHA-1.</p></blockquote><p>Ik vond deze handige handleiding <a href=https://gist.github.com/soarez/9688998 class=external-link target=_blank rel=noopener>hier</a>. Bedankt voor het delen, <a href=https://uk.linkedin.com/in/soarez class=external-link target=_blank rel=noopener>Igor Soarez</a>!</p><h1 id=je-eigen-ca-opzetten-met-openssl>Je eigen CA opzetten met OpenSSL</h1><p>Om ervan te leren heb ik besloten mijn eigen CA (certificaatautoriteit) te maken.
+Dit is wat ik heb geleerd.</p><h1 id=eerst-de-basis>Eerst de basis</h1><p>Eerst wat achtergrond.</p><h2 id=public-keycryptografie>Public-keycryptografie</h2><p>Ook wel asymmetrische cryptografie genoemd. Het lost het probleem op hoe twee partijen veilig kunnen communiceren zonder ooit een gemeenschappelijke sleutel uit te wisselen, door twee bij elkaar horende sleutels te gebruiken: één privé, één publiek.</p><p>Tekst die met de publieke sleutel is versleuteld, kan alleen met de bijbehorende privésleutel worden ontsleuteld, en handtekeningen die met de publieke sleutel te controleren zijn, kunnen alleen met de privésleutel worden gemaakt.</p><p>Maar als de twee partijen elkaar nog niet kennen, hebben ze een manier nodig om zeker te weten dat een publieke sleutel echt bij de privésleutel van de ander hoort.</p><p>Met andere woorden: als Alice met Bob praat en Bob zegt tegen Alice “dit is mijn publieke sleutel K, gebruik die om met mij te communiceren”, dan moet Alice weten dat het echt de publieke sleutel van Bob is en niet die van Eve.</p><p>De gebruikelijke oplossing hiervoor is een PKI.</p><h2 id=public-key-infrastructure---pki>Public Key Infrastructure - PKI</h2><p>Een PKI is een systeem dat publieke sleutels aan identiteiten koppelt via een certificaatautoriteit (Certificate Authority, CA).</p><p>Een CA is een centrale, vertrouwde derde partij waarvan de publieke sleutel al bekend is.</p><p>Als Alice nu met Bob praat, laat Bob haar een bericht zien dat is ondertekend door Trent, die Alice kent en vertrouwt, met de inhoud “deze publieke sleutel K is van Bob”. Zo&rsquo;n ondertekend bericht heet een certificaat, en het kan nog meer informatie bevatten. Alice kan de handtekening controleren met de publieke sleutel van Trent, en kan daarna met vertrouwen met Bob praten.</p><p>Vaak is er ook een vertrouwensketen. Alice praat met Bob; Trent kent Bob niet, maar kent wel Carol, die Bob kent. Bob laat Alice dan een keten van certificaten zien: één van Carol die zegt welke sleutel van Bob is, en één van Trent die zegt welke sleutel van Carol is. Ook zonder Carol te kennen kan Alice het certificaat van Trent controleren, zeker zijn van de sleutel van Carol, en als haar vertrouwen in Trent doorwerkt, kan ze Carol ook vertrouwen over wie Bob is.</p><p><strong>Let op</strong>:
+Een interessante oplossing voor het publiek verifiëren van publieke sleutels is het <a href=https://en.wikipedia.org/wiki/Web_of_trust class=external-link target=_blank rel=noopener>web-of-trust</a>-model, dat werkt met verklaringen van derden over zelfondertekende certificaten.</p><h2 id=x509>X.509</h2><p>X.509 is een standaard van de Internationale Telecommunicatie-unie (ITU) voor PKI.</p><p>Hij legt onder meer het formaat van certificaten voor publieke sleutels vast.</p><p>Beschreven in deze RFC&rsquo;s:</p><ul><li>Version 1 - <a href=https://tools.ietf.org/html/rfc1422 class=external-link target=_blank rel=noopener>RFC1422</a></li><li>Version 2 - <a href=https://tools.ietf.org/html/rfc2459 class=external-link target=_blank rel=noopener>RFC2459</a></li><li>Version 3 - <a href=https://tools.ietf.org/html/rfc5280 class=external-link target=_blank rel=noopener>RFC5280</a></li></ul><p>Een digitaal X.509 v3-certificaat heeft deze opbouw:</p><ul><li>Certificate<ul><li>Version</li><li>Serial Number</li><li>Algorithm ID</li><li>Issuer</li><li>Validity<ul><li>Not Before</li><li>Not After</li></ul></li><li>Subject</li><li>Subject public key info</li><li>Issuer Unique Identifier (optional)</li><li>Subject Unique Identifier (optional)</li><li>Extensions (optional)<ul><li>&mldr;</li></ul></li></ul></li><li>Certificate Signature Algorithm</li><li>Certificate Signature</li></ul><h3 id=versie-serienummer-algoritme-id-en-geldigheid>Versie, serienummer, algoritme-ID en geldigheid</h3><ul><li><strong>Version</strong> - Geeft de X.509-versie aan. Moet 3 zijn (waarde 0x2).</li><li><strong>Serial</strong> - Uniek positief getal dat de CA aan elk certificaat toekent.</li><li><strong>Algorithm ID</strong> - Moet gelijk zijn aan het veld &ldquo;Certificate Signature Algorithm&rdquo;.</li><li><strong>Validity</strong> - Twee datums die samen de periode vormen waarin het certificaat geldig is.</li></ul><h3 id=uitgever-issuer-en-onderwerp-subject>Uitgever (issuer) en onderwerp (subject)</h3><p>Beide zijn een Distinguished Name (DN), uniek per CA.</p><p>Een DN, beschreven in <a href=https://tools.ietf.org/html/rfc1779 class=external-link target=_blank rel=noopener>RFC1779</a>, bestaat uit één regel met deze waarden, gescheiden van elkaar:</p><ul><li>CN - CommonName</li><li>L - LocalityName</li><li>ST - StateOrProvinceName</li><li>O - OrganizationName</li><li>OU - OrganizationalUnitName</li><li>C - CountryName</li></ul><p>Voorbeeld:
+<code>C=PT, ST=Lisboa, L=Lisboa, O=Foo Org, OU=Bar Sector, CN=foo.org/emailAddress=admin@foo.org</code></p><p>De ondertekenende CA heeft niet altijd alle waarden nodig.</p><p>Bij een verbinding met een HTTPS-server controleren browsers de CN-waarde, die bij het domein moet passen. Wildcardcertificaten beginnen meestal met een <code>*</code> in de CN, zodat elk subdomein wordt toegestaan, bijvoorbeeld <code>CN=*.example.com</code>.</p><p>Let op: browsers weigeren de wildcard voor het kale domein; <code>example.com</code> valt dus niet onder <code>*.example.com</code>.</p><p>Een certificaat kan wel worden gebruikt voor een HTTPS-server die op meerdere domeinen antwoordt. Extra domeinen geef je op in de extensie Subject Alternative Names.</p><h4 id=subject-public-key-info>Subject public key info</h4><p>Bevat het algoritme van de publieke sleutel en de bijbehorende parameters, bijvoorbeeld:</p><ul><li>algorithm: rsa encryption</li><li>key size: 2048</li><li>exponent: 0x10001</li><li>modulus: 00:ec:82:3f:78:b6&mldr;</li></ul><h4 id=unieke-identificatie-van-uitgever-en-onderwerp>Unieke identificatie van uitgever en onderwerp</h4><p>Ingevoerd in versie 2 om hergebruik van namen van uitgevers en onderwerpen mogelijk te maken. Stel dat een CA failliet gaat en zijn naam uit de openbare lijst van het land wordt geschrapt: na een tijd kan een andere CA met dezelfde naam zich registreren, ook al heeft die niets met de eerste te maken.</p><p>Persoonlijk vind ik dit allemaal nogal onzinnig.
+Het is dan ook niet verrassend dat de IETF aanraadt namen van uitgevers en onderwerpen niet te hergebruiken.</p><h4 id=extensies>Extensies</h4><p>Ingevoerd in versie 3.
+Een CA kan met extensies een certificaat uitgeven voor een specifiek doel, bijvoorbeeld alleen voor webservers.</p><p>Extensies kunnen kritiek of niet-kritiek zijn. Niet-kritieke extensies mogen worden genegeerd; kritieke moeten worden toegepast, en het hele certificaat moet worden geweigerd als het systeem een kritieke extensie niet herkent.</p><p>Enkele standaardextensies:</p><ul><li>Subject Key Identifier</li><li>Authority Key Identifier</li><li>Subject Alternative Name</li><li>Basic Constraints</li></ul><h5 id=authority-en-subject-key-identifiers>Authority en Subject Key Identifiers</h5><p>Gebruikt als een partij meerdere ondertekeningssleutels heeft.
+De identiteit kan worden gecontroleerd met de naam en het serienummer, of met deze sleutel-identificatie.</p><p>Een identificatie is de 160-bits SHA-1-hash van de publieke sleutel, of alleen de laatste 60 bits, voorafgegaan door de bits 0100.</p><h5 id=subject-alternative-name>Subject Alternative Name</h5><p>Kan extra DNS-namen of IP-adressen bevatten waarvoor het certificaat geldig is, naast de naam in de CN.</p><h5 id=basic-constraints>Basic Constraints</h5><p>Of het onderwerp een CA is, en eventueel de maximale lengte van certificeringsketens.</p><h2 id=een-praktijkvoorbeeld>Een praktijkvoorbeeld</h2><p>Stel dat we een ondertekend certificaat nodig hebben voor een HTTPS-server.
+Dan hebben we een certificaat nodig voor het domein (of de domeinen) waarop de server bereikbaar is.</p><p>We hebben een certificaat nodig dat de browser kan controleren, zodat hij de gebruiker kan vertellen dat hij bij de juiste servers is van het domein dat hij intypte, en dat er een veilige verbinding is.</p><p>Browsers gebruiken een certificaatopslag met een lijst van CA&rsquo;s. Om die te bekijken ga je naar de instellingen van je browser en zoek je het onderdeel Certificaten, misschien onder Beveiliging of Geavanceerd; daar zit meestal een soort certificaatbeheer.</p><p>De certificaatopslag van de browser heeft meestal een paar onderdelen. Eén daarvan, waarschijnlijk leeg, is voor clientcertificaten: HTTPS kan namelijk ook de client met een certificaat authenticeren, al gebeurt dat bijna alleen in heel specifieke bedrijfsomgevingen.
+Het onderdeel dat je wilt bekijken is &lsquo;Autoriteiten&rsquo; (Authorities), waar de CA-certificaten staan. Je browser heeft vrijwel zeker certificaten van VeriSign, Comodo, GeoTrust, Microsoft enzovoort.</p><p>We hebben dus een certificaat nodig dat zegt dat onze sleutel bij ons domein hoort, uitgegeven (ondertekend) door een van deze partijen. Of het kan worden uitgegeven door een tussenpartij die door een van de CA&rsquo;s is gemachtigd om certificaten uit te geven.</p><p>Als je zoekt op &lsquo;SSL-certificaten&rsquo;, vind je veel verkopers van digitale certificaten. Je zult zien dat wildcardcertificaten meestal wat duurder zijn.</p><h3 id=wildcardcertificaten>Wildcardcertificaten</h3><p>Een wildcardcertificaat is een certificaat dat je voor meerdere subdomeinen van een domein kunt gebruiken.</p><p>Browsers kijken naar de CN (Common Name) in het subject-veld, dat een domein moet zijn of een wildcard zoals <code>*.example.com</code>.</p><p>Browsers accepteren een certificaat met CN <code>*.example.org</code> voor <code>www.example.org</code>, <code>login.example.org</code> of <code>bo.example.org</code>. Maar het “kale” domein <code>example.org</code> werkt niet.</p><p>Extra domeinen (ook het kale domein) kun je toevoegen in de extensie &ldquo;SubjectAltName&rdquo;.</p><p>Om dit te bekijken, ga je in je browser naar <code>https://mozilla.org</code> (of een andere HTTPS-server) en klik je op het slotje voor de URL; daar kun je meestal het gebruikte certificaat bekijken. Kijk naar de Common Name van het subject en naar de extensie Subject Alt Name.</p><h2 id=openssl>OpenSSL</h2><p>OpenSSL is een gereedschapskist voor cryptografie. Het bevat veel subcommando&rsquo;s, elk met een eigen manpage, bijvoorbeeld <code>ca(1)</code>, <code>req(1)</code> en <code>x509(1)</code>.</p><p>De meeste OpenSSL-tools werken met de parameters <code>-in</code> en <code>-out</code>. Meestal kun je bestanden ook bekijken met <code>-in &lt;bestand></code> en <code>-noout</code>; je geeft dan aan in welk deel van de inhoud je geïnteresseerd bent, of <code>-text</code> om alles te zien. Hieronder staan voorbeelden.</p><h3 id=sleutels-en-een-certificate-signing-request-csr-maken>Sleutels en een Certificate Signing Request (CSR) maken</h3><p>Maak een RSA-sleutel voor de CA:</p><pre tabindex=0><code>$ openssl genrsa -out example.org.key 2048
+Generating RSA private key, 2048 bit long modulus
+.........................................+++
+</code></pre><p><code>openssl genrsa</code> is de tool om RSA-sleutels te maken; <code>2048</code> is de sleutelgrootte.
+Dit maakt een bestand <code>example.org.key</code> met de privésleutel.</p><p>Met de tool <code>openssl rsa</code> kun je de sleutel bekijken.</p><pre tabindex=0><code>$ openssl rsa -in example.org.key -noout -text
+Private-Key: (2048 bit)
+modulus:
+    00:ad:d8:71:1f:ab:a7:df:a6:c3:7e:d8:1f:fd:81:
+    b0:5a:a8:9d:51:2b:15:c2:98:95:9e:fe:3b:7c:bd:
+    ...
+publicExponent: 65537 (0x10001)
+privateExponent:
+    7b:a9:ba:96:b7:c9:bb:eb:69:a7:62:60:27:39:c8:
+    d4:44:9b:5b:b0:d5:52:ce:ad:a8:22:da:f8:19:c2:
+    ...
+prime1:
+    00:d3:98:05:f5:49:48:11:f1:46:71:09:6c:b4:cb:
+    e6:3e:6f:a1:41:9a:36:43:c3:22:20:06:d1:aa:dd:
+    ...
+prime2:
+    00:d2:54:5e:cc:15:72:3d:5f:b2:64:ab:4f:42:a6:
+    15:79:ca:7a:e0:ef:dd:a7:f3:25:f2:f1:75:b2:33:
+    ...
+exponent1:
+    02:bf:5f:9c:6e:c6:2b:cd:79:3f:b0:82:a3:da:5d:
+    f4:03:99:11:74:02:2e:61:13:49:5d:2d:4d:cd:b1:
+    ...
+exponent2:
+    79:6c:c1:e9:9a:3c:00:98:9d:b9:a6:78:b4:a6:83:
+    61:73:76:ab:23:6f:58:c5:73:d4:24:77:e9:30:10:
+    ...
+coefficient:
+    17:53:93:4a:48:b0:63:9a:71:0e:37:fb:18:ad:be:
+    4e:d0:6e:af:6c:bc:7b:ff:44:c6:93:9a:23:03:51:
+    ...
+</code></pre><p>Desgewenst kun je de publieke RSA-sleutel uit de privésleutel halen:</p><pre tabindex=0><code>$ openssl rsa -in example.org.key -pubout -out example.org.pubkey
+$ openssl rsa -in example.org.pubkey -pubin -noout -text
+Public-Key: (2048 bit)
+Modulus:
+    00:ad:d8:71:1f:ab:a7:df:a6:c3:7e:d8:1f:fd:81:
+    b0:5a:a8:9d:51:2b:15:c2:98:95:9e:fe:3b:7c:bd:
+    ...
+Exponent: 65537 (0x10001)
+</code></pre><p>Een kopie van de privésleutel mag alleen in handen zijn van de partij die gecertificeerd wordt. De sleutel mag dus nooit naar iemand anders worden gestuurd, <strong>ook niet naar de uitgever van het certificaat</strong>.</p><p>Nu maken we een Certificate Signing Request met een deel van de informatie die we in het certificaat willen hebben.
+Om te bewijzen dat we de privésleutel bezitten, wordt de CSR ondertekend met de privésleutel van het onderwerp.</p><p>Maak een CSR:</p><pre tabindex=0><code>$ openssl req -new -key example.org.key -out example.org.csr
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter &#39;.&#39;, the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:PT
+State or Province Name (full name) [Some-State]:Lisboa
+Locality Name (eg, city) []:Lisboa
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Example Org
+Organizational Unit Name (eg, section) []:
+Common Name (e.g. server FQDN or YOUR name) []:*.example.org
+Email Address []:
+
+Please enter the following &#39;extra&#39; attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+</code></pre><p>Daarna kunnen we de inhoud van de CSR bekijken:</p><pre tabindex=0><code>$ openssl req -in example.org.csr -noout -text
+Certificate Request:
+    Data:
+        Version: 0 (0x0)
+        Subject: C=PT, ST=Lisboa, L=Lisboa, O=Example Org, CN=*.example.org
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:ad:d8:71:1f:ab:a7:df:a6:c3:7e:d8:1f:fd:81:
+                    b0:5a:a8:9d:51:2b:15:c2:98:95:9e:fe:3b:7c:bd:
+                    ...
+                Exponent: 65537 (0x10001)
+        Attributes:
+            a0:00
+    Signature Algorithm: sha1WithRSAEncryption
+         5d:f0:d4:d8:85:4c:e7:dd:6d:f2:bd:05:0f:57:8b:d8:0a:40:
+         09:10:ad:ab:cc:5b:a1:92:cb:5d:56:16:7f:0b:23:91:32:06:
+         ...
+</code></pre><p>De CSR wordt dan naar de uitgever gestuurd, en als die het verzoek goedkeurt, krijg je een certificaat terug.</p><p><strong>Zorg ervoor</strong> dat je ondertekeningsalgoritme niet MD5 is. Oude OpenSSL-configuraties hebben <code>default_md = md5</code> als standaard. Browsers weigeren certificaten met MD5 als ondertekeningsalgoritme, omdat dat <a href=http://www.win.tue.nl/hashclash/rogue-ca/ class=external-link target=_blank rel=noopener>onveilig is gebleken</a>.</p><p>Merk op dat er geen extensies zijn; daarvoor is een extra configuratiebestand nodig. Dat maakt het iets ingewikkelder, dus als je een wildcardcertificaat koopt, hoef je meestal de extensie SubjectAltName voor het kale domein niet zelf op te geven: dat doet de uitgever voor je.</p><p>Dit is een voorbeeldconfiguratie voor een CSR:</p><pre tabindex=0><code class=language-conf data-lang=conf># The main section is named req because the command we are using is req
+# (openssl req ...)
+[ req ]
+# This specifies the default key size in bits. If not specified then 512 is
+# used. It is used if the -new option is used. It can be overridden by using
+# the -newkey option. 
+default_bits = 2048
+
+# This is the default filename to write a private key to. If not specified the
+# key is written to standard output. This can be overridden by the -keyout
+# option.
+default_keyfile = oats.key
+
+# If this is set to no then if a private key is generated it is not encrypted.
+# This is equivalent to the -nodes command line option. For compatibility
+# encrypt_rsa_key is an equivalent option. 
+encrypt_key = no
+
+# This option specifies the digest algorithm to use. Possible values include
+# md5 sha1 mdc2. If not present then MD5 is used. This option can be overridden
+# on the command line.
+default_md = sha1
+
+# if set to the value no this disables prompting of certificate fields and just
+# takes values from the config file directly. It also changes the expected
+# format of the distinguished_name and attributes sections.
+prompt = no
+
+# if set to the value yes then field values to be interpreted as UTF8 strings,
+# by default they are interpreted as ASCII. This means that the field values,
+# whether prompted from a terminal or obtained from a configuration file, must
+# be valid UTF8 strings.
+utf8 = yes
+
+# This specifies the section containing the distinguished name fields to
+# prompt for when generating a certificate or certificate request.
+distinguished_name = my_req_distinguished_name
+
+
+# this specifies the configuration file section containing a list of extensions
+# to add to the certificate request. It can be overridden by the -reqexts
+# command line switch. See the x509v3_config(5) manual page for details of the
+# extension section format.
+req_extensions = my_extensions
+
+[ my_req_distinguished_name ]
+C = PT
+ST = Lisboa
+L = Lisboa
+O  = Oats In The Water
+CN = *.oats.org
+
+[ my_extensions ]
+basicConstraints=CA:FALSE
+subjectAltName=@my_subject_alt_names
+subjectKeyIdentifier = hash
+
+[ my_subject_alt_names ]
+DNS.1 = *.oats.org
+DNS.2 = *.oats.net
+DNS.3 = *.oats.in
+DNS.4 = oats.org
+DNS.5 = oats.net
+DNS.6 = oats.in
+</code></pre><p>Let op de verschillende DNS-namen. Omdat de configuratieparser geen meerdere waarden voor dezelfde naam toestaat, gebruiken we <code>@my_subject_alt_names</code> en <code>DNS.#</code> met verschillende nummers.</p><p>Met deze configuratie kunnen we een CSR maken met de juiste extensies:</p><pre tabindex=0><code>$ openssl req -new -out oats.csr -config oats.conf
+Generating a 2048 bit RSA private key
+.............+++
+....................................+++
+writing new private key to &#39;oats.key&#39;
+-----
+</code></pre><p>Omdat we geen sleutel hebben opgegeven, maakt OpenSSL er een op basis van onze configuratie (<code>default_bits</code> en <code>default_keyfile</code>).</p><p>Laten we het resultaat bekijken:</p><pre tabindex=0><code>$ openssl req -in oats.csr -noout -text
+Certificate Request:
+    Data:
+        Version: 0 (0x0)
+        Subject: C=PT, ST=Lisboa, L=Lisboa, O=Oats In The Water, CN=*.oats.org
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:a2:58:fc:57:32:4d:40:aa:62:92:65:86:1d:6b:
+                    4f:3e:11:a6:b5:36:f2:48:d2:23:2a:8f:bb:a0:a4:
+                    ...
+                Exponent: 65537 (0x10001)
+        Attributes:
+        Requested Extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Alternative Name: 
+                DNS:*.oats.org, DNS:*.oats.net, DNS:*.oats.in, DNS:oats.org, DNS:oats.net, DNS:oats.in
+            X509v3 Subject Key Identifier: 
+                C6:0E:59:B3:1A:FF:1A:A2:FF:F3:DC:76:21:F0:92:FC:57:88:05:6D
+    Signature Algorithm: sha1WithRSAEncryption
+         0d:45:6c:21:65:20:72:68:30:91:5f:fa:b8:c3:62:a0:66:a2:
+         96:6f:76:4a:ba:ca:e3:1d:9e:eb:47:d4:93:87:88:83:a2:f5:
+         ...
+</code></pre><p>Nu zien we een sectie <code>Requested Extensions</code> met het felbegeerde veld <code>Subject Alternative Name</code>.</p><p>Een CA kan deze velden nog steeds verwijderen of overschrijven bij het uitgeven van je certificaat. Dat je ze in je CSR zet, garandeert niet dat ze in het uiteindelijke certificaat komen.</p><h3 id=ca-sleutel-en-zelfondertekend-certificaat>CA-sleutel en zelfondertekend certificaat</h3><p>Nu spelen we zelf de CA.</p><p>Maak een sleutel aan (voor de CA). Dat gaat op dezelfde manier als voor ons onderwerp.</p><pre tabindex=0><code>$ openssl genrsa -out ca.key 2048
+Generating RSA private key, 2048 bit long modulus
+......................................................+++
+.......+++
+e is 65537 (0x10001)
+</code></pre><p>Maak een zelfondertekend certificaat voor de CA:</p><pre tabindex=0><code>$ openssl req -new -x509 -key ca.key -out ca.crt
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter &#39;.&#39;, the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:PT
+State or Province Name (full name) [Some-State]:Lisboa
+Locality Name (eg, city) []:Lisboa
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Sz CA
+Organizational Unit Name (eg, section) []:SZ CA
+Common Name (e.g. server FQDN or YOUR name) []:
+Email Address []:An optional company name []:
+</code></pre><p>OpenSSL stelt een X.509-certificaat samen uit de informatie die je invult, en de publieke sleutel die uit de opgegeven privésleutel wordt gehaald; met die privésleutel wordt ook de handtekening gemaakt.</p><p>Als we extensies in het zelfondertekende certificaat willen opnemen, kunnen we een configuratiebestand gebruiken zoals bij de CSR, maar dan met <code>x509_extensions</code> in plaats van <code>req_extensions</code>.</p><h4 id=ondertekenen>Ondertekenen</h4><p>Een heel eenvoudige manier om een certificaat te ondertekenen:</p><pre tabindex=0><code>$ openssl x509 -req -in example.org.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out example.org.crt
+Signature ok
+subject=/C=PT/ST=Lisboa/L=Lisboa/O=Example Org/CN=*.example.org
+Getting CA Private Key
+</code></pre><p>Elk uitgegeven certificaat moet een uniek serienummer hebben dat de CA toekent.
+Het moet uniek zijn voor elk certificaat van dezelfde CA.
+OpenSSL houdt de gebruikte serienummers bij in een bestand, standaard met dezelfde naam als het CA-certificaat maar met de extensie <code>srl</code>.
+Er wordt dus een bestand <code>ca.srl</code> gemaakt:</p><pre tabindex=0><code>$ cat ca.srl
+ED4B4A80662B1B4C
+</code></pre><p>Dit commando maakt het bestand <code>example.org.crt</code>, dat we kunnen bekijken:</p><pre tabindex=0><code>$ openssl x509 -in example.org.crt -noout -text
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number: 17098842325572590412 (0xed4b4a80662b1b4c)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=PT, ST=Lisboa, L=Lisboa, O=Sz CA, OU=SZ CA
+        Validity
+            Not Before: Mar 20 22:46:43 2014 GMT
+            Not After : Apr 19 22:46:43 2014 GMT
+        Subject: C=PT, ST=Lisboa, L=Lisboa, O=Example Org, CN=*.example.org
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:ad:d8:71:1f:ab:a7:df:a6:c3:7e:d8:1f:fd:81:
+                    b0:5a:a8:9d:51:2b:15:c2:98:95:9e:fe:3b:7c:bd:
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha1WithRSAEncryption
+         05:21:5c:0f:4c:3c:9a:76:7f:3f:fb:fa:e0:09:03:05:c5:16:
+         bf:4b:ac:60:d8:86:fc:b2:42:3e:5e:19:45:2a:e2:01:83:67:
+</code></pre><p>Let op het serienummer: in hexadecimaal is het precies de inhoud van het aangemaakte bestand <code>ca.srl</code>.</p><p>Daarna heb ik met het certificaat en de sleutel een HTTPS-server op poort 1443 opgezet met <a href=https://github.com/indutny/bud class=external-link target=_blank rel=noopener>bud</a>. Bud is een TLS-terminator: het pakt inkomende HTTPS-verbindingen uit en stuurt ze als gewone HTTP door naar een backendserver. Ik stuurde de verbindingen van bud door naar een statische HTTP-server met een heel eenvoudige <code>index.html</code>.</p><p>Ook voegde ik de regel <code>127.0.0.1 www.example.org</code> toe aan mijn <code>/etc/hosts</code>, zodat mijn computer het domein naar het loopbackadres vertaalt.</p><p>Toen ging ik in mijn browser naar <code>https://www.example.org:1443/</code>. De browser klaagde meteen dat het certificaat ongeldig was, omdat de ondertekeningsketen ontbrak. Dat betekent: het certificaat zegt dat de partij <code>C=PT, ST=Lisboa, L=Lisboa, O=Example Org, CN=*.example.org</code> gecertificeerd is door de partij <code>C=PT, ST=Lisboa, L=Lisboa, O=Sz CA, OU=SZ CA</code>, maar er staat nergens wie die tweede partij certificeert, en omdat de browser die partij niet kent, wordt het certificaat ongeldig verklaard.</p><p>Wat we kunnen doen, is een extra bestand maken met het certificaat van example.org én het CA-certificaat.</p><pre tabindex=0><code>$ cat example.org.crt ca.crt &gt; example.org.bundle.crt
+</code></pre><p>Dat deed ik, en toen weigerde mijn browser, Firefox, het certificaat nog steeds, maar met een andere melding: nu klaagde hij dat SZ CA geen vertrouwde partij was.</p><p>Dus opende ik de instellingen van mijn browser en voegde het CA-certificaat toe aan het onderdeel Autoriteiten in de certificaatopslag. En nu werkt het!</p><p><img src=https://i.cloudup.com/OhL6UKbvkM.png alt loading=lazy></p><p>Nou ja&mldr; De browser geeft geen waarschuwing meer. Maar hij toont niet het groene icoontje dat je waarschijnlijk gewend bent</p><p><img src=https://i.cloudup.com/tpp1u2bPAr.png alt loading=lazy></p><p>Dat komt door <a href=https://en.wikipedia.org/wiki/Extended_Validation_Certificate class=external-link target=_blank rel=noopener>extended validation</a>, een extensie die we niet in het certificaat hebben opgenomen en waarvoor de CA meestal de wettelijke identiteit van het onderwerp moet controleren. Om dat te controleren, kunnen we de browser het certificaat laten exporteren naar een bestand dat we met openssl kunnen bekijken:</p><pre tabindex=0><code>$ openssl x509 -in github.com.crt -noout -text
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            04:7f:be:2e:4b:de:00:84:d2:ca:f8:e3:ec:fe:70:58
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance EV CA-1
+        Validity
+            Not Before: Jun 10 00:00:00 2013 GMT
+            Not After : Sep  2 12:00:00 2015 GMT
+        Subject: businessCategory=Private Organization/1.3.6.1.4.1.311.60.2.1.3=US/1.3.6.1.4.1.311.60.2.1.2=Delaware/serialNumber=5157550/street=548 4th Street/postalCode=94107, C=US, ST=California, L=San Francisco, O=GitHub, Inc., CN=github.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:ed:d3:89:c3:5d:70:72:09:f3:33:4f:1a:72:74:
+                    d9:b6:5a:95:50:bb:68:61:9f:f7:fb:1f:19:e1:da:
+                    ...
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:4C:58:CB:25:F0:41:4F:52:F4:28:C8:81:43:9B:A6:A8:A0:E6:92:E5
+
+            X509v3 Subject Key Identifier: 
+                87:D1:8F:19:6E:E4:87:6F:53:8C:77:91:07:50:DF:A3:BF:55:47:20
+            X509v3 Subject Alternative Name: 
+                DNS:github.com, DNS:www.github.com
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crl3.digicert.com/evca1-g2.crl
+
+                Full Name:
+                  URI:http://crl4.digicert.com/evca1-g2.crl
+
+            X509v3 Certificate Policies: 
+                Policy: 2.16.840.1.114412.2.1
+                  CPS: http://www.digicert.com/ssl-cps-repository.htm
+                  User Notice:
+                    Explicit Text: 
+
+            Authority Information Access: 
+                OCSP - URI:http://ocsp.digicert.com
+                CA Issuers - URI:http://cacerts.digicert.com/DigiCertHighAssuranceEVCA-1.crt
+
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+    Signature Algorithm: sha1WithRSAEncryption
+         5f:15:6d:67:c3:3a:d5:a3:de:16:9c:45:33:26:d5:3d:c9:16:
+         74:34:ca:87:48:1b:14:90:6d:f5:ab:47:86:b9:f5:b8:e3:01:
+         ...
+</code></pre><p>De relevante extensie voor Extended Validation (EV) is <code>Certificate Policies</code>.</p><p>Verkopers van certificaten weigeren wildcardcertificaten met EV uit te geven, omdat cabforum.org, de organisatie die de regels voor EV-SSL-certificaten bepaalt, heeft besloten dat dit absoluut niet mag. EV-certificaten kunnen wel zoveel SubjectAltNames hebben als je wilt.</p><h4 id=openssl-ca><code>openssl ca</code></h4><p>Je kunt CSR&rsquo;s ook ondertekenen met <code>ca(1)</code>.</p><p>Eerst hebben we een configuratiebestand <code>ca.conf</code> nodig:</p><pre tabindex=0><code># we use &#39;ca&#39; as the default section because we&#39;re usign the ca command
+# we use &#39;ca&#39; as the default section because we&#39;re usign the ca command
+[ ca ]
+default_ca = my_ca
+
+[ my_ca ]
+#  a text file containing the next serial number to use in hex. Mandatory.
+#  This file must be present and contain a valid serial number.
+serial = ./serial
+
+# the text database file to use. Mandatory. This file must be present though
+# initially it will be empty.
+database = ./index.txt
+
+# specifies the directory where new certificates will be placed. Mandatory.
+new_certs_dir = ./newcerts
+
+# the file containing the CA certificate. Mandatory
+certificate = ./ca.crt
+
+# the file contaning the CA private key. Mandatory
+private_key = ./ca.key
+
+# the message digest algorithm. Remember to not use MD5
+default_md = sha1
+
+# for how many days will the signed certificate be valid
+default_days = 365
+
+# a section with a set of variables corresponding to DN fields
+policy = my_policy
+
+[ my_policy ]
+# if the value is &#34;match&#34; then the field value must match the same field in the
+# CA certificate. If the value is &#34;supplied&#34; then it must be present.
+# Optional means it may be present. Any fields not mentioned are silently
+# deleted.
+countryName = match
+stateOrProvinceName = supplied
+organizationName = supplied
+commonName = supplied
+organizationalUnitName = optional
+commonName = supplied
+
+[ ca ]
+default_ca = my_ca
+
+[ my_ca ]
+#  a text file containing the next serial number to use in hex. Mandatory.
+#  This file must be present and contain a valid serial number.
+serial = ./serial
+
+# the text database file to use. Mandatory. This file must be present though
+# initially it will be empty.
+database = ./index.txt
+
+# specifies the directory where new certificates will be placed. Mandatory.
+new_certs_dir = ./newcerts
+
+# the file containing the CA certificate. Mandatory
+certificate = ./ca.crt
+
+# the file contaning the CA private key. Mandatory
+private_key = ./ca.key
+
+# the message digest algorithm. Remember to not use MD5
+default_md = sha1
+
+# for how many days will the signed certificate be valid
+default_days = 365
+
+# a section with a set of variables corresponding to DN fields
+policy = my_policy
+
+[ my_policy ]
+# if the value is &#34;match&#34; then the field value must match the same field in the
+# CA certificate. If the value is &#34;supplied&#34; then it must be present.
+# Optional means it may be present. Any fields not mentioned are silently
+# deleted.
+countryName = match
+stateOrProvinceName = supplied
+organizationName = supplied
+commonName = supplied
+organizationalUnitName = optional
+commonName = supplied
+</code></pre><p>Vergeet niet: met <code>man ca</code> zie je niet alleen details over opties en gebruik van het commando, maar ook over de bijbehorende configuratiesecties en -instellingen.</p><p>We moeten eerst wat structuur aanmaken. Het configuratiebestand verwacht een map <code>newcerts</code> en de bestanden <code>index.txt</code> en <code>serial</code>:</p><pre tabindex=0><code>$ mkdir newcerts
+$ touch index.txt
+$ echo &#39;01&#39; &gt; serial
+</code></pre><p>En nu kunnen we eindelijk het certificaat ondertekenen:</p><pre tabindex=0><code>$ openssl ca -config ca.cnf -out example.org.crt -infiles example.org.csr
+Using configuration from ca.cnf
+Check that the request matches the signature
+Signature ok
+The Subject&#39;s Distinguished Name is as follows
+countryName           :PRINTABLE:&#39;PT&#39;
+stateOrProvinceName   :ASN.1 12:&#39;Lisboa&#39;
+localityName          :ASN.1 12:&#39;Lisboa&#39;
+organizationName      :ASN.1 12:&#39;Example Org&#39;
+commonName            :ASN.1 12:&#39;*.example.org&#39;
+Certificate is to be certified until Mar 21 01:13:36 2015 GMT (365 days)
+Sign the certificate? [y/n]:y
+
+
+1 out of 1 certificate requests certified, commit? [y/n]y
+Write out database with 1 new entries
+Data Base Updated
+</code></pre><p>Als we extensies willen toevoegen, of de extensies uit een CSR willen behouden (openssl verwijdert ze bij het ondertekenen), dan moeten we die configuratie ook meegeven.</p><p>Dit is een extra configuratiebestand <code>oats.extensions.cnf</code>:</p><pre tabindex=0><code>basicConstraints=CA:FALSE
+subjectAltName=@my_subject_alt_names
+subjectKeyIdentifier = hash
+
+[ my_subject_alt_names ]
+DNS.1 = *.oats.org
+DNS.2 = *.oats.net
+DNS.3 = *.oats.in
+DNS.4 = oats.org
+DNS.5 = oats.net
+DNS.6 = oats.in
+</code></pre><p>En nu:</p><pre tabindex=0><code>$ openssl ca -config ca.cnf -out oats.crt -extfile oats.extensions.cnf -in oats.csr
+Using configuration from ca.cnf
+Check that the request matches the signature
+Signature ok
+The Subject&#39;s Distinguished Name is as follows
+countryName           :PRINTABLE:&#39;PT&#39;
+stateOrProvinceName   :PRINTABLE:&#39;Lisboa&#39;
+localityName          :PRINTABLE:&#39;Lisboa&#39;
+organizationName      :PRINTABLE:&#39;Oats In The Water&#39;
+commonName            :T61STRING:&#39;*.oats.org&#39;
+Certificate is to be certified until Mar 21 01:43:11 2015 GMT (365 days)
+Sign the certificate? [y/n]:y
+
+
+1 out of 1 certificate requests certified, commit? [y/n]y
+Write out database with 1 new entries
+Data Base Updated
+</code></pre><p>We hebben een certificaat met de SubjectAltNames die we wilden:</p><pre tabindex=0><code>$ openssl x509 -in oats.crt -noout -text
+
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 2 (0x2)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=PT, ST=Lisboa, L=Lisboa, O=Sz CA, OU=SZ CA
+        Validity
+            Not Before: Mar 21 01:43:11 2014 GMT
+            Not After : Mar 21 01:43:11 2015 GMT
+        Subject: C=PT, ST=Lisboa, O=Oats In The Water, CN=*.oats.org
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:a2:58:fc:57:32:4d:40:aa:62:92:65:86:1d:6b:
+                    4f:3e:11:a6:b5:36:f2:48:d2:23:2a:8f:bb:a0:a4:
+                    ...
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Alternative Name: 
+                DNS:*.oats.org, DNS:*.oats.net, DNS:*.oats.in, DNS:oats.org, DNS:oats.net, DNS:oats.in
+            X509v3 Subject Key Identifier: 
+                C6:0E:59:B3:1A:FF:1A:A2:FF:F3:DC:76:21:F0:92:FC:57:88:05:6D
+    Signature Algorithm: sha1WithRSAEncryption
+         89:7e:7d:67:1e:98:85:78:a1:f2:81:4c:b4:8c:f9:80:cd:47:
+         a9:94:94:a3:f0:dd:36:d3:e3:48:93:77:4a:31:16:03:79:9c:
+         ...
+</code></pre><p>We kunnen controleren of het certificaat klopt:</p><pre tabindex=0><code>$ openssl verify -CAfile ca.crt oats.crt
+oats.crt: OK
+</code></pre><h1 id=dat-was-het>Dat was het</h1><p>Ik weet dat ik heel veel niet heb behandeld, belangrijke dingen zoals CRL&rsquo;s (intrekkingslijsten). Sorry daarvoor. Het hele systeem ziet er nogal rommelig uit, en ik hoop dat we het in de toekomst kunnen vervangen door iets beters.</p></article></div></div></div></div></div></div></main></div><script type=application/javascript src=https://tlnd.org/js/toc.js></script><link rel=stylesheet href=https://tlnd.org/css/toc.css></div><div class="footer container-xl width-full p-responsive"><div class="d-flex flex-justify-center pt-6 pb-6 mt-6 f6 text-gray border-top border-gray-light">© Benjamin Italiaander 2014</div></div></body><script type=application/javascript src=https://tlnd.org/js/github-style.js></script><script src=https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js></script><script type=application/javascript src=https://tlnd.org/js/search.js></script></html>

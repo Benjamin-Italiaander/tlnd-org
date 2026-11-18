@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CLI on Benjamin Italiaander</title><link>https://tlnd.org/Linux/cli/</link><description>Recent content in CLI on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tlnd.org/Linux/cli/index.xml" rel="self" type="application/rss+xml"/><item><title>Dag screen, hallo Zellij</title><link>https://tlnd.org/Linux/cli/bye-bye-screen-hello-zellij_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/bye-bye-screen-hello-zellij_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/cli/bye-bye-screen-hello-zellij/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="zellij-is-een-prima-alternatief-voor-screen"&gt;&lt;a href="https://zellij.dev/" class="external-link" target="_blank" rel="noopener"&gt;Zellij&lt;/a&gt; is een prima alternatief voor screen!&lt;/h1&gt;
+&lt;p&gt;Ik kwam onlangs Zellij tegen, een hele fijne vervanger voor terminal-multiplexers zoals tmux en screen. Ik was meteen fan!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://zellij.dev/" class="external-link" target="_blank" rel="noopener"&gt;Zellij vind je hier&lt;/a&gt;. Het zit nog niet in de pakketbronnen van elke distributie, maar je kunt het makkelijk vanuit de broncode bouwen, of de binary downloaden en naar een map in je &lt;code&gt;PATH&lt;/code&gt; kopiëren, zoals &lt;code&gt;/usr/local/bin&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Diff: twee bestanden vergelijken</title><link>https://tlnd.org/Linux/cli/diff_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/diff_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/cli/diff/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="de-verschillen-tussen-twee-bestanden-tonen"&gt;De verschillen tussen twee bestanden tonen&lt;/h1&gt;
+&lt;p&gt;Naast elkaar, in twee kolommen:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;diff --side-by-side file_one.txt file_two.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Naast elkaar, met alleen de regels die verschillen:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;diff --side-by-side --suppress-common-lines file_one.txt file_two.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;-y&lt;/code&gt; is de korte vorm van &lt;code&gt;--side-by-side&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Een kolom uit een bestand halen</title><link>https://tlnd.org/Linux/cli/Filter_from_tab_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/Filter_from_tab_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/cli/Filter_from_tab/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="een-bepaalde-kolom-ophalen-in-de-linux-cli"&gt;Een bepaalde kolom ophalen in de Linux-CLI&lt;/h1&gt;
+&lt;p&gt;Soms wil je op de Linux-commandoregel een bepaalde kolom (of een veld gescheiden door tabs) uit een bestand halen.&lt;/p&gt;
+&lt;h3 id="voorbeeldbestand"&gt;Voorbeeldbestand&lt;/h3&gt;
+&lt;p&gt;Stel dat we een bestand (&lt;code&gt;file.txt&lt;/code&gt;) hebben met deze inhoud:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;A B C 
+D E F 
+G H I 
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="de-eerste-kolom-ophalen"&gt;De eerste kolom ophalen&lt;/h3&gt;
+&lt;p&gt;Om de eerste kolom van elke regel te krijgen, gebruik je &lt;code&gt;awk&lt;/code&gt;:&lt;/p&gt;</description></item><item><title>Een QR-code maken vanuit een pipe in de Linux-CLI</title><link>https://tlnd.org/Linux/cli/qrcode_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/qrcode_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/cli/qrcode/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="een-qr-code-maken-van-de-uitvoer-van-een-commando"&gt;Een QR-code maken van de uitvoer van een commando&lt;/h1&gt;
+&lt;p&gt;Ik wilde de uitvoer van een commando omzetten in een QR-code. Zo maak je een QR-code vanuit een pipe in de Linux-CLI:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;qrencode -t ansiutf8 &amp;lt; ./somefile.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ik beheer mijn wachtwoorden met &lt;code&gt;pass&lt;/code&gt; en wilde een wachtwoord met een QR-code naar mijn telefoon overzetten:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pass work/someaccount &lt;span class="p"&gt;|&lt;/span&gt; head -n1 &lt;span class="p"&gt;|&lt;/span&gt; tr -d &lt;span class="s1"&gt;&amp;#39;\n&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; qrencode -t ansiutf8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;tr&lt;/code&gt; haalt het regeleinde aan het eind weg.&lt;/p&gt;</description></item><item><title>Elk woord op een eigen regel</title><link>https://tlnd.org/Linux/cli/remove-blank-spaces_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/remove-blank-spaces_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/cli/remove-blank-spaces/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="elk-woord-op-een-eigen-regel-zetten"&gt;Elk woord op een eigen regel zetten&lt;/h1&gt;
+&lt;p&gt;Heb je een bestand met tekst zoals dit:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;abcd efdg ijklm sfgsdf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sdgf gfgf gdfg dgdffdg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;en wil je elk woord op een aparte regel, dan is &lt;code&gt;xargs&lt;/code&gt; het makkelijkst:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;xargs -n &lt;span class="m"&gt;1&lt;/span&gt; &amp;lt; ./somefile.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>ImageMagick</title><link>https://tlnd.org/Linux/cli/ImageMagick_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/ImageMagick_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/cli/ImageMagick/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="imagemagick-gebruiken"&gt;ImageMagick gebruiken&lt;/h1&gt;
+&lt;p&gt;Moet je snel een afbeelding of document omzetten? ImageMagick is een commandoregeltool die je daarbij heel veel tijd kan besparen. Hier een korte handleiding om het te installeren en te gebruiken om afbeeldingen, pdf&amp;rsquo;s en meer om te zetten. Ideaal om herhalend werk te automatiseren.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 In ImageMagick 7 heet het commando &lt;code&gt;convert&lt;/code&gt; voortaan &lt;code&gt;magick&lt;/code&gt; (bijvoorbeeld &lt;code&gt;magick input.psd output.jpg&lt;/code&gt;). &lt;code&gt;convert&lt;/code&gt; werkt nog wel, maar is verouderd.&lt;/p&gt;</description></item><item><title>Kopiëren en plakken in de CLI</title><link>https://tlnd.org/Linux/cli/copy-and-paste-in-cli_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/copy-and-paste-in-cli_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/cli/copy-and-paste-in-cli/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="kopiëren-en-plakken-in-de-linux-terminal-is-makkelijk-met-xclip"&gt;Kopiëren en plakken in de Linux-terminal is makkelijk met xclip&lt;/h1&gt;
+&lt;h3 id="een-eenvoudig-commando"&gt;Een eenvoudig commando&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Copy whatever is piped in to the clipboard&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;xclip -selection c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="er-een-functie-van-maken"&gt;Er een functie van maken&lt;/h3&gt;
+&lt;p&gt;Ik vergeet het commando steeds, dus heb ik een functie aan mijn &lt;code&gt;.bashrc&lt;/code&gt; toegevoegd:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Use it by piping something into copy-to-clipboard&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;copy-to-clipboard&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; xclip -selection c
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# For example:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cat some-file.txt &lt;span class="p"&gt;|&lt;/span&gt; copy-to-clipboard
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Markdown lezen in de CLI</title><link>https://tlnd.org/Linux/cli/read_markdown_in_cli_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/read_markdown_in_cli_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/cli/read_markdown_in_cli/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="markdown-bestanden-lezen-op-de-linux-commandoregel"&gt;Markdown-bestanden lezen op de Linux-commandoregel&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/charmbracelet/glow" class="external-link" target="_blank" rel="noopener"&gt;Glow&lt;/a&gt;: een handige tool die ik tegenkwam. Goed onderhouden en makkelijk in gebruik.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Textualize/frogmouth" class="external-link" target="_blank" rel="noopener"&gt;Frogmouth&lt;/a&gt;: een eenvoudige Markdown-viewer voor de CLI, gebouwd met &lt;a href="https://github.com/Textualize/textual" class="external-link" target="_blank" rel="noopener"&gt;Textual&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ttscoff/mdless" class="external-link" target="_blank" rel="noopener"&gt;mdless&lt;/a&gt;: lijkt niet regelmatig onderhouden te worden, maar geeft Markdown-bestanden goed weer in de CLI.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/markdownlint/markdownlint" class="external-link" target="_blank" rel="noopener"&gt;Markdown lint tool&lt;/a&gt;: voor de Markdown-puristen, een tool om je Markdown-bestanden te controleren. Niet goed onderhouden.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Uitgaande verbindingen tonen</title><link>https://tlnd.org/Linux/cli/outgoing_connections_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/outgoing_connections_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/cli/outgoing_connections/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="uitgaande-verbindingen-tonen-in-de-linux-cli"&gt;Uitgaande verbindingen tonen in de Linux-CLI&lt;/h1&gt;
+&lt;p&gt;Een klein voorbeeld om de externe adressen van je verbindingen te tonen.&lt;/p&gt;
+&lt;p&gt;Uitgaande TCP-verbindingen:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;netstat -atn &lt;span class="p"&gt;|&lt;/span&gt; tr -s &lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; cut -f5 -d &lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; grep -v &lt;span class="s1"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Uitgaande UDP-verbindingen:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;netstat -aun &lt;span class="p"&gt;|&lt;/span&gt; tr -s &lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; cut -f5 -d &lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; grep -v &lt;span class="s1"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Op nieuwere systemen is &lt;code&gt;netstat&lt;/code&gt; misschien niet geïnstalleerd; &lt;code&gt;ss -tn&lt;/code&gt; (TCP) en &lt;code&gt;ss -un&lt;/code&gt; (UDP) geven vergelijkbare uitvoer.&lt;/p&gt;</description></item><item><title>Generate a QR code from a pipe in the Linux CLI</title><link>https://tlnd.org/Linux/cli/qrcode/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/qrcode/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/cli/qrcode_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="create-a-qr-code-from-command-output"&gt;Create a QR code from command output&lt;/h1&gt;
+&lt;p&gt;I needed to turn the output of a command into a QR code. Here is a short guide on how to generate a QR code from a pipe in the Linux CLI:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;qrencode -t ansiutf8 &amp;lt; ./somefile.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I manage my passwords with &lt;code&gt;pass&lt;/code&gt; and wanted to get a password onto my phone with a QR code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pass work/someaccount &lt;span class="p"&gt;|&lt;/span&gt; head -n1 &lt;span class="p"&gt;|&lt;/span&gt; tr -d &lt;span class="s1"&gt;&amp;#39;\n&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; qrencode -t ansiutf8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;tr&lt;/code&gt; removes the newline that is added at the end.&lt;/p&gt;</description></item><item><title>Read Markdown in the CLI</title><link>https://tlnd.org/Linux/cli/read_markdown_in_cli/</link><pubDate>Tue, 22 Nov 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/read_markdown_in_cli/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/cli/read_markdown_in_cli_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="reading-markdown-files-on-the-linux-command-line"&gt;Reading Markdown files on the Linux command line&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/charmbracelet/glow" class="external-link" target="_blank" rel="noopener"&gt;Glow&lt;/a&gt;: a handy tool I came across. Well maintained and easy to use.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Textualize/frogmouth" class="external-link" target="_blank" rel="noopener"&gt;Frogmouth&lt;/a&gt;: a simple Markdown viewer for the CLI, built with &lt;a href="https://github.com/Textualize/textual" class="external-link" target="_blank" rel="noopener"&gt;Textual&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ttscoff/mdless" class="external-link" target="_blank" rel="noopener"&gt;mdless&lt;/a&gt;: doesn&amp;rsquo;t look like it is maintained regularly, but it gives good output of Markdown files in the CLI.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/markdownlint/markdownlint" class="external-link" target="_blank" rel="noopener"&gt;Markdown lint tool&lt;/a&gt;: for the Markdown purists, a tool to check your Markdown files. Not well maintained.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Copy and Paste in the CLI</title><link>https://tlnd.org/Linux/cli/copy-and-paste-in-cli/</link><pubDate>Thu, 03 Nov 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/copy-and-paste-in-cli/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/cli/copy-and-paste-in-cli_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="copying-and-pasting-in-the-linux-terminal-is-easy-with-xclip"&gt;Copying and pasting in the Linux terminal is easy with xclip&lt;/h1&gt;
+&lt;h3 id="a-simple-command"&gt;A simple command&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Copy whatever is piped in to the clipboard&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;xclip -selection c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="making-it-a-function"&gt;Making it a function&lt;/h3&gt;
+&lt;p&gt;I keep forgetting the command, so I added a function to my &lt;code&gt;.bashrc&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Use it by piping something into copy-to-clipboard&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;copy-to-clipboard&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; xclip -selection c
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# For example:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cat some-file.txt &lt;span class="p"&gt;|&lt;/span&gt; copy-to-clipboard
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>ImageMagick</title><link>https://tlnd.org/Linux/cli/ImageMagick/</link><pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/ImageMagick/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/cli/ImageMagick_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="using-imagemagick"&gt;Using ImageMagick&lt;/h1&gt;
+&lt;p&gt;If you ever need to do some quick image or document conversions, ImageMagick is a command-line tool that can save you a ton of time. Here&amp;rsquo;s a quick guide on how to install it and use it to convert images, PDFs and more. Perfect for automating repetitive tasks.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 In ImageMagick 7 the &lt;code&gt;convert&lt;/code&gt; command is called &lt;code&gt;magick&lt;/code&gt; (e.g. &lt;code&gt;magick input.psd output.jpg&lt;/code&gt;). &lt;code&gt;convert&lt;/code&gt; still works but is deprecated.&lt;/p&gt;</description></item><item><title>Put every word on its own line</title><link>https://tlnd.org/Linux/cli/remove-blank-spaces/</link><pubDate>Tue, 04 Oct 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/remove-blank-spaces/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/cli/remove-blank-spaces_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="put-every-word-on-its-own-line"&gt;Put every word on its own line&lt;/h1&gt;
+&lt;p&gt;If you have a file with text like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;abcd efdg ijklm sfgsdf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sdgf gfgf gdfg dgdffdg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and you want each word on a separate line, the easiest way is &lt;code&gt;xargs&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;xargs -n &lt;span class="m"&gt;1&lt;/span&gt; &amp;lt; ./somefile.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Extract a Column</title><link>https://tlnd.org/Linux/cli/Filter_from_tab/</link><pubDate>Fri, 03 Jun 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/Filter_from_tab/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/cli/Filter_from_tab_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="extracting-a-specific-column-in-the-linux-cli"&gt;Extracting a Specific Column in the Linux CLI&lt;/h1&gt;
+&lt;p&gt;Sometimes, you may need to extract a specific column (or tab-separated field) from a file in the Linux command line.&lt;/p&gt;
+&lt;h3 id="example-file"&gt;Example File&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s say we have a file (&lt;code&gt;file.txt&lt;/code&gt;) with the following content:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;A B C 
+D E F 
+G H I 
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="extracting-the-first-column"&gt;Extracting the First Column&lt;/h3&gt;
+&lt;p&gt;To extract the first column from each line, you can use &lt;code&gt;awk&lt;/code&gt;:&lt;/p&gt;</description></item><item><title>Diff: compare two files</title><link>https://tlnd.org/Linux/cli/diff/</link><pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/diff/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/cli/diff_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="show-the-differences-between-two-files"&gt;Show the differences between two files&lt;/h1&gt;
+&lt;p&gt;Side-by-side output, in two columns:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;diff --side-by-side file_one.txt file_two.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Side-by-side output, showing only the lines that differ:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;diff --side-by-side --suppress-common-lines file_one.txt file_two.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;-y&lt;/code&gt; is the short form of &lt;code&gt;--side-by-side&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>List outgoing connections</title><link>https://tlnd.org/Linux/cli/outgoing_connections/</link><pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/outgoing_connections/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/cli/outgoing_connections_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="how-to-list-outgoing-connections-on-the-linux-cli"&gt;How to list outgoing connections on the Linux CLI&lt;/h1&gt;
+&lt;p&gt;A small example of how to show the remote addresses of your connections.&lt;/p&gt;
+&lt;p&gt;Outgoing TCP connections:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;netstat -atn &lt;span class="p"&gt;|&lt;/span&gt; tr -s &lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; cut -f5 -d &lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; grep -v &lt;span class="s1"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Outgoing UDP connections:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;netstat -aun &lt;span class="p"&gt;|&lt;/span&gt; tr -s &lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; cut -f5 -d &lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; grep -v &lt;span class="s1"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;On newer systems &lt;code&gt;netstat&lt;/code&gt; may not be installed; &lt;code&gt;ss -tn&lt;/code&gt; (TCP) and &lt;code&gt;ss -un&lt;/code&gt; (UDP) give similar output.&lt;/p&gt;</description></item><item><title>Bye Bye Screen, Hello Zellij</title><link>https://tlnd.org/Linux/cli/bye-bye-screen-hello-zellij/</link><pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cli/bye-bye-screen-hello-zellij/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/cli/bye-bye-screen-hello-zellij_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="zellij-is-a-great-alternative-to-screen"&gt;&lt;a href="https://zellij.dev/" class="external-link" target="_blank" rel="noopener"&gt;Zellij&lt;/a&gt; is a great alternative to screen!&lt;/h1&gt;
+&lt;p&gt;I recently came across Zellij, a really nice replacement for terminal multiplexers like tmux and screen. I instantly became a fan!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://zellij.dev/" class="external-link" target="_blank" rel="noopener"&gt;Zellij can be found here&lt;/a&gt;. It isn&amp;rsquo;t in every distribution&amp;rsquo;s repositories yet, but it is easy to build from source, or you can download the binary and copy it to a folder in your &lt;code&gt;PATH&lt;/code&gt;, such as &lt;code&gt;/usr/local/bin&lt;/code&gt;.&lt;/p&gt;</description></item></channel></rss>

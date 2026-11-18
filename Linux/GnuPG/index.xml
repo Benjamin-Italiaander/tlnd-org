@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GnuPG on Benjamin Italiaander</title><link>https://tlnd.org/Linux/GnuPG/</link><description>Recent content in GnuPG on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tlnd.org/Linux/GnuPG/index.xml" rel="self" type="application/rss+xml"/><item><title>GnuPG</title><link>https://tlnd.org/Linux/GnuPG/nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/GnuPG/nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/GnuPG/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="the-gnu-privacy-guard"&gt;The GNU Privacy Guard&lt;/h1&gt;
+&lt;p&gt;Zo versleutel en ontsleutel je een bestand:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# encrypt a file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg -e -r someone@domain.tld file-to-encrypt.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# decrypt a file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg -d -o secrets.txt file-to-encrypt.txt.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="gpg-fout-onbruikbare-publieke-sleutel"&gt;GPG-fout: onbruikbare publieke sleutel&lt;/h2&gt;
+&lt;p&gt;Krijg je de volgende fout:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There is no assurance this key belongs to the named user
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;encryption failed: Unusable public key
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Een stapsgewijze oplossing vind je hier:&lt;/p&gt;</description></item><item><title>GnuPG: onbruikbare publieke sleutel</title><link>https://tlnd.org/Linux/GnuPG/GPG_unusable_public_key_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/GnuPG/GPG_unusable_public_key_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/GnuPG/GPG_unusable_public_key/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="oplossing-de-fout-unusable-public-key-in-gpg"&gt;Oplossing: de fout &amp;ldquo;Unusable public key&amp;rdquo; in GPG&lt;/h1&gt;
+&lt;h2 id="foutmelding"&gt;Foutmelding&lt;/h2&gt;
+&lt;p&gt;Krijg je de volgende fout, dan betekent dat meestal dat er geen vertrouwde publieke sleutel beschikbaar is:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There is no assurance this key belongs to the named user
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;encryption failed: Unusable public key
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="oorzaak"&gt;Oorzaak&lt;/h2&gt;
+&lt;p&gt;GPG weigert te versleutelen omdat de publieke sleutel niet wordt vertrouwd.&lt;/p&gt;
+&lt;h2 id="oplossing"&gt;Oplossing&lt;/h2&gt;
+&lt;p&gt;Je moet de publieke sleutel als vertrouwd markeren.&lt;/p&gt;</description></item><item><title>GnuPG: Unusable public key</title><link>https://tlnd.org/Linux/GnuPG/GPG_unusable_public_key/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/GnuPG/GPG_unusable_public_key/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/GnuPG/GPG_unusable_public_key_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="fix-unusable-public-key-error-in-gpg"&gt;Fix: &amp;ldquo;Unusable public key&amp;rdquo; error in GPG&lt;/h1&gt;
+&lt;h2 id="error-message"&gt;Error message&lt;/h2&gt;
+&lt;p&gt;If you encounter the following error, it usually means that no trusted public key is available:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There is no assurance this key belongs to the named user
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;encryption failed: Unusable public key
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="cause"&gt;Cause&lt;/h2&gt;
+&lt;p&gt;GPG refuses to encrypt because the public key is not trusted.&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;You need to mark the public key as trusted.&lt;/p&gt;
+&lt;h3 id="step-1-list-available-keys"&gt;Step 1: List available keys&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gpg --list-keys
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example output:&lt;/p&gt;</description></item></channel></rss>

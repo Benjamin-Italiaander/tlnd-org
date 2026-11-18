@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My Linux notes on Benjamin Italiaander</title><link>https://tlnd.org/Linux/</link><description>Recent content in My Linux notes on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tlnd.org/Linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Bestanden zoeken zonder verborgen bestanden</title><link>https://tlnd.org/Linux/find_exclude_hidden_files_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/find_exclude_hidden_files_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/find_exclude_hidden_files/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="bestanden-zoeken-en-verborgen--bestanden-overslaan"&gt;Bestanden zoeken en verborgen (&lt;code&gt;.*&lt;/code&gt;) bestanden overslaan&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;find /home/user ! -path &lt;span class="s1"&gt;&amp;#39;*/.*&amp;#39;&lt;/span&gt; -type f
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Vervang &lt;code&gt;/home/user&lt;/code&gt; door de map waarin je wilt zoeken.&lt;/li&gt;
+&lt;li&gt;Verander &lt;code&gt;-type f&lt;/code&gt; (bestanden) in &lt;code&gt;-type d&lt;/code&gt; om mappen te zoeken.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Linux CLI-spiekbriefje (dagelijks gebruik)</title><link>https://tlnd.org/Linux/cheatsheet_bash_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cheatsheet_bash_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/cheatsheet_bash/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="-linux-cli-spiekbriefje-dagelijks-gebruik"&gt;🧠 Linux CLI-spiekbriefje (dagelijks gebruik)&lt;/h1&gt;
+&lt;h2 id="-zoeken-in-de-geschiedenis"&gt;🔎 Zoeken in de geschiedenis&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + r &lt;span class="c1"&gt;# Terugzoeken (typ om te zoeken, druk nogmaals voor oudere treffers)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + s &lt;span class="c1"&gt;# Vooruit zoeken (staat vaak standaard uit)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;history&lt;/span&gt; &lt;span class="c1"&gt;# De commandogeschiedenis tonen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;history&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; grep ssh &lt;span class="c1"&gt;# Zoeken in de geschiedenis met grep&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;!123 &lt;span class="c1"&gt;# Commando nummer 123 uit de geschiedenis uitvoeren&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;!! &lt;span class="c1"&gt;# Het vorige commando uitvoeren&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;!ssh &lt;span class="c1"&gt;# Het laatste commando dat met &amp;#34;ssh&amp;#34; begint uitvoeren&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-de-cursor-verplaatsen-superhandig"&gt;✏️ De cursor verplaatsen (SUPERhandig)&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + a &lt;span class="c1"&gt;# Naar het begin van de regel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + e &lt;span class="c1"&gt;# Naar het eind van de regel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Alt + b &lt;span class="c1"&gt;# Eén woord terug&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Alt + f &lt;span class="c1"&gt;# Eén woord vooruit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + x x &lt;span class="c1"&gt;# Wisselen tussen begin van de regel en de cursor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-bewerken-en-verwijderen"&gt;✂️ Bewerken en verwijderen&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + u &lt;span class="c1"&gt;# Verwijderen van cursor → begin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + k &lt;span class="c1"&gt;# Verwijderen van cursor → eind&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + w &lt;span class="c1"&gt;# Vorige woord verwijderen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + d &lt;span class="c1"&gt;# Teken onder de cursor verwijderen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + h &lt;span class="c1"&gt;# Teken vóór de cursor verwijderen (backspace)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + y &lt;span class="c1"&gt;# Laatst verwijderde tekst plakken (yank)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-scherm-leegmaken--resetten"&gt;🧹 Scherm leegmaken / resetten&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + l &lt;span class="c1"&gt;# Scherm leegmaken (hetzelfde als &amp;#39;clear&amp;#39;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;clear &lt;span class="c1"&gt;# Scherm leegmaken&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;reset &lt;span class="c1"&gt;# Terminal volledig resetten (voor een kapotte terminal)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-processen-beheren"&gt;⏸️ Processen beheren&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + c &lt;span class="c1"&gt;# Huidige commando stoppen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + z &lt;span class="c1"&gt;# Pauzeren (naar de achtergrond)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;fg&lt;/span&gt; &lt;span class="c1"&gt;# Terughalen naar de voorgrond&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;bg&lt;/span&gt; &lt;span class="c1"&gt;# Op de achtergrond verder laten lopen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;jobs&lt;/span&gt; &lt;span class="c1"&gt;# Achtergrondjobs tonen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-navigeren-en-basis"&gt;📁 Navigeren en basis&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; - &lt;span class="c1"&gt;# Naar de vorige map&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;pwd&lt;/span&gt; &lt;span class="c1"&gt;# Huidige map tonen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls -lah &lt;span class="c1"&gt;# Bestanden tonen (uitgebreid + leesbare groottes)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;tree &lt;span class="c1"&gt;# Mappenstructuur tonen (als het geïnstalleerd is)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-handige-sneltoetsen"&gt;⚡ Handige sneltoetsen&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Tab &lt;span class="c1"&gt;# Bestanden/commando&amp;#39;s automatisch aanvullen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Tab Tab &lt;span class="c1"&gt;# Alle mogelijkheden tonen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + p &lt;span class="c1"&gt;# Vorig commando (zoals ↑)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + n &lt;span class="c1"&gt;# Volgend commando (zoals ↓)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-pro-tips"&gt;🧠 Pro-tips&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo !! &lt;span class="c1"&gt;# Het vorige commando opnieuw uitvoeren met sudo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;!$ &lt;span class="c1"&gt;# Laatste argument van het vorige commando&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# voorbeeld:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdir &lt;span class="nb"&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; !$ &lt;span class="c1"&gt;# gaat naar test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;^oud^nieuw &lt;span class="c1"&gt;# Tekst in het vorige commando vervangen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# voorbeeld:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls /var/logg
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;^logg^log &lt;span class="c1"&gt;# verbetert de typfout&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-geschiedenis-wissen-pas-op-"&gt;🧼 Geschiedenis wissen (pas op 😄)&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;history&lt;/span&gt; -c &lt;span class="c1"&gt;# Geschiedenis van de huidige sessie wissen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;history&lt;/span&gt; -w &lt;span class="c1"&gt;# Wijzigingen naar ~/.bash_history schrijven&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-bonus-zsh--oh-my-zsh"&gt;🔧 Bonus (zsh / oh-my-zsh)&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + r &lt;span class="c1"&gt;# Zoeken in de geschiedenis&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Installeer fzf voor nog beter zoeken:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Ctrl + r wordt dan een interactieve fuzzy search&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Mijn Linux-notities</title><link>https://tlnd.org/Linux/nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Een verzameling notities van de kleine Linux-projecten die ik bouw en waarmee ik experimenteer. Kijk gerust rond: bij elke notitie staat een link naar de Nederlandse versie.&lt;/p&gt;
+&lt;!-- note-index:start --&gt;
+&lt;!-- Generated by make_index.py — do not edit between these markers. --&gt;
+&lt;h2 id="-index"&gt;📚 Index&lt;/h2&gt;
+&lt;p&gt;53 notes, each in 🇬🇧 English and 🇳🇱 Nederlands. 🤖 = translated with AI · met AI vertaald.&lt;/p&gt;</description></item><item><title>OpenPGP / GnuPG-spiekbriefje</title><link>https://tlnd.org/Linux/OpenPGP_GnuPG_cheat_sheet_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/OpenPGP_GnuPG_cheat_sheet_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/OpenPGP_GnuPG_cheat_sheet/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="een-korte-lijst-met-belangrijke-commandos-die-ik-met-gnupg-gebruik"&gt;Een korte lijst met belangrijke commando&amp;rsquo;s die ik met GnuPG gebruik&lt;/h1&gt;
+&lt;h2 id="yubikey-en-gnupg-openpgp--gpg"&gt;YubiKey en GnuPG (OpenPGP / gpg)&lt;/h2&gt;
+&lt;p&gt;Begin met:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;# open the card menu for your YubiKey
+gpg --card-edit
+
+# Now enter the admin command
+gpg/card&amp;gt; admin
+
+# Now enter help to see all available commands
+gpg/card&amp;gt; help
+quit quit this menu
+admin show admin commands
+help show this help
+list list all available data
+name change card holder&amp;#39;s name
+url change URL to retrieve key
+fetch fetch the key specified in the card URL
+login change the login name
+lang change the language preferences
+salutation change card holder&amp;#39;s salutation
+cafpr change a CA fingerprint
+forcesig toggle the signature force PIN flag
+generate generate new keys
+passwd menu to change or unblock the PIN
+verify verify the PIN and list all data
+unblock unblock the PIN using a Reset Code
+factory-reset destroy all keys and data
+kdf-setup setup KDF for PIN authentication
+key-attr change the key attribute
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Toon alle sleutels op een YubiKey, inclusief hun keygrips:&lt;/p&gt;</description></item><item><title>OTP-generator in Bash</title><link>https://tlnd.org/Linux/bash_otp_generator_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/bash_otp_generator_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/bash_otp_generator/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="een-otpmfa-tool-maken-in-de-bash-terminal"&gt;Een OTP/MFA-tool maken in de Bash-terminal&lt;/h1&gt;
+&lt;p&gt;Ik was &lt;strong&gt;Google Authenticator&lt;/strong&gt; zat, dus zocht ik een eenvoudige manier om zelf &lt;strong&gt;OTP-codes (eenmalige wachtwoorden)&lt;/strong&gt; te maken, direct in &lt;strong&gt;Bash&lt;/strong&gt;.
+Vervang de voorbeeldtekst hieronder (&lt;code&gt;JHJH...&lt;/code&gt;) door je eigen geheime sleutel.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/usr/bin/oathtool -b --totp &lt;span class="s1"&gt;&amp;#39;JHJHJHJHJHJHJHJHJHJHJHJHJ&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Wil je de code meteen naar je klembord kopiëren, gebruik dan &lt;strong&gt;xclip&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/usr/bin/oathtool -b --totp &lt;span class="s1"&gt;&amp;#39;JHJHJHJHJHJHJHJHJHJHJHJHJ&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xclip -selection c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Zo heb je eenvoudig je eigen OTP-generator in de terminal.&lt;/p&gt;</description></item><item><title>Find Files, Excluding Hidden Files</title><link>https://tlnd.org/Linux/find_exclude_hidden_files/</link><pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/find_exclude_hidden_files/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/find_exclude_hidden_files_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id="find-files-and-ignore-hidden--files"&gt;Find files and ignore hidden (&lt;code&gt;.*&lt;/code&gt;) files&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;find /home/user ! -path &lt;span class="s1"&gt;&amp;#39;*/.*&amp;#39;&lt;/span&gt; -type f
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Replace &lt;code&gt;/home/user&lt;/code&gt; with the folder you want to search.&lt;/li&gt;
+&lt;li&gt;Change &lt;code&gt;-type f&lt;/code&gt; (files) to &lt;code&gt;-type d&lt;/code&gt; to find directories instead.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Linux CLI Cheatsheet (Daily Use)</title><link>https://tlnd.org/Linux/cheatsheet_bash/</link><pubDate>Sun, 07 Aug 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/cheatsheet_bash/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/cheatsheet_bash_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="-linux-cli-cheatsheet-daily-use"&gt;🧠 Linux CLI Cheatsheet (Daily Use)&lt;/h1&gt;
+&lt;h2 id="-search-in-history"&gt;🔎 Search in History&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + r &lt;span class="c1"&gt;# Reverse search (type to search, keep pressing for older matches)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + s &lt;span class="c1"&gt;# Forward search (often disabled by default)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;history&lt;/span&gt; &lt;span class="c1"&gt;# Show command history&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;history&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; grep ssh &lt;span class="c1"&gt;# Search history with grep&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;!123 &lt;span class="c1"&gt;# Run command number 123 from history&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;!! &lt;span class="c1"&gt;# Run last command&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;!ssh &lt;span class="c1"&gt;# Run last command starting with &amp;#34;ssh&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-cursor-movement-super-useful"&gt;✏️ Cursor Movement (SUPER useful)&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + a &lt;span class="c1"&gt;# Go to beginning of line&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + e &lt;span class="c1"&gt;# Go to end of line&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Alt + b &lt;span class="c1"&gt;# Move back one word&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Alt + f &lt;span class="c1"&gt;# Move forward one word&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + x x &lt;span class="c1"&gt;# Jump between start of line and cursor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-editing--deleting"&gt;✂️ Editing &amp;amp; Deleting&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + u &lt;span class="c1"&gt;# Delete from cursor → start&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + k &lt;span class="c1"&gt;# Delete from cursor → end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + w &lt;span class="c1"&gt;# Delete previous word&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + d &lt;span class="c1"&gt;# Delete character under cursor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + h &lt;span class="c1"&gt;# Delete character before cursor (backspace)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + y &lt;span class="c1"&gt;# Paste last deleted text (yank)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-clear-screen--reset"&gt;🧹 Clear Screen / Reset&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + l &lt;span class="c1"&gt;# Clear screen (same as &amp;#39;clear&amp;#39;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;clear &lt;span class="c1"&gt;# Clear screen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;reset &lt;span class="c1"&gt;# Full terminal reset (fix broken terminal)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-process-control"&gt;⏸️ Process Control&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + c &lt;span class="c1"&gt;# Stop current command&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + z &lt;span class="c1"&gt;# Suspend (background)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;fg&lt;/span&gt; &lt;span class="c1"&gt;# Bring back to foreground&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;bg&lt;/span&gt; &lt;span class="c1"&gt;# Resume in background&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;jobs&lt;/span&gt; &lt;span class="c1"&gt;# List background jobs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-navigation--basics"&gt;📁 Navigation &amp;amp; Basics&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; - &lt;span class="c1"&gt;# Go to previous directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;pwd&lt;/span&gt; &lt;span class="c1"&gt;# Show current directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls -lah &lt;span class="c1"&gt;# List files (detailed + human readable)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;tree &lt;span class="c1"&gt;# Show directory structure (if installed)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-handy-shortcuts"&gt;⚡ Handy Shortcuts&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Tab &lt;span class="c1"&gt;# Auto-complete files/commands&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Tab Tab &lt;span class="c1"&gt;# Show all possibilities&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + p &lt;span class="c1"&gt;# Previous command (like ↑)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + n &lt;span class="c1"&gt;# Next command (like ↓)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-pro-tips"&gt;🧠 Pro Tips&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo !! &lt;span class="c1"&gt;# Rerun last command with sudo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;!$ &lt;span class="c1"&gt;# Last argument of previous command&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# example:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdir &lt;span class="nb"&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; !$ &lt;span class="c1"&gt;# goes into test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;^old^new &lt;span class="c1"&gt;# Replace text in last command&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# example:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls /var/logg
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;^logg^log &lt;span class="c1"&gt;# fixes typo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-clear-history-careful-"&gt;🧼 Clear History (careful 😄)&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;history&lt;/span&gt; -c &lt;span class="c1"&gt;# Clear current session history&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;history&lt;/span&gt; -w &lt;span class="c1"&gt;# Write changes to ~/.bash_history&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-bonus-zsh--oh-my-zsh"&gt;🔧 Bonus (zsh / oh-my-zsh)&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ctrl + r &lt;span class="c1"&gt;# History search&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Install fzf for an even better search:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Ctrl + r becomes an interactive fuzzy search&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Bash OTP Generator</title><link>https://tlnd.org/Linux/bash_otp_generator/</link><pubDate>Sun, 05 Jun 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/bash_otp_generator/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/bash_otp_generator_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="create-an-otp-mfa-tool-in-the-bash-terminal"&gt;Create an OTP MFA Tool in the Bash Terminal&lt;/h1&gt;
+&lt;p&gt;I was tired of using &lt;strong&gt;Google Authenticator&lt;/strong&gt;, so I found a simple way to generate my own &lt;strong&gt;OTP (One-Time Password)&lt;/strong&gt; codes directly in &lt;strong&gt;Bash&lt;/strong&gt;.&lt;br&gt;
+Just replace the example string below (&lt;code&gt;JHJH...&lt;/code&gt;) with your own secret key.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/usr/bin/oathtool -b --totp &lt;span class="s1"&gt;&amp;#39;JHJHJHJHJHJHJHJHJHJHJHJHJ&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you want to copy the token directly to your clipboard, just use &lt;strong&gt;xclip&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/usr/bin/oathtool -b --totp &lt;span class="s1"&gt;&amp;#39;JHJHJHJHJHJHJHJHJHJHJHJHJ&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xclip -selection c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This way, you can easily run your own OTP generator right in the terminal.&lt;/p&gt;</description></item><item><title>OpenPGP / GnuPG Cheat Sheet</title><link>https://tlnd.org/Linux/OpenPGP_GnuPG_cheat_sheet/</link><pubDate>Mon, 14 Mar 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/OpenPGP_GnuPG_cheat_sheet/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/OpenPGP_GnuPG_cheat_sheet_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="a-short-list-of-important-commands-i-use-with-gnupg"&gt;A short list of important commands I use with GnuPG&lt;/h1&gt;
+&lt;h2 id="yubikey-and-gnupg-openpgp--gpg"&gt;YubiKey and GnuPG (OpenPGP / gpg)&lt;/h2&gt;
+&lt;p&gt;Start with:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;# open the card menu for your YubiKey
+gpg --card-edit
+
+# Now enter the admin command
+gpg/card&amp;gt; admin
+
+# Now enter help to see all available commands
+gpg/card&amp;gt; help
+quit quit this menu
+admin show admin commands
+help show this help
+list list all available data
+name change card holder&amp;#39;s name
+url change URL to retrieve key
+fetch fetch the key specified in the card URL
+login change the login name
+lang change the language preferences
+salutation change card holder&amp;#39;s salutation
+cafpr change a CA fingerprint
+forcesig toggle the signature force PIN flag
+generate generate new keys
+passwd menu to change or unblock the PIN
+verify verify the PIN and list all data
+unblock unblock the PIN using a Reset Code
+factory-reset destroy all keys and data
+kdf-setup setup KDF for PIN authentication
+key-attr change the key attribute
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;List all keys on a YubiKey, including their keygrips:&lt;/p&gt;</description></item></channel></rss>

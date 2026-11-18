@@ -1,0 +1,54 @@
+/* Small additions for the My_Notes site on top of github-style. */
+.nb-tabs { overflow-x: auto; scrollbar-width: none; }
+.nb-tabs::-webkit-scrollbar { display: none; }
+.nb-path .octicon { color: var(--color-text-secondary, #57606a); margin-right: 4px; vertical-align: middle; }
+.nb-path .path-divider { margin: 0 .25em; }
+.nb-icon-folder .octicon { fill: #54aeff; }
+.nb-files .Box-row:hover { background-color: var(--color-bg-secondary, #f6f8fa); }
+.nb-files .nb-name { max-width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nb-desc { min-width: 0; }
+@media (max-width: 767px) { .nb-desc { display: none !important; } .nb-files .nb-name { max-width: none; flex: 1 1 auto; } }
+.markdown-body img { max-width: 100%; height: auto; }
+.pinned-item-meta .octicon { vertical-align: text-bottom; }
+.nb-desc { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 767px) {
+  .nb-files .nb-name { flex-shrink: 1 !important; white-space: normal; max-width: none; }
+  .nb-files .Box-row > .no-wrap { display: none; }
+}
+
+/* ---------------------------------------------------------------- responsive */
+.nb-lang { white-space: nowrap; flex-shrink: 0; }
+
+/* Tabs: wrap onto a second line instead of disappearing off-screen */
+@media (max-width: 1011px) {
+  .nb-tabs { flex-wrap: wrap; overflow: visible; }
+  .nb-tabs .UnderlineNav-item { padding: 8px 10px; margin-right: 2px; }
+}
+@media (max-width: 543px) {
+  .nb-tabs .octicon { display: none; }
+  .nb-tabs .UnderlineNav-item { font-size: 13px; padding: 6px 8px; }
+  .nb-tabs .Counter { font-size: 11px; padding: 0 5px; min-width: 18px; }
+}
+
+/* Wide tables scroll sideways inside the page instead of being cut off */
+.markdown-body table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.markdown-body pre { overflow-x: auto; }
+.markdown-body img, .markdown-body video { max-width: 100%; height: auto; }
+
+/* Phones: less padding around notes, calmer heading sizes */
+@media (max-width: 767px) {
+  .Box-body.px-5, .Box-body.px-4 { padding-left: 16px !important; padding-right: 16px !important; }
+  .markdown-body { font-size: 15px; overflow-wrap: break-word; }
+  .markdown-body h1 { font-size: 1.6em; }
+  .markdown-body h2 { font-size: 1.35em; }
+  .markdown-body h3 { font-size: 1.15em; }
+  .nb-path { font-size: 18px !important; }
+  .container-lg.px-3 { padding-left: 8px !important; padding-right: 8px !important; }
+  .pinned-item-list-item { padding: 12px !important; }
+}

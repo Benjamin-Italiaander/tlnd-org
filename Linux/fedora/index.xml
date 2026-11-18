@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fedora on Benjamin Italiaander</title><link>https://tlnd.org/Linux/fedora/</link><description>Recent content in Fedora on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tlnd.org/Linux/fedora/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux installeren op een Fujitsu Lifebook</title><link>https://tlnd.org/Linux/fedora/Install_Linux_from_USB_on_fujitsu_lifebook_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/fedora/Install_Linux_from_USB_on_fujitsu_lifebook_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/fedora/Install_Linux_from_USB_on_fujitsu_lifebook/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ik wilde Fedora 36 vanaf USB installeren op mijn Fujitsu Lifebook U7410, maar hij wilde niet opstarten vanaf de USB-stick:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;set_second_stage() failed: invalid Parameter
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Something has gone seriously wrong: shim_init() failed Invalid Parameter
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Je voorkomt dit probleem door de opstartbare USB-stick te maken met &lt;a href="https://www.ventoy.net/en/index.html" class="external-link" target="_blank" rel="noopener"&gt;Ventoy&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Sneltoetsen op het Fedora-bureaublad</title><link>https://tlnd.org/Linux/fedora/fedora_desktop_shortcut_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/fedora/fedora_desktop_shortcut_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/fedora/fedora_desktop_shortcut/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="sneltoetsen-op-het-fedora-bureaublad"&gt;Sneltoetsen op het Fedora-bureaublad&lt;/h1&gt;
+&lt;h4 id="het-geselecteerde-venster-naar-het-werkblad-links-verplaatsen"&gt;Het geselecteerde venster naar het werkblad links verplaatsen&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Super + Shift + Page Up&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="het-geselecteerde-venster-naar-het-werkblad-rechts-verplaatsen"&gt;Het geselecteerde venster naar het werkblad rechts verplaatsen&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Super + Shift + Page Down&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Toetsenbord werkt niet op een Fujitsu Lifebook met Fedora 36</title><link>https://tlnd.org/Linux/fedora/Keyboard_not_working_on_Fujitsu_Lifebook_on_Fedora_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/fedora/Keyboard_not_working_on_Fujitsu_Lifebook_on_Fedora_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/fedora/Keyboard_not_working_on_Fujitsu_Lifebook_on_Fedora/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Na het installeren van Fedora Linux 36 op mijn Fujitsu Lifebook U7410 werkte het toetsenbord niet meer. Ik heb het opgelost door de GRUB-configuratie aan te passen.&lt;/p&gt;
+&lt;p&gt;Zet deze regel onderaan &lt;code&gt;/etc/default/grub&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;GRUB_CMDLINE_LINUX_DEFAULT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;quiet splash i8042.reset i8042.nomux i8042.nopnp i8042.noloop&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Maak na het aanpassen de GRUB-configuratie opnieuw aan:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;grub2-mkconfig -o &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;readlink -e /etc/grub2.cfg&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Start daarna opnieuw op.&lt;/p&gt;</description></item><item><title>Keyboard not working on Fujitsu Lifebook on Fedora 36</title><link>https://tlnd.org/Linux/fedora/Keyboard_not_working_on_Fujitsu_Lifebook_on_Fedora/</link><pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/fedora/Keyboard_not_working_on_Fujitsu_Lifebook_on_Fedora/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/fedora/Keyboard_not_working_on_Fujitsu_Lifebook_on_Fedora_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;After installing Fedora Linux 36 on my Fujitsu Lifebook U7410, the keyboard stopped working. I fixed it by editing the GRUB configuration.&lt;/p&gt;
+&lt;p&gt;Add the following line at the bottom of &lt;code&gt;/etc/default/grub&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;GRUB_CMDLINE_LINUX_DEFAULT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;quiet splash i8042.reset i8042.nomux i8042.nopnp i8042.noloop&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After editing the file, regenerate the GRUB configuration:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;grub2-mkconfig -o &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;readlink -e /etc/grub2.cfg&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now reboot.&lt;/p&gt;</description></item><item><title>Install Linux on a Fujitsu Lifebook</title><link>https://tlnd.org/Linux/fedora/Install_Linux_from_USB_on_fujitsu_lifebook/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/fedora/Install_Linux_from_USB_on_fujitsu_lifebook/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/fedora/Install_Linux_from_USB_on_fujitsu_lifebook_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I was trying to install Fedora 36 from USB on my Fujitsu Lifebook U7410, but it would not boot from the USB stick:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;set_second_stage() failed: invalid Parameter
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Something has gone seriously wrong: shim_init() failed Invalid Parameter
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can avoid this problem by making the bootable USB stick with the &lt;a href="https://www.ventoy.net/en/index.html" class="external-link" target="_blank" rel="noopener"&gt;Ventoy USB tool&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Shortcuts on the Fedora desktop</title><link>https://tlnd.org/Linux/fedora/fedora_desktop_shortcut/</link><pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/fedora/fedora_desktop_shortcut/</guid><description>&lt;p&gt;&lt;em&gt;🇳🇱 &lt;a href="https://tlnd.org/Linux/fedora/fedora_desktop_shortcut_nl/"&gt;Lees deze pagina in het Nederlands&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id="shortcuts-on-the-fedora-desktop"&gt;Shortcuts on the Fedora desktop&lt;/h1&gt;
+&lt;h4 id="move-the-selected-window-to-the-workspace-on-the-left"&gt;Move the selected window to the workspace on the left&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Super + Shift + Page Up&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="move-the-selected-window-to-the-workspace-on-the-right"&gt;Move the selected window to the workspace on the right&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Super + Shift + Page Down&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

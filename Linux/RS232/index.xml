@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Connect to a Dell S4048 serial console in Linux on Benjamin Italiaander</title><link>https://tlnd.org/Linux/RS232/</link><description>Recent content in Connect to a Dell S4048 serial console in Linux on Benjamin Italiaander</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tlnd.org/Linux/RS232/index.xml" rel="self" type="application/rss+xml"/><item><title>Verbinden met de seriële console van een Dell S4048 in Linux</title><link>https://tlnd.org/Linux/RS232/connect_serial_with_fedora_nl/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://tlnd.org/Linux/RS232/connect_serial_with_fedora_nl/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;🤖 &lt;em&gt;Deze pagina is met AI vertaald uit het Engels. &lt;a href="https://tlnd.org/Linux/RS232/"&gt;Lees het origineel in het Engels&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="verbinden-met-een-seriële-console-in-linux"&gt;Verbinden met een seriële console in Linux&lt;/h1&gt;
+&lt;p&gt;Ik moest in Linux via een seriële poort verbinding maken met mijn Dell S4048- en Dell Z9100-ON-switches.&lt;/p&gt;
+&lt;p&gt;Ik sloot mijn RS232-kabel aan op de Dell-switch, maar na het verbinden kreeg ik vreemde tekens.&lt;/p&gt;
+&lt;p&gt;De specificaties op de site van Dell waren:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;115200 baud (zet de Micro-USB-consolepoort op 9600 baud).&lt;/li&gt;
+&lt;li&gt;Geen pariteit.&lt;/li&gt;
+&lt;li&gt;8 databits.&lt;/li&gt;
+&lt;li&gt;1 stopbit.&lt;/li&gt;
+&lt;li&gt;Geen flow control.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ik probeerde minicom en cu, zonder succes.
+Uiteindelijk werkte het met &lt;a href="http://www.columbia.edu/kermit/ck90.html" class="external-link" target="_blank" rel="noopener"&gt;Kermit&lt;/a&gt;, met dit configuratiebestand &lt;code&gt;~/.kermrc&lt;/code&gt;:&lt;/p&gt;</description></item></channel></rss>
